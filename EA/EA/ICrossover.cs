@@ -8,6 +8,6 @@ namespace EA.EA
 {
     public interface ICrossover<T> where T : ISpecimen
     {
-        List<T> Crossover(List<T> specimens);
+        IList<T> Crossover(IList<T> specimens);
     }
 }

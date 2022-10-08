@@ -8,6 +8,6 @@ namespace EA.EA
 {
     public interface IMutator<T> where T : ISpecimen
     {
-        List<T> Mutate(List<T> currentPopulation);
+        IList<T> Mutate(IList<T> currentPopulation);
     }
 }

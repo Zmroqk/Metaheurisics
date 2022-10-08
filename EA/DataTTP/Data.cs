@@ -12,6 +12,7 @@ namespace EA.DataTTP
         {
             this.Nodes = new HashSet<Node>();
             this.Items = new HashSet<Item>();
+            this.Distances = new Dictionary<(Node, Node), double>();
         }
 
         public string Name { get; set; }
@@ -19,11 +20,26 @@ namespace EA.DataTTP
         public int CityCount { get; set; }
         public int NumberOfItems { get; set; }
         public int KnapsackCapacity { get; set; }
-        public decimal MinSpeed { get; set; }
-        public decimal MaxSpeed { get; set; }
-        public decimal RentingRatio { get; set; }
+        public double MinSpeed { get; set; }
+        public double MaxSpeed { get; set; }
+        public double RentingRatio { get; set; }
         public string EdgeWeightType { get; set; }
         public HashSet<Node> Nodes { get; set; }
         public HashSet<Item> Items { get; set; }
+
+        public Dictionary<(Node, Node), double> Distances { get; set; }
+
+        public Dictionary<(Node, Node), double> GenerateNodeMatrix()
+        {
+            foreach (var node in Nodes)
+            {
+                foreach (var otherNode in Nodes)
+                {
+                    var distance = Math.Sqrt(Math.Pow(node.X, 2) + Math.Pow(node.Y, 2));
+                    this.Distances.Add((node, otherNode), distance);
+                }
+            }
+            return Distances;
+        }
     }
 }

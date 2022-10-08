@@ -8,6 +8,6 @@ namespace EA.EA
 {
     public interface ISelector<T> where T : ISpecimen
     {
-        List<T> Select(List<T> currentPopulation);
+        IList<T> Select(IList<T> currentPopulation);
     }
 }

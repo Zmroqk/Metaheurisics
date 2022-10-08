@@ -11,13 +11,18 @@ namespace EA.DataTTP
     {
         public Specimen()
         {
-            Items = new HashSet<Item>();
-            Nodes = new HashSet<Node>();
+            Items = new Dictionary<Item, bool>();
+            Nodes = new List<Node>();
         }
 
-        public HashSet<Item> Items { get; }
+        public Dictionary<Item, bool> Items { get; }
 
-        public HashSet<Node> Nodes { get; }
+        public List<Node> Nodes { get; }
+
+        public double Evaluate()
+        {
+            throw new NotImplementedException();
+        }
 
         public void Fix()
         {

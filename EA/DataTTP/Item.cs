@@ -15,17 +15,19 @@ namespace EA.DataTTP
             this.Weight = 0;
             this.NodeIndex = 0;
         }
-        public Item(int index, int profit, int weight, int nodeIndex)
+        public Item(int index, int profit, int weight, int nodeIndex, Node node)
         {
             this.Index = index;
             this.Profit = profit;
             this.Weight = weight;
             this.NodeIndex = nodeIndex;
+            this.Node = node;
         }
 
-        int Index { get; set; }
-        int Profit { get; set; }
-        int Weight { get; set; }
-        int NodeIndex { get; set; }
+        public int Index { get; set; }
+        public int Profit { get; set; }
+        public int Weight { get; set; }
+        public int NodeIndex { get; set; }
+        public Node Node { get; set; }
     }
 }

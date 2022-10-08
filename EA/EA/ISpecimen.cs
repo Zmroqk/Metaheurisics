@@ -9,5 +9,6 @@ namespace EA.EA
     public interface ISpecimen
     {
         void Fix();
+        double Evaluate();
     }
 }

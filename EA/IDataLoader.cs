@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace EA
 {
-    public interface IDataLoader
+    public interface IDataLoader<T> where T : class
     {
-        void Load(string path);
+        T? Load(string path);
     }
 }
