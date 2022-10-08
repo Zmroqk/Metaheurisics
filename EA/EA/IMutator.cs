@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EA.EA
 {
-    public interface IMutator<T> where T : ISpecimen
+    public interface IMutator<T> where T : ISpecimen<T>
     {
         IList<T> Mutate(IList<T> currentPopulation);
     }

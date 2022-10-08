@@ -29,8 +29,12 @@ namespace EA.DataTTP
 
         public Dictionary<(Node, Node), double> Distances { get; set; }
 
-        public Dictionary<(Node, Node), double> GenerateNodeMatrix()
+        public Dictionary<(Node, Node), double> GetNodeMatrix()
         {
+            if(this.Distances.Count != 0)
+            {
+                return this.Distances;
+            }
             foreach (var node in Nodes)
             {
                 foreach (var otherNode in Nodes)
@@ -39,7 +43,7 @@ namespace EA.DataTTP
                     this.Distances.Add((node, otherNode), distance);
                 }
             }
-            return Distances;
+            return this.Distances;
         }
     }
 }

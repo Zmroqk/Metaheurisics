@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace EA.EA
 {
-    public interface ISpecimen
+    public interface ISpecimen<T> where T : ISpecimen<T>
     {
+        ISpecimenInitializator<T> SpecimenInitialization { get; }
+
+        void Init();
         void Fix();
         double Evaluate();
     }

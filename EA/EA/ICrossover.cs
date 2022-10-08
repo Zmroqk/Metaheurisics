@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EA.EA
 {
-    public interface ICrossover<T> where T : ISpecimen
+    public interface ICrossover<T> where T : ISpecimen<T>
     {
         IList<T> Crossover(IList<T> specimens);
     }

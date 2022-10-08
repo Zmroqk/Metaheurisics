@@ -11,8 +11,15 @@ namespace EA.DataTTP
     {
         public Data Config { get; set; }
 
-        public LearningManager(Data config, IMutator<Specimen> mutator, ICrossover<Specimen> crossover, ISelector<Specimen> selector)
-            : base(mutator, crossover, selector)
+        public LearningManager(Data config
+            , IMutator<Specimen> mutator
+            , ICrossover<Specimen> crossover
+            , ISelector<Specimen> selector
+            , ISpecimenFactory<Specimen> specimenFactory
+            , uint populationSize
+            , ILogger<Specimen>? logger = null
+            )
+            : base(mutator, crossover, selector, specimenFactory, populationSize, logger)
         {
             this.Config = config;
         }

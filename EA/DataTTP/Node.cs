@@ -13,17 +13,20 @@ namespace EA.DataTTP
             this.Index = 0;
             this.X = 0;
             this.Y = 0;
+            this.AvailableItems = new List<Item>();
         }
 
         public Node(int index, double x, double y)
         {
-            Index = index;
-            X = x;
-            Y = y;
+            this.Index = index;
+            this.X = x;
+            this.Y = y;
+            this.AvailableItems = new List<Item>();
         }
 
         public int Index { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
+        public List<Item> AvailableItems { get; set; }
     }
 }

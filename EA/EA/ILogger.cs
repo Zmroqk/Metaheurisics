@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace EA.EA
 {
-    public interface ISelector<T> where T : ISpecimen<T>
+    public interface ILogger<T> where T : ISpecimen<T>
     {
-        IList<T> Select(IList<T> currentPopulation);
+        Task Log(IList<T> CurrentEpochSpecimens);
     }
 }

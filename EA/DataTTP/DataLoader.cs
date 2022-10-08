@@ -38,13 +38,15 @@ namespace EA.DataTTP
                 {
                     var lineData = lines[i].Split('\t');
                     var nodeIndex = int.Parse(lineData[3]);
-                    data.Items.Add(new Item(int.Parse(lineData[0])
+                    var node = data.Nodes.First(n => n.Index == nodeIndex);
+                    var item = new Item(int.Parse(lineData[0])
                         , int.Parse(lineData[1])
                         , int.Parse(lineData[2])
                         , nodeIndex
-                        , data.Nodes.First(n => n.Index == nodeIndex)
-                        )
-                    );
+                        , node
+                        );
+                    data.Items.Add(item);
+                    node.AvailableItems.Add(item);
                 }
                 return data;
             }
