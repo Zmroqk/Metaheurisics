@@ -31,7 +31,8 @@ namespace EA.Core.Selectors
             for (int i = 0; i < this.SpecimenCount; i++)
             {
                 var value = random.NextDouble() * sum;
-                weightedSpecimens.First(ws => ws.Value.from >= value && ws.Value.to < value);
+                var specimen = weightedSpecimens.First(ws => ws.Value.from >= value && ws.Value.to < value);
+                selectedSpecimens.Add(specimen.Key);
             }
             List<T> newSpecimens = new List<T>(currentPopulation.Count);
             int selectedSpecimenIndex = 0;

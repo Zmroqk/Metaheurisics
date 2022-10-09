@@ -27,10 +27,11 @@ namespace EA.DataTTP.Inititializators
                 var city = cities[random.Next(0, cities.Count)];
                 specimen.Nodes.Add(city);
                 var probability = 1 - this.ItemAddProbability;
-                if (probability <= random.NextDouble())
+                if (probability <= random.NextDouble() && city.AvailableItems.Count > 0)
                 {
                     specimen.AddItemToKnapsack(city.AvailableItems[random.Next(city.AvailableItems.Count)]);
                 }
+                cities.Remove(city);
             }
         }
     }

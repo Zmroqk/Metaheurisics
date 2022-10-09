@@ -26,11 +26,12 @@ namespace EA.Core.Loggers.CSV
         {
             this.FilePath = filePath;
             this.CancellationTokenSource = new CancellationTokenSource();
+            this.LoggerTasks = new Queue<Task>();
         }
 
         public void RunLogger()
         {
-            this.CsvStream = new FileStream(this.FilePath, FileMode.CreateNew, FileAccess.Write, FileShare.Read);
+            this.CsvStream = new FileStream(this.FilePath, FileMode.Create, FileAccess.Write, FileShare.Read);
             this.CsvWriter = new CsvWriter(new StreamWriter(this.CsvStream)
                 , new CsvConfiguration(CultureInfo.CurrentCulture)
                 {
@@ -42,7 +43,9 @@ namespace EA.Core.Loggers.CSV
                 throw new IOException($"CSVLogger: Cannot create file for logging at {this.FilePath}");
             }
             this.CsvWriter.WriteHeader(typeof(Record));
+            this.CsvWriter.NextRecord();
             this.loggerThread = new Task(LoggerLoop);
+            this.loggerThread.Start();
         }
 
         private void LoggerLoop()
@@ -53,9 +56,12 @@ namespace EA.Core.Loggers.CSV
                 {
                     Thread.Sleep(100);
                 }
-                var task = this.LoggerTasks.Dequeue();
-                task.Start();
-                task.Wait();
+                else
+                {
+                    var task = this.LoggerTasks.Dequeue();
+                    task.Start();
+                    task.Wait();
+                }
             }
         }
 
@@ -79,12 +85,28 @@ namespace EA.Core.Loggers.CSV
                 var record = new Record();
                 record.ApplyData(currentEpoch, index++, specimen);
                 this.CsvWriter.WriteRecord<Record>(record);
+                this.CsvWriter.NextRecord();
             }
+            this.CsvWriter.Flush();
+        }
+
+        public void Wait()
+        {
+            while(this.LoggerTasks.Count > 0)
+            {
+                Thread.Sleep(100);
+            }
+            this.CancellationTokenSource.Cancel();
+            this.LoggerThread.Wait();
         }
 
         public void Dispose()
         {
-            this.CancellationTokenSource.Cancel();
+            if (!this.CancellationTokenSource.IsCancellationRequested)
+            {
+                this.CancellationTokenSource.Cancel();
+            }
+            this.CsvWriter.Dispose();
         }
     }
 }

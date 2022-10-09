@@ -78,6 +78,7 @@ namespace EA.DataTTP
         public void RemoveItemFromKnapsack(Item item)
         {
             this.Items[item] = false;
+            this.CurrentKnapsackUsage -= item.Weight;
         }
 
         public bool CheckIfItemIsInKnapsack(Item item)

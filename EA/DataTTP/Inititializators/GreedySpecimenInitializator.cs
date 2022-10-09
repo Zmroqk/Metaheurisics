@@ -33,7 +33,7 @@ namespace EA.DataTTP.Inititializators
                 currentCity = selected.Key.to;
                 cities.Remove(currentCity);
                 specimen.Nodes.Add(currentCity);
-                if (probability <= random.NextDouble())
+                if (probability <= random.NextDouble() && currentCity.AvailableItems.Count > 0)
                 {
                     specimen.AddItemToKnapsack(currentCity.AvailableItems[random.Next(currentCity.AvailableItems.Count)]);
                 }
