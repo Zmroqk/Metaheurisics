@@ -1,4 +1,4 @@
-﻿using EA.EA;
+﻿using EA.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +28,15 @@ namespace EA.DataTTP
 
         public double CurrentKnapsackUsage { get; set; }
 
+        public double? EvaluationValue { get; set; }
+
         public double Evaluate()
         {
+            if (this.EvaluationValue.HasValue)
+            {
+                return this.EvaluationValue.Value;
+            }
+
             var profit = 0d;
             foreach(var item in Items)
             {
@@ -48,7 +55,8 @@ namespace EA.DataTTP
                 time += distance * currentSpeed;
                 this.UpdateWeight(ref currentWeight, this.Nodes[i]);
             }
-            return profit + time;
+            this.EvaluationValue = profit + time;
+            return profit - time;
         }
 
         public bool AddItemToKnapsack(Item item)
@@ -60,6 +68,16 @@ namespace EA.DataTTP
                 return true;
             }
             return false;
+        }
+
+        public Item[] GetKnapsackItems()
+        {
+            return this.Items.Where(i => i.Value).Select(i => i.Key).ToArray();
+        }
+
+        public void RemoveItemFromKnapsack(Item item)
+        {
+            this.Items[item] = false;
         }
 
         public bool CheckIfItemIsInKnapsack(Item item)
@@ -92,13 +110,40 @@ namespace EA.DataTTP
 
         public void Fix()
         {
-            throw new NotImplementedException();
+            var cities = new HashSet<Node>(this.Config.Nodes);
+            foreach(var node in this.Nodes) {
+                cities.Remove(node);
+            }
+            var citiesToRemove = this.Nodes.GroupBy(n => n).Where(g => g.Count() > 1).Select(g => g.Key).ToList();
+            var index = 0;
+            foreach(var city in cities)
+            {
+                var nodeIndex = this.Nodes.IndexOf(city);
+                this.Nodes.RemoveAt(nodeIndex);
+                this.Nodes.Insert(nodeIndex, citiesToRemove[index]);
+                citiesToRemove.RemoveAt(index++);
+            }
         }
 
         public void Init()
         {
             this.SetupItemsDictionary();
             this.SpecimenInitialization.Initialize(this);
+        }
+
+        public Specimen Clone()
+        {
+            var specimen = new Specimen(this.Config, this.SpecimenInitialization);
+            specimen.SetupItemsDictionary();
+            foreach(var node in this.Nodes)
+            {
+                specimen.Nodes.Add(node);
+            }
+            foreach(var item in this.Items)
+            {
+                specimen.Items[item.Key] = item.Value;
+            }
+            return specimen;
         }
     }
 }

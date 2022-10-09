@@ -1,10 +1,11 @@
-﻿using System;
+﻿using EA.Core.Loggers.CSV;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.EA
+namespace EA.Core
 {
     public class LearningManagerBase<T> : ILearningManager<T> where T : ISpecimen<T>
     {
@@ -15,6 +16,8 @@ namespace EA.EA
         public uint PopulationSize { get; set; }
         public ISpecimenFactory<T> SpecimenFactory { get; set; }
         public ILogger<T>? Logger { get; set; }
+
+        public int CurrentEpoch { get; set; }
 
         public LearningManagerBase(IMutator<T> mutator
             , ICrossover<T> crossover
@@ -30,12 +33,13 @@ namespace EA.EA
             this.Selector = selector;            this.PopulationSize = populationSize;
             this.SpecimenFactory = specimenFactory;
             this.Logger = logger;
+            this.CurrentEpoch = 1;
         }
 
         public virtual void Init()
         {
             this.CurrentEpochSpecimens.Clear();
-            for(int i = 0; i < PopulationSize; i++)
+            for (int i = 0; i < this.PopulationSize; i++)
             {
                 this.CurrentEpochSpecimens.Add(this.SpecimenFactory.CreateSpecimen());
             }
@@ -43,11 +47,11 @@ namespace EA.EA
 
         public virtual void NextEpoch()
         {
-            var selectedSpecimens = this.Selector.Select(this.CurrentEpochSpecimens);
-            var newSpecimens = this.Crossover.Crossover(selectedSpecimens);
-            var mutatedSpecimens = this.Mutator.Mutate(newSpecimens);
+            var selectedSpecimens = Selector.Select(CurrentEpochSpecimens);
+            var newSpecimens = Crossover.Crossover(selectedSpecimens);
+            var mutatedSpecimens = Mutator.Mutate(newSpecimens);
             this.CurrentEpochSpecimens = mutatedSpecimens;
-            this.Logger?.Log(this.CurrentEpochSpecimens);
+            this.Logger?.Log(++this.CurrentEpoch, CurrentEpochSpecimens);
         }
     }
 }

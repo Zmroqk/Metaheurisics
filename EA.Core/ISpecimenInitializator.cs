@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.EA
+namespace EA.Core
 {
     public interface ISpecimenInitializator<T> where T : ISpecimen<T>
     {

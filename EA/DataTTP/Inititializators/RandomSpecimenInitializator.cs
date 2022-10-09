@@ -1,4 +1,4 @@
-﻿using EA.EA;
+﻿using EA.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,13 +21,13 @@ namespace EA.DataTTP.Inititializators
         public void Initialize(Specimen specimen)
         {
             List<Node> cities = this.Config.Nodes.ToList();
-            List<Item> items = this.Config.Items.ToList();
             Random random = new Random();
             while(cities.Count > 0)
             {
                 var city = cities[random.Next(0, cities.Count)];
                 specimen.Nodes.Add(city);
-                if(random.Next() >= ItemAddProbability || ItemAddProbability == 1)
+                var probability = 1 - this.ItemAddProbability;
+                if (probability <= random.NextDouble())
                 {
                     specimen.AddItemToKnapsack(city.AvailableItems[random.Next(city.AvailableItems.Count)]);
                 }

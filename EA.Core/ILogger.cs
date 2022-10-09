@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.EA
+namespace EA.Core
 {
     public interface ILogger<T> where T : ISpecimen<T>
     {
-        Task Log(IList<T> CurrentEpochSpecimens);
+        Task Log(int currentEpoch, IList<T> currentEpochSpecimens);
     }
 }

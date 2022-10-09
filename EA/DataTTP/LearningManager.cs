@@ -1,4 +1,4 @@
-﻿using EA.EA;
+﻿using EA.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;

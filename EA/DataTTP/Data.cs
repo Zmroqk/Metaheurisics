@@ -10,8 +10,8 @@ namespace EA.DataTTP
     {
         public Data()
         {
-            this.Nodes = new HashSet<Node>();
-            this.Items = new HashSet<Item>();
+            this.Nodes = new List<Node>();
+            this.Items = new List<Item>();
             this.Distances = new Dictionary<(Node, Node), double>();
         }
 
@@ -24,12 +24,12 @@ namespace EA.DataTTP
         public double MaxSpeed { get; set; }
         public double RentingRatio { get; set; }
         public string EdgeWeightType { get; set; }
-        public HashSet<Node> Nodes { get; set; }
-        public HashSet<Item> Items { get; set; }
+        public List<Node> Nodes { get; set; }
+        public List<Item> Items { get; set; }
 
-        public Dictionary<(Node, Node), double> Distances { get; set; }
+        public Dictionary<(Node from, Node to), double> Distances { get; set; }
 
-        public Dictionary<(Node, Node), double> GetNodeMatrix()
+        public Dictionary<(Node from, Node to), double> GetNodeMatrix()
         {
             if(this.Distances.Count != 0)
             {
@@ -39,7 +39,7 @@ namespace EA.DataTTP
             {
                 foreach (var otherNode in Nodes)
                 {
-                    var distance = Math.Sqrt(Math.Pow(node.X, 2) + Math.Pow(node.Y, 2));
+                    var distance = Math.Sqrt(Math.Pow(node.X - otherNode.X, 2) + Math.Pow(node.Y - otherNode.Y, 2));
                     this.Distances.Add((node, otherNode), distance);
                 }
             }

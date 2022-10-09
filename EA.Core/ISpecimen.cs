@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.EA
+namespace EA.Core
 {
     public interface ISpecimen<T> where T : ISpecimen<T>
     {
@@ -13,5 +13,6 @@ namespace EA.EA
         void Init();
         void Fix();
         double Evaluate();
+        T Clone();
     }
 }

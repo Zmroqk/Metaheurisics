@@ -1,22 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\.editorconfig" Link=".editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CsvHelper" Version="29.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EA.Core\EA.Core.csproj" />
+    <EditorConfigFiles Remove="C:\Users\adria\source\repos\EA\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\adria\source\repos\EA\.editorconfig" />
   </ItemGroup>
 
 </Project>

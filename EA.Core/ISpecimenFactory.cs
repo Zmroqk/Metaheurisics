@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.EA
+namespace EA.Core
 {
-    public interface ISelector<T> where T : ISpecimen<T>
+    public interface ISpecimenFactory<T> where T : ISpecimen<T>
     {
-        IList<T> Select(IList<T> currentPopulation);
+        T CreateSpecimen();
     }
 }
