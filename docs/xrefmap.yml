@@ -1,3 +1,2653 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: EA
+  name: EA
+  href: api/EA.html
+  commentId: N:EA
+  fullName: EA
+  nameWithType: EA
+- uid: EA.Config
+  name: EA.Config
+  href: api/EA.Config.html
+  commentId: N:EA.Config
+  fullName: EA.Config
+  nameWithType: EA.Config
+- uid: EA.Config.CrossoverConfig
+  name: CrossoverConfig
+  href: api/EA.Config.CrossoverConfig.html
+  commentId: T:EA.Config.CrossoverConfig
+  fullName: EA.Config.CrossoverConfig
+  nameWithType: CrossoverConfig
+- uid: EA.Config.CrossoverConfig.CrossoverLength
+  name: CrossoverLength
+  href: api/EA.Config.CrossoverConfig.html#EA_Config_CrossoverConfig_CrossoverLength
+  commentId: P:EA.Config.CrossoverConfig.CrossoverLength
+  fullName: EA.Config.CrossoverConfig.CrossoverLength
+  nameWithType: CrossoverConfig.CrossoverLength
+- uid: EA.Config.CrossoverConfig.CrossoverLength*
+  name: CrossoverLength
+  href: api/EA.Config.CrossoverConfig.html#EA_Config_CrossoverConfig_CrossoverLength_
+  commentId: Overload:EA.Config.CrossoverConfig.CrossoverLength
+  isSpec: "True"
+  fullName: EA.Config.CrossoverConfig.CrossoverLength
+  nameWithType: CrossoverConfig.CrossoverLength
+- uid: EA.Config.CrossoverConfig.Probability
+  name: Probability
+  href: api/EA.Config.CrossoverConfig.html#EA_Config_CrossoverConfig_Probability
+  commentId: P:EA.Config.CrossoverConfig.Probability
+  fullName: EA.Config.CrossoverConfig.Probability
+  nameWithType: CrossoverConfig.Probability
+- uid: EA.Config.CrossoverConfig.Probability*
+  name: Probability
+  href: api/EA.Config.CrossoverConfig.html#EA_Config_CrossoverConfig_Probability_
+  commentId: Overload:EA.Config.CrossoverConfig.Probability
+  isSpec: "True"
+  fullName: EA.Config.CrossoverConfig.Probability
+  nameWithType: CrossoverConfig.Probability
+- uid: EA.Config.CrossoverConfig.Type
+  name: Type
+  href: api/EA.Config.CrossoverConfig.html#EA_Config_CrossoverConfig_Type
+  commentId: P:EA.Config.CrossoverConfig.Type
+  fullName: EA.Config.CrossoverConfig.Type
+  nameWithType: CrossoverConfig.Type
+- uid: EA.Config.CrossoverConfig.Type*
+  name: Type
+  href: api/EA.Config.CrossoverConfig.html#EA_Config_CrossoverConfig_Type_
+  commentId: Overload:EA.Config.CrossoverConfig.Type
+  isSpec: "True"
+  fullName: EA.Config.CrossoverConfig.Type
+  nameWithType: CrossoverConfig.Type
+- uid: EA.Config.CrossoverType
+  name: CrossoverType
+  href: api/EA.Config.CrossoverType.html
+  commentId: T:EA.Config.CrossoverType
+  fullName: EA.Config.CrossoverType
+  nameWithType: CrossoverType
+- uid: EA.Config.CrossoverType.Order
+  name: Order
+  href: api/EA.Config.CrossoverType.html#EA_Config_CrossoverType_Order
+  commentId: F:EA.Config.CrossoverType.Order
+  fullName: EA.Config.CrossoverType.Order
+  nameWithType: CrossoverType.Order
+- uid: EA.Config.CrossoverType.PartiallyMatched
+  name: PartiallyMatched
+  href: api/EA.Config.CrossoverType.html#EA_Config_CrossoverType_PartiallyMatched
+  commentId: F:EA.Config.CrossoverType.PartiallyMatched
+  fullName: EA.Config.CrossoverType.PartiallyMatched
+  nameWithType: CrossoverType.PartiallyMatched
+- uid: EA.Config.LearningConfig
+  name: LearningConfig
+  href: api/EA.Config.LearningConfig.html
+  commentId: T:EA.Config.LearningConfig
+  fullName: EA.Config.LearningConfig
+  nameWithType: LearningConfig
+- uid: EA.Config.LearningConfig.Crossover
+  name: Crossover
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Crossover
+  commentId: P:EA.Config.LearningConfig.Crossover
+  fullName: EA.Config.LearningConfig.Crossover
+  nameWithType: LearningConfig.Crossover
+- uid: EA.Config.LearningConfig.Crossover*
+  name: Crossover
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Crossover_
+  commentId: Overload:EA.Config.LearningConfig.Crossover
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.Crossover
+  nameWithType: LearningConfig.Crossover
+- uid: EA.Config.LearningConfig.Epochs
+  name: Epochs
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Epochs
+  commentId: P:EA.Config.LearningConfig.Epochs
+  fullName: EA.Config.LearningConfig.Epochs
+  nameWithType: LearningConfig.Epochs
+- uid: EA.Config.LearningConfig.Epochs*
+  name: Epochs
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Epochs_
+  commentId: Overload:EA.Config.LearningConfig.Epochs
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.Epochs
+  nameWithType: LearningConfig.Epochs
+- uid: EA.Config.LearningConfig.Mutator
+  name: Mutator
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Mutator
+  commentId: P:EA.Config.LearningConfig.Mutator
+  fullName: EA.Config.LearningConfig.Mutator
+  nameWithType: LearningConfig.Mutator
+- uid: EA.Config.LearningConfig.Mutator*
+  name: Mutator
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Mutator_
+  commentId: Overload:EA.Config.LearningConfig.Mutator
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.Mutator
+  nameWithType: LearningConfig.Mutator
+- uid: EA.Config.LearningConfig.OutputFileName
+  name: OutputFileName
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_OutputFileName
+  commentId: P:EA.Config.LearningConfig.OutputFileName
+  fullName: EA.Config.LearningConfig.OutputFileName
+  nameWithType: LearningConfig.OutputFileName
+- uid: EA.Config.LearningConfig.OutputFileName*
+  name: OutputFileName
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_OutputFileName_
+  commentId: Overload:EA.Config.LearningConfig.OutputFileName
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.OutputFileName
+  nameWithType: LearningConfig.OutputFileName
+- uid: EA.Config.LearningConfig.PopulationSize
+  name: PopulationSize
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_PopulationSize
+  commentId: P:EA.Config.LearningConfig.PopulationSize
+  fullName: EA.Config.LearningConfig.PopulationSize
+  nameWithType: LearningConfig.PopulationSize
+- uid: EA.Config.LearningConfig.PopulationSize*
+  name: PopulationSize
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_PopulationSize_
+  commentId: Overload:EA.Config.LearningConfig.PopulationSize
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.PopulationSize
+  nameWithType: LearningConfig.PopulationSize
+- uid: EA.Config.LearningConfig.Selector
+  name: Selector
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Selector
+  commentId: P:EA.Config.LearningConfig.Selector
+  fullName: EA.Config.LearningConfig.Selector
+  nameWithType: LearningConfig.Selector
+- uid: EA.Config.LearningConfig.Selector*
+  name: Selector
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Selector_
+  commentId: Overload:EA.Config.LearningConfig.Selector
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.Selector
+  nameWithType: LearningConfig.Selector
+- uid: EA.Config.LearningConfig.SpecimenInitializator
+  name: SpecimenInitializator
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_SpecimenInitializator
+  commentId: P:EA.Config.LearningConfig.SpecimenInitializator
+  fullName: EA.Config.LearningConfig.SpecimenInitializator
+  nameWithType: LearningConfig.SpecimenInitializator
+- uid: EA.Config.LearningConfig.SpecimenInitializator*
+  name: SpecimenInitializator
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_SpecimenInitializator_
+  commentId: Overload:EA.Config.LearningConfig.SpecimenInitializator
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.SpecimenInitializator
+  nameWithType: LearningConfig.SpecimenInitializator
+- uid: EA.Config.LearningConfigLoader
+  name: LearningConfigLoader
+  href: api/EA.Config.LearningConfigLoader.html
+  commentId: T:EA.Config.LearningConfigLoader
+  fullName: EA.Config.LearningConfigLoader
+  nameWithType: LearningConfigLoader
+- uid: EA.Config.LearningConfigLoader.Load(System.String)
+  name: Load(String)
+  href: api/EA.Config.LearningConfigLoader.html#EA_Config_LearningConfigLoader_Load_System_String_
+  commentId: M:EA.Config.LearningConfigLoader.Load(System.String)
+  fullName: EA.Config.LearningConfigLoader.Load(System.String)
+  nameWithType: LearningConfigLoader.Load(String)
+- uid: EA.Config.LearningConfigLoader.Load*
+  name: Load
+  href: api/EA.Config.LearningConfigLoader.html#EA_Config_LearningConfigLoader_Load_
+  commentId: Overload:EA.Config.LearningConfigLoader.Load
+  isSpec: "True"
+  fullName: EA.Config.LearningConfigLoader.Load
+  nameWithType: LearningConfigLoader.Load
+- uid: EA.Config.MutatorConfig
+  name: MutatorConfig
+  href: api/EA.Config.MutatorConfig.html
+  commentId: T:EA.Config.MutatorConfig
+  fullName: EA.Config.MutatorConfig
+  nameWithType: MutatorConfig
+- uid: EA.Config.MutatorConfig.ItemSwappingCount
+  name: ItemSwappingCount
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_ItemSwappingCount
+  commentId: P:EA.Config.MutatorConfig.ItemSwappingCount
+  fullName: EA.Config.MutatorConfig.ItemSwappingCount
+  nameWithType: MutatorConfig.ItemSwappingCount
+- uid: EA.Config.MutatorConfig.ItemSwappingCount*
+  name: ItemSwappingCount
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_ItemSwappingCount_
+  commentId: Overload:EA.Config.MutatorConfig.ItemSwappingCount
+  isSpec: "True"
+  fullName: EA.Config.MutatorConfig.ItemSwappingCount
+  nameWithType: MutatorConfig.ItemSwappingCount
+- uid: EA.Config.MutatorConfig.MutateRatio
+  name: MutateRatio
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_MutateRatio
+  commentId: P:EA.Config.MutatorConfig.MutateRatio
+  fullName: EA.Config.MutatorConfig.MutateRatio
+  nameWithType: MutatorConfig.MutateRatio
+- uid: EA.Config.MutatorConfig.MutateRatio*
+  name: MutateRatio
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_MutateRatio_
+  commentId: Overload:EA.Config.MutatorConfig.MutateRatio
+  isSpec: "True"
+  fullName: EA.Config.MutatorConfig.MutateRatio
+  nameWithType: MutatorConfig.MutateRatio
+- uid: EA.Config.MutatorConfig.NodeSwappingCount
+  name: NodeSwappingCount
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_NodeSwappingCount
+  commentId: P:EA.Config.MutatorConfig.NodeSwappingCount
+  fullName: EA.Config.MutatorConfig.NodeSwappingCount
+  nameWithType: MutatorConfig.NodeSwappingCount
+- uid: EA.Config.MutatorConfig.NodeSwappingCount*
+  name: NodeSwappingCount
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_NodeSwappingCount_
+  commentId: Overload:EA.Config.MutatorConfig.NodeSwappingCount
+  isSpec: "True"
+  fullName: EA.Config.MutatorConfig.NodeSwappingCount
+  nameWithType: MutatorConfig.NodeSwappingCount
+- uid: EA.Config.MutatorConfig.NodeSwappingLength
+  name: NodeSwappingLength
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_NodeSwappingLength
+  commentId: P:EA.Config.MutatorConfig.NodeSwappingLength
+  fullName: EA.Config.MutatorConfig.NodeSwappingLength
+  nameWithType: MutatorConfig.NodeSwappingLength
+- uid: EA.Config.MutatorConfig.NodeSwappingLength*
+  name: NodeSwappingLength
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_NodeSwappingLength_
+  commentId: Overload:EA.Config.MutatorConfig.NodeSwappingLength
+  isSpec: "True"
+  fullName: EA.Config.MutatorConfig.NodeSwappingLength
+  nameWithType: MutatorConfig.NodeSwappingLength
+- uid: EA.Config.MutatorConfig.Type
+  name: Type
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_Type
+  commentId: P:EA.Config.MutatorConfig.Type
+  fullName: EA.Config.MutatorConfig.Type
+  nameWithType: MutatorConfig.Type
+- uid: EA.Config.MutatorConfig.Type*
+  name: Type
+  href: api/EA.Config.MutatorConfig.html#EA_Config_MutatorConfig_Type_
+  commentId: Overload:EA.Config.MutatorConfig.Type
+  isSpec: "True"
+  fullName: EA.Config.MutatorConfig.Type
+  nameWithType: MutatorConfig.Type
+- uid: EA.Config.MutatorType
+  name: MutatorType
+  href: api/EA.Config.MutatorType.html
+  commentId: T:EA.Config.MutatorType
+  fullName: EA.Config.MutatorType
+  nameWithType: MutatorType
+- uid: EA.Config.MutatorType.Inverse
+  name: Inverse
+  href: api/EA.Config.MutatorType.html#EA_Config_MutatorType_Inverse
+  commentId: F:EA.Config.MutatorType.Inverse
+  fullName: EA.Config.MutatorType.Inverse
+  nameWithType: MutatorType.Inverse
+- uid: EA.Config.MutatorType.Swap
+  name: Swap
+  href: api/EA.Config.MutatorType.html#EA_Config_MutatorType_Swap
+  commentId: F:EA.Config.MutatorType.Swap
+  fullName: EA.Config.MutatorType.Swap
+  nameWithType: MutatorType.Swap
+- uid: EA.Config.SelectionType
+  name: SelectionType
+  href: api/EA.Config.SelectionType.html
+  commentId: T:EA.Config.SelectionType
+  fullName: EA.Config.SelectionType
+  nameWithType: SelectionType
+- uid: EA.Config.SelectionType.Roulette
+  name: Roulette
+  href: api/EA.Config.SelectionType.html#EA_Config_SelectionType_Roulette
+  commentId: F:EA.Config.SelectionType.Roulette
+  fullName: EA.Config.SelectionType.Roulette
+  nameWithType: SelectionType.Roulette
+- uid: EA.Config.SelectionType.Tournament
+  name: Tournament
+  href: api/EA.Config.SelectionType.html#EA_Config_SelectionType_Tournament
+  commentId: F:EA.Config.SelectionType.Tournament
+  fullName: EA.Config.SelectionType.Tournament
+  nameWithType: SelectionType.Tournament
+- uid: EA.Config.SelectorConfig
+  name: SelectorConfig
+  href: api/EA.Config.SelectorConfig.html
+  commentId: T:EA.Config.SelectorConfig
+  fullName: EA.Config.SelectorConfig
+  nameWithType: SelectorConfig
+- uid: EA.Config.SelectorConfig.SpecimenCount
+  name: SpecimenCount
+  href: api/EA.Config.SelectorConfig.html#EA_Config_SelectorConfig_SpecimenCount
+  commentId: P:EA.Config.SelectorConfig.SpecimenCount
+  fullName: EA.Config.SelectorConfig.SpecimenCount
+  nameWithType: SelectorConfig.SpecimenCount
+- uid: EA.Config.SelectorConfig.SpecimenCount*
+  name: SpecimenCount
+  href: api/EA.Config.SelectorConfig.html#EA_Config_SelectorConfig_SpecimenCount_
+  commentId: Overload:EA.Config.SelectorConfig.SpecimenCount
+  isSpec: "True"
+  fullName: EA.Config.SelectorConfig.SpecimenCount
+  nameWithType: SelectorConfig.SpecimenCount
+- uid: EA.Config.SelectorConfig.TournamentCount
+  name: TournamentCount
+  href: api/EA.Config.SelectorConfig.html#EA_Config_SelectorConfig_TournamentCount
+  commentId: P:EA.Config.SelectorConfig.TournamentCount
+  fullName: EA.Config.SelectorConfig.TournamentCount
+  nameWithType: SelectorConfig.TournamentCount
+- uid: EA.Config.SelectorConfig.TournamentCount*
+  name: TournamentCount
+  href: api/EA.Config.SelectorConfig.html#EA_Config_SelectorConfig_TournamentCount_
+  commentId: Overload:EA.Config.SelectorConfig.TournamentCount
+  isSpec: "True"
+  fullName: EA.Config.SelectorConfig.TournamentCount
+  nameWithType: SelectorConfig.TournamentCount
+- uid: EA.Config.SelectorConfig.Type
+  name: Type
+  href: api/EA.Config.SelectorConfig.html#EA_Config_SelectorConfig_Type
+  commentId: P:EA.Config.SelectorConfig.Type
+  fullName: EA.Config.SelectorConfig.Type
+  nameWithType: SelectorConfig.Type
+- uid: EA.Config.SelectorConfig.Type*
+  name: Type
+  href: api/EA.Config.SelectorConfig.html#EA_Config_SelectorConfig_Type_
+  commentId: Overload:EA.Config.SelectorConfig.Type
+  isSpec: "True"
+  fullName: EA.Config.SelectorConfig.Type
+  nameWithType: SelectorConfig.Type
+- uid: EA.Config.SpecimenInitializatorConfig
+  name: SpecimenInitializatorConfig
+  href: api/EA.Config.SpecimenInitializatorConfig.html
+  commentId: T:EA.Config.SpecimenInitializatorConfig
+  fullName: EA.Config.SpecimenInitializatorConfig
+  nameWithType: SpecimenInitializatorConfig
+- uid: EA.Config.SpecimenInitializatorConfig.ItemAddPropability
+  name: ItemAddPropability
+  href: api/EA.Config.SpecimenInitializatorConfig.html#EA_Config_SpecimenInitializatorConfig_ItemAddPropability
+  commentId: P:EA.Config.SpecimenInitializatorConfig.ItemAddPropability
+  fullName: EA.Config.SpecimenInitializatorConfig.ItemAddPropability
+  nameWithType: SpecimenInitializatorConfig.ItemAddPropability
+- uid: EA.Config.SpecimenInitializatorConfig.ItemAddPropability*
+  name: ItemAddPropability
+  href: api/EA.Config.SpecimenInitializatorConfig.html#EA_Config_SpecimenInitializatorConfig_ItemAddPropability_
+  commentId: Overload:EA.Config.SpecimenInitializatorConfig.ItemAddPropability
+  isSpec: "True"
+  fullName: EA.Config.SpecimenInitializatorConfig.ItemAddPropability
+  nameWithType: SpecimenInitializatorConfig.ItemAddPropability
+- uid: EA.Config.SpecimenInitializatorConfig.Type
+  name: Type
+  href: api/EA.Config.SpecimenInitializatorConfig.html#EA_Config_SpecimenInitializatorConfig_Type
+  commentId: P:EA.Config.SpecimenInitializatorConfig.Type
+  fullName: EA.Config.SpecimenInitializatorConfig.Type
+  nameWithType: SpecimenInitializatorConfig.Type
+- uid: EA.Config.SpecimenInitializatorConfig.Type*
+  name: Type
+  href: api/EA.Config.SpecimenInitializatorConfig.html#EA_Config_SpecimenInitializatorConfig_Type_
+  commentId: Overload:EA.Config.SpecimenInitializatorConfig.Type
+  isSpec: "True"
+  fullName: EA.Config.SpecimenInitializatorConfig.Type
+  nameWithType: SpecimenInitializatorConfig.Type
+- uid: EA.Config.SpecimenInitializatorType
+  name: SpecimenInitializatorType
+  href: api/EA.Config.SpecimenInitializatorType.html
+  commentId: T:EA.Config.SpecimenInitializatorType
+  fullName: EA.Config.SpecimenInitializatorType
+  nameWithType: SpecimenInitializatorType
+- uid: EA.Config.SpecimenInitializatorType.Greedy
+  name: Greedy
+  href: api/EA.Config.SpecimenInitializatorType.html#EA_Config_SpecimenInitializatorType_Greedy
+  commentId: F:EA.Config.SpecimenInitializatorType.Greedy
+  fullName: EA.Config.SpecimenInitializatorType.Greedy
+  nameWithType: SpecimenInitializatorType.Greedy
+- uid: EA.Config.SpecimenInitializatorType.Random
+  name: Random
+  href: api/EA.Config.SpecimenInitializatorType.html#EA_Config_SpecimenInitializatorType_Random
+  commentId: F:EA.Config.SpecimenInitializatorType.Random
+  fullName: EA.Config.SpecimenInitializatorType.Random
+  nameWithType: SpecimenInitializatorType.Random
+- uid: EA.Core
+  name: EA.Core
+  href: api/EA.Core.html
+  commentId: N:EA.Core
+  fullName: EA.Core
+  nameWithType: EA.Core
+- uid: EA.Core.ICrossover`1
+  name: ICrossover<T>
+  href: api/EA.Core.ICrossover-1.html
+  commentId: T:EA.Core.ICrossover`1
+  name.vb: ICrossover(Of T)
+  fullName: EA.Core.ICrossover<T>
+  fullName.vb: EA.Core.ICrossover(Of T)
+  nameWithType: ICrossover<T>
+  nameWithType.vb: ICrossover(Of T)
+- uid: EA.Core.ICrossover`1.Crossover(System.Collections.Generic.IList{`0})
+  name: Crossover(IList<T>)
+  href: api/EA.Core.ICrossover-1.html#EA_Core_ICrossover_1_Crossover_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.ICrossover`1.Crossover(System.Collections.Generic.IList{`0})
+  name.vb: Crossover(IList(Of T))
+  fullName: EA.Core.ICrossover<T>.Crossover(System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.ICrossover(Of T).Crossover(System.Collections.Generic.IList(Of T))
+  nameWithType: ICrossover<T>.Crossover(IList<T>)
+  nameWithType.vb: ICrossover(Of T).Crossover(IList(Of T))
+- uid: EA.Core.ICrossover`1.Crossover*
+  name: Crossover
+  href: api/EA.Core.ICrossover-1.html#EA_Core_ICrossover_1_Crossover_
+  commentId: Overload:EA.Core.ICrossover`1.Crossover
+  isSpec: "True"
+  fullName: EA.Core.ICrossover<T>.Crossover
+  fullName.vb: EA.Core.ICrossover(Of T).Crossover
+  nameWithType: ICrossover<T>.Crossover
+  nameWithType.vb: ICrossover(Of T).Crossover
+- uid: EA.Core.ICrossover`1.Probability
+  name: Probability
+  href: api/EA.Core.ICrossover-1.html#EA_Core_ICrossover_1_Probability
+  commentId: P:EA.Core.ICrossover`1.Probability
+  fullName: EA.Core.ICrossover<T>.Probability
+  fullName.vb: EA.Core.ICrossover(Of T).Probability
+  nameWithType: ICrossover<T>.Probability
+  nameWithType.vb: ICrossover(Of T).Probability
+- uid: EA.Core.ICrossover`1.Probability*
+  name: Probability
+  href: api/EA.Core.ICrossover-1.html#EA_Core_ICrossover_1_Probability_
+  commentId: Overload:EA.Core.ICrossover`1.Probability
+  isSpec: "True"
+  fullName: EA.Core.ICrossover<T>.Probability
+  fullName.vb: EA.Core.ICrossover(Of T).Probability
+  nameWithType: ICrossover<T>.Probability
+  nameWithType.vb: ICrossover(Of T).Probability
+- uid: EA.Core.ILearningManager`1
+  name: ILearningManager<T>
+  href: api/EA.Core.ILearningManager-1.html
+  commentId: T:EA.Core.ILearningManager`1
+  name.vb: ILearningManager(Of T)
+  fullName: EA.Core.ILearningManager<T>
+  fullName.vb: EA.Core.ILearningManager(Of T)
+  nameWithType: ILearningManager<T>
+  nameWithType.vb: ILearningManager(Of T)
+- uid: EA.Core.ILearningManager`1.Crossover
+  name: Crossover
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Crossover
+  commentId: P:EA.Core.ILearningManager`1.Crossover
+  fullName: EA.Core.ILearningManager<T>.Crossover
+  fullName.vb: EA.Core.ILearningManager(Of T).Crossover
+  nameWithType: ILearningManager<T>.Crossover
+  nameWithType.vb: ILearningManager(Of T).Crossover
+- uid: EA.Core.ILearningManager`1.Crossover*
+  name: Crossover
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Crossover_
+  commentId: Overload:EA.Core.ILearningManager`1.Crossover
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.Crossover
+  fullName.vb: EA.Core.ILearningManager(Of T).Crossover
+  nameWithType: ILearningManager<T>.Crossover
+  nameWithType.vb: ILearningManager(Of T).Crossover
+- uid: EA.Core.ILearningManager`1.CurrentEpochSpecimens
+  name: CurrentEpochSpecimens
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_CurrentEpochSpecimens
+  commentId: P:EA.Core.ILearningManager`1.CurrentEpochSpecimens
+  fullName: EA.Core.ILearningManager<T>.CurrentEpochSpecimens
+  fullName.vb: EA.Core.ILearningManager(Of T).CurrentEpochSpecimens
+  nameWithType: ILearningManager<T>.CurrentEpochSpecimens
+  nameWithType.vb: ILearningManager(Of T).CurrentEpochSpecimens
+- uid: EA.Core.ILearningManager`1.CurrentEpochSpecimens*
+  name: CurrentEpochSpecimens
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_CurrentEpochSpecimens_
+  commentId: Overload:EA.Core.ILearningManager`1.CurrentEpochSpecimens
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.CurrentEpochSpecimens
+  fullName.vb: EA.Core.ILearningManager(Of T).CurrentEpochSpecimens
+  nameWithType: ILearningManager<T>.CurrentEpochSpecimens
+  nameWithType.vb: ILearningManager(Of T).CurrentEpochSpecimens
+- uid: EA.Core.ILearningManager`1.Init
+  name: Init()
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Init
+  commentId: M:EA.Core.ILearningManager`1.Init
+  fullName: EA.Core.ILearningManager<T>.Init()
+  fullName.vb: EA.Core.ILearningManager(Of T).Init()
+  nameWithType: ILearningManager<T>.Init()
+  nameWithType.vb: ILearningManager(Of T).Init()
+- uid: EA.Core.ILearningManager`1.Init*
+  name: Init
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Init_
+  commentId: Overload:EA.Core.ILearningManager`1.Init
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.Init
+  fullName.vb: EA.Core.ILearningManager(Of T).Init
+  nameWithType: ILearningManager<T>.Init
+  nameWithType.vb: ILearningManager(Of T).Init
+- uid: EA.Core.ILearningManager`1.Logger
+  name: Logger
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Logger
+  commentId: P:EA.Core.ILearningManager`1.Logger
+  fullName: EA.Core.ILearningManager<T>.Logger
+  fullName.vb: EA.Core.ILearningManager(Of T).Logger
+  nameWithType: ILearningManager<T>.Logger
+  nameWithType.vb: ILearningManager(Of T).Logger
+- uid: EA.Core.ILearningManager`1.Logger*
+  name: Logger
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Logger_
+  commentId: Overload:EA.Core.ILearningManager`1.Logger
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.Logger
+  fullName.vb: EA.Core.ILearningManager(Of T).Logger
+  nameWithType: ILearningManager<T>.Logger
+  nameWithType.vb: ILearningManager(Of T).Logger
+- uid: EA.Core.ILearningManager`1.Mutator
+  name: Mutator
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Mutator
+  commentId: P:EA.Core.ILearningManager`1.Mutator
+  fullName: EA.Core.ILearningManager<T>.Mutator
+  fullName.vb: EA.Core.ILearningManager(Of T).Mutator
+  nameWithType: ILearningManager<T>.Mutator
+  nameWithType.vb: ILearningManager(Of T).Mutator
+- uid: EA.Core.ILearningManager`1.Mutator*
+  name: Mutator
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Mutator_
+  commentId: Overload:EA.Core.ILearningManager`1.Mutator
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.Mutator
+  fullName.vb: EA.Core.ILearningManager(Of T).Mutator
+  nameWithType: ILearningManager<T>.Mutator
+  nameWithType.vb: ILearningManager(Of T).Mutator
+- uid: EA.Core.ILearningManager`1.NextEpoch
+  name: NextEpoch()
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_NextEpoch
+  commentId: M:EA.Core.ILearningManager`1.NextEpoch
+  fullName: EA.Core.ILearningManager<T>.NextEpoch()
+  fullName.vb: EA.Core.ILearningManager(Of T).NextEpoch()
+  nameWithType: ILearningManager<T>.NextEpoch()
+  nameWithType.vb: ILearningManager(Of T).NextEpoch()
+- uid: EA.Core.ILearningManager`1.NextEpoch*
+  name: NextEpoch
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_NextEpoch_
+  commentId: Overload:EA.Core.ILearningManager`1.NextEpoch
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.NextEpoch
+  fullName.vb: EA.Core.ILearningManager(Of T).NextEpoch
+  nameWithType: ILearningManager<T>.NextEpoch
+  nameWithType.vb: ILearningManager(Of T).NextEpoch
+- uid: EA.Core.ILearningManager`1.PopulationSize
+  name: PopulationSize
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_PopulationSize
+  commentId: P:EA.Core.ILearningManager`1.PopulationSize
+  fullName: EA.Core.ILearningManager<T>.PopulationSize
+  fullName.vb: EA.Core.ILearningManager(Of T).PopulationSize
+  nameWithType: ILearningManager<T>.PopulationSize
+  nameWithType.vb: ILearningManager(Of T).PopulationSize
+- uid: EA.Core.ILearningManager`1.PopulationSize*
+  name: PopulationSize
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_PopulationSize_
+  commentId: Overload:EA.Core.ILearningManager`1.PopulationSize
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.PopulationSize
+  fullName.vb: EA.Core.ILearningManager(Of T).PopulationSize
+  nameWithType: ILearningManager<T>.PopulationSize
+  nameWithType.vb: ILearningManager(Of T).PopulationSize
+- uid: EA.Core.ILearningManager`1.Selector
+  name: Selector
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Selector
+  commentId: P:EA.Core.ILearningManager`1.Selector
+  fullName: EA.Core.ILearningManager<T>.Selector
+  fullName.vb: EA.Core.ILearningManager(Of T).Selector
+  nameWithType: ILearningManager<T>.Selector
+  nameWithType.vb: ILearningManager(Of T).Selector
+- uid: EA.Core.ILearningManager`1.Selector*
+  name: Selector
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_Selector_
+  commentId: Overload:EA.Core.ILearningManager`1.Selector
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.Selector
+  fullName.vb: EA.Core.ILearningManager(Of T).Selector
+  nameWithType: ILearningManager<T>.Selector
+  nameWithType.vb: ILearningManager(Of T).Selector
+- uid: EA.Core.ILearningManager`1.SpecimenFactory
+  name: SpecimenFactory
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_SpecimenFactory
+  commentId: P:EA.Core.ILearningManager`1.SpecimenFactory
+  fullName: EA.Core.ILearningManager<T>.SpecimenFactory
+  fullName.vb: EA.Core.ILearningManager(Of T).SpecimenFactory
+  nameWithType: ILearningManager<T>.SpecimenFactory
+  nameWithType.vb: ILearningManager(Of T).SpecimenFactory
+- uid: EA.Core.ILearningManager`1.SpecimenFactory*
+  name: SpecimenFactory
+  href: api/EA.Core.ILearningManager-1.html#EA_Core_ILearningManager_1_SpecimenFactory_
+  commentId: Overload:EA.Core.ILearningManager`1.SpecimenFactory
+  isSpec: "True"
+  fullName: EA.Core.ILearningManager<T>.SpecimenFactory
+  fullName.vb: EA.Core.ILearningManager(Of T).SpecimenFactory
+  nameWithType: ILearningManager<T>.SpecimenFactory
+  nameWithType.vb: ILearningManager(Of T).SpecimenFactory
+- uid: EA.Core.ILogger`1
+  name: ILogger<T>
+  href: api/EA.Core.ILogger-1.html
+  commentId: T:EA.Core.ILogger`1
+  name.vb: ILogger(Of T)
+  fullName: EA.Core.ILogger<T>
+  fullName.vb: EA.Core.ILogger(Of T)
+  nameWithType: ILogger<T>
+  nameWithType.vb: ILogger(Of T)
+- uid: EA.Core.ILogger`1.Log(System.Int32,System.Collections.Generic.IList{`0})
+  name: Log(Int32, IList<T>)
+  href: api/EA.Core.ILogger-1.html#EA_Core_ILogger_1_Log_System_Int32_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.ILogger`1.Log(System.Int32,System.Collections.Generic.IList{`0})
+  name.vb: Log(Int32, IList(Of T))
+  fullName: EA.Core.ILogger<T>.Log(System.Int32, System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.ILogger(Of T).Log(System.Int32, System.Collections.Generic.IList(Of T))
+  nameWithType: ILogger<T>.Log(Int32, IList<T>)
+  nameWithType.vb: ILogger(Of T).Log(Int32, IList(Of T))
+- uid: EA.Core.ILogger`1.Log*
+  name: Log
+  href: api/EA.Core.ILogger-1.html#EA_Core_ILogger_1_Log_
+  commentId: Overload:EA.Core.ILogger`1.Log
+  isSpec: "True"
+  fullName: EA.Core.ILogger<T>.Log
+  fullName.vb: EA.Core.ILogger(Of T).Log
+  nameWithType: ILogger<T>.Log
+  nameWithType.vb: ILogger(Of T).Log
+- uid: EA.Core.IMutator`1
+  name: IMutator<T>
+  href: api/EA.Core.IMutator-1.html
+  commentId: T:EA.Core.IMutator`1
+  name.vb: IMutator(Of T)
+  fullName: EA.Core.IMutator<T>
+  fullName.vb: EA.Core.IMutator(Of T)
+  nameWithType: IMutator<T>
+  nameWithType.vb: IMutator(Of T)
+- uid: EA.Core.IMutator`1.Mutate(System.Collections.Generic.IList{`0})
+  name: Mutate(IList<T>)
+  href: api/EA.Core.IMutator-1.html#EA_Core_IMutator_1_Mutate_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.IMutator`1.Mutate(System.Collections.Generic.IList{`0})
+  name.vb: Mutate(IList(Of T))
+  fullName: EA.Core.IMutator<T>.Mutate(System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.IMutator(Of T).Mutate(System.Collections.Generic.IList(Of T))
+  nameWithType: IMutator<T>.Mutate(IList<T>)
+  nameWithType.vb: IMutator(Of T).Mutate(IList(Of T))
+- uid: EA.Core.IMutator`1.Mutate*
+  name: Mutate
+  href: api/EA.Core.IMutator-1.html#EA_Core_IMutator_1_Mutate_
+  commentId: Overload:EA.Core.IMutator`1.Mutate
+  isSpec: "True"
+  fullName: EA.Core.IMutator<T>.Mutate
+  fullName.vb: EA.Core.IMutator(Of T).Mutate
+  nameWithType: IMutator<T>.Mutate
+  nameWithType.vb: IMutator(Of T).Mutate
+- uid: EA.Core.IMutator`1.Probability
+  name: Probability
+  href: api/EA.Core.IMutator-1.html#EA_Core_IMutator_1_Probability
+  commentId: P:EA.Core.IMutator`1.Probability
+  fullName: EA.Core.IMutator<T>.Probability
+  fullName.vb: EA.Core.IMutator(Of T).Probability
+  nameWithType: IMutator<T>.Probability
+  nameWithType.vb: IMutator(Of T).Probability
+- uid: EA.Core.IMutator`1.Probability*
+  name: Probability
+  href: api/EA.Core.IMutator-1.html#EA_Core_IMutator_1_Probability_
+  commentId: Overload:EA.Core.IMutator`1.Probability
+  isSpec: "True"
+  fullName: EA.Core.IMutator<T>.Probability
+  fullName.vb: EA.Core.IMutator(Of T).Probability
+  nameWithType: IMutator<T>.Probability
+  nameWithType.vb: IMutator(Of T).Probability
+- uid: EA.Core.ISelector`1
+  name: ISelector<T>
+  href: api/EA.Core.ISelector-1.html
+  commentId: T:EA.Core.ISelector`1
+  name.vb: ISelector(Of T)
+  fullName: EA.Core.ISelector<T>
+  fullName.vb: EA.Core.ISelector(Of T)
+  nameWithType: ISelector<T>
+  nameWithType.vb: ISelector(Of T)
+- uid: EA.Core.ISelector`1.Select(System.Collections.Generic.IList{`0})
+  name: Select(IList<T>)
+  href: api/EA.Core.ISelector-1.html#EA_Core_ISelector_1_Select_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.ISelector`1.Select(System.Collections.Generic.IList{`0})
+  name.vb: Select(IList(Of T))
+  fullName: EA.Core.ISelector<T>.Select(System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.ISelector(Of T).Select(System.Collections.Generic.IList(Of T))
+  nameWithType: ISelector<T>.Select(IList<T>)
+  nameWithType.vb: ISelector(Of T).Select(IList(Of T))
+- uid: EA.Core.ISelector`1.Select*
+  name: Select
+  href: api/EA.Core.ISelector-1.html#EA_Core_ISelector_1_Select_
+  commentId: Overload:EA.Core.ISelector`1.Select
+  isSpec: "True"
+  fullName: EA.Core.ISelector<T>.Select
+  fullName.vb: EA.Core.ISelector(Of T).Select
+  nameWithType: ISelector<T>.Select
+  nameWithType.vb: ISelector(Of T).Select
+- uid: EA.Core.ISpecimen`1
+  name: ISpecimen<T>
+  href: api/EA.Core.ISpecimen-1.html
+  commentId: T:EA.Core.ISpecimen`1
+  name.vb: ISpecimen(Of T)
+  fullName: EA.Core.ISpecimen<T>
+  fullName.vb: EA.Core.ISpecimen(Of T)
+  nameWithType: ISpecimen<T>
+  nameWithType.vb: ISpecimen(Of T)
+- uid: EA.Core.ISpecimen`1.Clone
+  name: Clone()
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Clone
+  commentId: M:EA.Core.ISpecimen`1.Clone
+  fullName: EA.Core.ISpecimen<T>.Clone()
+  fullName.vb: EA.Core.ISpecimen(Of T).Clone()
+  nameWithType: ISpecimen<T>.Clone()
+  nameWithType.vb: ISpecimen(Of T).Clone()
+- uid: EA.Core.ISpecimen`1.Clone*
+  name: Clone
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Clone_
+  commentId: Overload:EA.Core.ISpecimen`1.Clone
+  isSpec: "True"
+  fullName: EA.Core.ISpecimen<T>.Clone
+  fullName.vb: EA.Core.ISpecimen(Of T).Clone
+  nameWithType: ISpecimen<T>.Clone
+  nameWithType.vb: ISpecimen(Of T).Clone
+- uid: EA.Core.ISpecimen`1.Evaluate
+  name: Evaluate()
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Evaluate
+  commentId: M:EA.Core.ISpecimen`1.Evaluate
+  fullName: EA.Core.ISpecimen<T>.Evaluate()
+  fullName.vb: EA.Core.ISpecimen(Of T).Evaluate()
+  nameWithType: ISpecimen<T>.Evaluate()
+  nameWithType.vb: ISpecimen(Of T).Evaluate()
+- uid: EA.Core.ISpecimen`1.Evaluate*
+  name: Evaluate
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Evaluate_
+  commentId: Overload:EA.Core.ISpecimen`1.Evaluate
+  isSpec: "True"
+  fullName: EA.Core.ISpecimen<T>.Evaluate
+  fullName.vb: EA.Core.ISpecimen(Of T).Evaluate
+  nameWithType: ISpecimen<T>.Evaluate
+  nameWithType.vb: ISpecimen(Of T).Evaluate
+- uid: EA.Core.ISpecimen`1.Fix
+  name: Fix()
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Fix
+  commentId: M:EA.Core.ISpecimen`1.Fix
+  fullName: EA.Core.ISpecimen<T>.Fix()
+  fullName.vb: EA.Core.ISpecimen(Of T).Fix()
+  nameWithType: ISpecimen<T>.Fix()
+  nameWithType.vb: ISpecimen(Of T).Fix()
+- uid: EA.Core.ISpecimen`1.Fix*
+  name: Fix
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Fix_
+  commentId: Overload:EA.Core.ISpecimen`1.Fix
+  isSpec: "True"
+  fullName: EA.Core.ISpecimen<T>.Fix
+  fullName.vb: EA.Core.ISpecimen(Of T).Fix
+  nameWithType: ISpecimen<T>.Fix
+  nameWithType.vb: ISpecimen(Of T).Fix
+- uid: EA.Core.ISpecimen`1.Init
+  name: Init()
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Init
+  commentId: M:EA.Core.ISpecimen`1.Init
+  fullName: EA.Core.ISpecimen<T>.Init()
+  fullName.vb: EA.Core.ISpecimen(Of T).Init()
+  nameWithType: ISpecimen<T>.Init()
+  nameWithType.vb: ISpecimen(Of T).Init()
+- uid: EA.Core.ISpecimen`1.Init*
+  name: Init
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_Init_
+  commentId: Overload:EA.Core.ISpecimen`1.Init
+  isSpec: "True"
+  fullName: EA.Core.ISpecimen<T>.Init
+  fullName.vb: EA.Core.ISpecimen(Of T).Init
+  nameWithType: ISpecimen<T>.Init
+  nameWithType.vb: ISpecimen(Of T).Init
+- uid: EA.Core.ISpecimen`1.SpecimenInitialization
+  name: SpecimenInitialization
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_SpecimenInitialization
+  commentId: P:EA.Core.ISpecimen`1.SpecimenInitialization
+  fullName: EA.Core.ISpecimen<T>.SpecimenInitialization
+  fullName.vb: EA.Core.ISpecimen(Of T).SpecimenInitialization
+  nameWithType: ISpecimen<T>.SpecimenInitialization
+  nameWithType.vb: ISpecimen(Of T).SpecimenInitialization
+- uid: EA.Core.ISpecimen`1.SpecimenInitialization*
+  name: SpecimenInitialization
+  href: api/EA.Core.ISpecimen-1.html#EA_Core_ISpecimen_1_SpecimenInitialization_
+  commentId: Overload:EA.Core.ISpecimen`1.SpecimenInitialization
+  isSpec: "True"
+  fullName: EA.Core.ISpecimen<T>.SpecimenInitialization
+  fullName.vb: EA.Core.ISpecimen(Of T).SpecimenInitialization
+  nameWithType: ISpecimen<T>.SpecimenInitialization
+  nameWithType.vb: ISpecimen(Of T).SpecimenInitialization
+- uid: EA.Core.ISpecimenFactory`1
+  name: ISpecimenFactory<T>
+  href: api/EA.Core.ISpecimenFactory-1.html
+  commentId: T:EA.Core.ISpecimenFactory`1
+  name.vb: ISpecimenFactory(Of T)
+  fullName: EA.Core.ISpecimenFactory<T>
+  fullName.vb: EA.Core.ISpecimenFactory(Of T)
+  nameWithType: ISpecimenFactory<T>
+  nameWithType.vb: ISpecimenFactory(Of T)
+- uid: EA.Core.ISpecimenFactory`1.CreateSpecimen
+  name: CreateSpecimen()
+  href: api/EA.Core.ISpecimenFactory-1.html#EA_Core_ISpecimenFactory_1_CreateSpecimen
+  commentId: M:EA.Core.ISpecimenFactory`1.CreateSpecimen
+  fullName: EA.Core.ISpecimenFactory<T>.CreateSpecimen()
+  fullName.vb: EA.Core.ISpecimenFactory(Of T).CreateSpecimen()
+  nameWithType: ISpecimenFactory<T>.CreateSpecimen()
+  nameWithType.vb: ISpecimenFactory(Of T).CreateSpecimen()
+- uid: EA.Core.ISpecimenFactory`1.CreateSpecimen*
+  name: CreateSpecimen
+  href: api/EA.Core.ISpecimenFactory-1.html#EA_Core_ISpecimenFactory_1_CreateSpecimen_
+  commentId: Overload:EA.Core.ISpecimenFactory`1.CreateSpecimen
+  isSpec: "True"
+  fullName: EA.Core.ISpecimenFactory<T>.CreateSpecimen
+  fullName.vb: EA.Core.ISpecimenFactory(Of T).CreateSpecimen
+  nameWithType: ISpecimenFactory<T>.CreateSpecimen
+  nameWithType.vb: ISpecimenFactory(Of T).CreateSpecimen
+- uid: EA.Core.ISpecimenInitializator`1
+  name: ISpecimenInitializator<T>
+  href: api/EA.Core.ISpecimenInitializator-1.html
+  commentId: T:EA.Core.ISpecimenInitializator`1
+  name.vb: ISpecimenInitializator(Of T)
+  fullName: EA.Core.ISpecimenInitializator<T>
+  fullName.vb: EA.Core.ISpecimenInitializator(Of T)
+  nameWithType: ISpecimenInitializator<T>
+  nameWithType.vb: ISpecimenInitializator(Of T)
+- uid: EA.Core.ISpecimenInitializator`1.Initialize(`0)
+  name: Initialize(T)
+  href: api/EA.Core.ISpecimenInitializator-1.html#EA_Core_ISpecimenInitializator_1_Initialize__0_
+  commentId: M:EA.Core.ISpecimenInitializator`1.Initialize(`0)
+  fullName: EA.Core.ISpecimenInitializator<T>.Initialize(T)
+  fullName.vb: EA.Core.ISpecimenInitializator(Of T).Initialize(T)
+  nameWithType: ISpecimenInitializator<T>.Initialize(T)
+  nameWithType.vb: ISpecimenInitializator(Of T).Initialize(T)
+- uid: EA.Core.ISpecimenInitializator`1.Initialize*
+  name: Initialize
+  href: api/EA.Core.ISpecimenInitializator-1.html#EA_Core_ISpecimenInitializator_1_Initialize_
+  commentId: Overload:EA.Core.ISpecimenInitializator`1.Initialize
+  isSpec: "True"
+  fullName: EA.Core.ISpecimenInitializator<T>.Initialize
+  fullName.vb: EA.Core.ISpecimenInitializator(Of T).Initialize
+  nameWithType: ISpecimenInitializator<T>.Initialize
+  nameWithType.vb: ISpecimenInitializator(Of T).Initialize
+- uid: EA.Core.LearningManagerBase`1
+  name: LearningManagerBase<T>
+  href: api/EA.Core.LearningManagerBase-1.html
+  commentId: T:EA.Core.LearningManagerBase`1
+  name.vb: LearningManagerBase(Of T)
+  fullName: EA.Core.LearningManagerBase<T>
+  fullName.vb: EA.Core.LearningManagerBase(Of T)
+  nameWithType: LearningManagerBase<T>
+  nameWithType.vb: LearningManagerBase(Of T)
+- uid: EA.Core.LearningManagerBase`1.#ctor(EA.Core.IMutator{`0},EA.Core.ICrossover{`0},EA.Core.ISelector{`0},EA.Core.ISpecimenFactory{`0},System.UInt32,EA.Core.ILogger{`0})
+  name: LearningManagerBase(IMutator<T>, ICrossover<T>, ISelector<T>, ISpecimenFactory<T>, UInt32, ILogger<T>)
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1__ctor_EA_Core_IMutator__0__EA_Core_ICrossover__0__EA_Core_ISelector__0__EA_Core_ISpecimenFactory__0__System_UInt32_EA_Core_ILogger__0__
+  commentId: M:EA.Core.LearningManagerBase`1.#ctor(EA.Core.IMutator{`0},EA.Core.ICrossover{`0},EA.Core.ISelector{`0},EA.Core.ISpecimenFactory{`0},System.UInt32,EA.Core.ILogger{`0})
+  name.vb: LearningManagerBase(IMutator(Of T), ICrossover(Of T), ISelector(Of T), ISpecimenFactory(Of T), UInt32, ILogger(Of T))
+  fullName: EA.Core.LearningManagerBase<T>.LearningManagerBase(EA.Core.IMutator<T>, EA.Core.ICrossover<T>, EA.Core.ISelector<T>, EA.Core.ISpecimenFactory<T>, System.UInt32, EA.Core.ILogger<T>)
+  fullName.vb: EA.Core.LearningManagerBase(Of T).LearningManagerBase(EA.Core.IMutator(Of T), EA.Core.ICrossover(Of T), EA.Core.ISelector(Of T), EA.Core.ISpecimenFactory(Of T), System.UInt32, EA.Core.ILogger(Of T))
+  nameWithType: LearningManagerBase<T>.LearningManagerBase(IMutator<T>, ICrossover<T>, ISelector<T>, ISpecimenFactory<T>, UInt32, ILogger<T>)
+  nameWithType.vb: LearningManagerBase(Of T).LearningManagerBase(IMutator(Of T), ICrossover(Of T), ISelector(Of T), ISpecimenFactory(Of T), UInt32, ILogger(Of T))
+- uid: EA.Core.LearningManagerBase`1.#ctor*
+  name: LearningManagerBase
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1__ctor_
+  commentId: Overload:EA.Core.LearningManagerBase`1.#ctor
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.LearningManagerBase
+  fullName.vb: EA.Core.LearningManagerBase(Of T).LearningManagerBase
+  nameWithType: LearningManagerBase<T>.LearningManagerBase
+  nameWithType.vb: LearningManagerBase(Of T).LearningManagerBase
+- uid: EA.Core.LearningManagerBase`1.Crossover
+  name: Crossover
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Crossover
+  commentId: P:EA.Core.LearningManagerBase`1.Crossover
+  fullName: EA.Core.LearningManagerBase<T>.Crossover
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Crossover
+  nameWithType: LearningManagerBase<T>.Crossover
+  nameWithType.vb: LearningManagerBase(Of T).Crossover
+- uid: EA.Core.LearningManagerBase`1.Crossover*
+  name: Crossover
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Crossover_
+  commentId: Overload:EA.Core.LearningManagerBase`1.Crossover
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.Crossover
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Crossover
+  nameWithType: LearningManagerBase<T>.Crossover
+  nameWithType.vb: LearningManagerBase(Of T).Crossover
+- uid: EA.Core.LearningManagerBase`1.CurrentEpoch
+  name: CurrentEpoch
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_CurrentEpoch
+  commentId: P:EA.Core.LearningManagerBase`1.CurrentEpoch
+  fullName: EA.Core.LearningManagerBase<T>.CurrentEpoch
+  fullName.vb: EA.Core.LearningManagerBase(Of T).CurrentEpoch
+  nameWithType: LearningManagerBase<T>.CurrentEpoch
+  nameWithType.vb: LearningManagerBase(Of T).CurrentEpoch
+- uid: EA.Core.LearningManagerBase`1.CurrentEpoch*
+  name: CurrentEpoch
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_CurrentEpoch_
+  commentId: Overload:EA.Core.LearningManagerBase`1.CurrentEpoch
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.CurrentEpoch
+  fullName.vb: EA.Core.LearningManagerBase(Of T).CurrentEpoch
+  nameWithType: LearningManagerBase<T>.CurrentEpoch
+  nameWithType.vb: LearningManagerBase(Of T).CurrentEpoch
+- uid: EA.Core.LearningManagerBase`1.CurrentEpochSpecimens
+  name: CurrentEpochSpecimens
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_CurrentEpochSpecimens
+  commentId: P:EA.Core.LearningManagerBase`1.CurrentEpochSpecimens
+  fullName: EA.Core.LearningManagerBase<T>.CurrentEpochSpecimens
+  fullName.vb: EA.Core.LearningManagerBase(Of T).CurrentEpochSpecimens
+  nameWithType: LearningManagerBase<T>.CurrentEpochSpecimens
+  nameWithType.vb: LearningManagerBase(Of T).CurrentEpochSpecimens
+- uid: EA.Core.LearningManagerBase`1.CurrentEpochSpecimens*
+  name: CurrentEpochSpecimens
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_CurrentEpochSpecimens_
+  commentId: Overload:EA.Core.LearningManagerBase`1.CurrentEpochSpecimens
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.CurrentEpochSpecimens
+  fullName.vb: EA.Core.LearningManagerBase(Of T).CurrentEpochSpecimens
+  nameWithType: LearningManagerBase<T>.CurrentEpochSpecimens
+  nameWithType.vb: LearningManagerBase(Of T).CurrentEpochSpecimens
+- uid: EA.Core.LearningManagerBase`1.Init
+  name: Init()
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Init
+  commentId: M:EA.Core.LearningManagerBase`1.Init
+  fullName: EA.Core.LearningManagerBase<T>.Init()
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Init()
+  nameWithType: LearningManagerBase<T>.Init()
+  nameWithType.vb: LearningManagerBase(Of T).Init()
+- uid: EA.Core.LearningManagerBase`1.Init*
+  name: Init
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Init_
+  commentId: Overload:EA.Core.LearningManagerBase`1.Init
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.Init
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Init
+  nameWithType: LearningManagerBase<T>.Init
+  nameWithType.vb: LearningManagerBase(Of T).Init
+- uid: EA.Core.LearningManagerBase`1.Logger
+  name: Logger
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Logger
+  commentId: P:EA.Core.LearningManagerBase`1.Logger
+  fullName: EA.Core.LearningManagerBase<T>.Logger
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Logger
+  nameWithType: LearningManagerBase<T>.Logger
+  nameWithType.vb: LearningManagerBase(Of T).Logger
+- uid: EA.Core.LearningManagerBase`1.Logger*
+  name: Logger
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Logger_
+  commentId: Overload:EA.Core.LearningManagerBase`1.Logger
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.Logger
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Logger
+  nameWithType: LearningManagerBase<T>.Logger
+  nameWithType.vb: LearningManagerBase(Of T).Logger
+- uid: EA.Core.LearningManagerBase`1.Mutator
+  name: Mutator
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Mutator
+  commentId: P:EA.Core.LearningManagerBase`1.Mutator
+  fullName: EA.Core.LearningManagerBase<T>.Mutator
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Mutator
+  nameWithType: LearningManagerBase<T>.Mutator
+  nameWithType.vb: LearningManagerBase(Of T).Mutator
+- uid: EA.Core.LearningManagerBase`1.Mutator*
+  name: Mutator
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Mutator_
+  commentId: Overload:EA.Core.LearningManagerBase`1.Mutator
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.Mutator
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Mutator
+  nameWithType: LearningManagerBase<T>.Mutator
+  nameWithType.vb: LearningManagerBase(Of T).Mutator
+- uid: EA.Core.LearningManagerBase`1.NextEpoch
+  name: NextEpoch()
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_NextEpoch
+  commentId: M:EA.Core.LearningManagerBase`1.NextEpoch
+  fullName: EA.Core.LearningManagerBase<T>.NextEpoch()
+  fullName.vb: EA.Core.LearningManagerBase(Of T).NextEpoch()
+  nameWithType: LearningManagerBase<T>.NextEpoch()
+  nameWithType.vb: LearningManagerBase(Of T).NextEpoch()
+- uid: EA.Core.LearningManagerBase`1.NextEpoch*
+  name: NextEpoch
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_NextEpoch_
+  commentId: Overload:EA.Core.LearningManagerBase`1.NextEpoch
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.NextEpoch
+  fullName.vb: EA.Core.LearningManagerBase(Of T).NextEpoch
+  nameWithType: LearningManagerBase<T>.NextEpoch
+  nameWithType.vb: LearningManagerBase(Of T).NextEpoch
+- uid: EA.Core.LearningManagerBase`1.PopulationSize
+  name: PopulationSize
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_PopulationSize
+  commentId: P:EA.Core.LearningManagerBase`1.PopulationSize
+  fullName: EA.Core.LearningManagerBase<T>.PopulationSize
+  fullName.vb: EA.Core.LearningManagerBase(Of T).PopulationSize
+  nameWithType: LearningManagerBase<T>.PopulationSize
+  nameWithType.vb: LearningManagerBase(Of T).PopulationSize
+- uid: EA.Core.LearningManagerBase`1.PopulationSize*
+  name: PopulationSize
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_PopulationSize_
+  commentId: Overload:EA.Core.LearningManagerBase`1.PopulationSize
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.PopulationSize
+  fullName.vb: EA.Core.LearningManagerBase(Of T).PopulationSize
+  nameWithType: LearningManagerBase<T>.PopulationSize
+  nameWithType.vb: LearningManagerBase(Of T).PopulationSize
+- uid: EA.Core.LearningManagerBase`1.Selector
+  name: Selector
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Selector
+  commentId: P:EA.Core.LearningManagerBase`1.Selector
+  fullName: EA.Core.LearningManagerBase<T>.Selector
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Selector
+  nameWithType: LearningManagerBase<T>.Selector
+  nameWithType.vb: LearningManagerBase(Of T).Selector
+- uid: EA.Core.LearningManagerBase`1.Selector*
+  name: Selector
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_Selector_
+  commentId: Overload:EA.Core.LearningManagerBase`1.Selector
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.Selector
+  fullName.vb: EA.Core.LearningManagerBase(Of T).Selector
+  nameWithType: LearningManagerBase<T>.Selector
+  nameWithType.vb: LearningManagerBase(Of T).Selector
+- uid: EA.Core.LearningManagerBase`1.SpecimenFactory
+  name: SpecimenFactory
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_SpecimenFactory
+  commentId: P:EA.Core.LearningManagerBase`1.SpecimenFactory
+  fullName: EA.Core.LearningManagerBase<T>.SpecimenFactory
+  fullName.vb: EA.Core.LearningManagerBase(Of T).SpecimenFactory
+  nameWithType: LearningManagerBase<T>.SpecimenFactory
+  nameWithType.vb: LearningManagerBase(Of T).SpecimenFactory
+- uid: EA.Core.LearningManagerBase`1.SpecimenFactory*
+  name: SpecimenFactory
+  href: api/EA.Core.LearningManagerBase-1.html#EA_Core_LearningManagerBase_1_SpecimenFactory_
+  commentId: Overload:EA.Core.LearningManagerBase`1.SpecimenFactory
+  isSpec: "True"
+  fullName: EA.Core.LearningManagerBase<T>.SpecimenFactory
+  fullName.vb: EA.Core.LearningManagerBase(Of T).SpecimenFactory
+  nameWithType: LearningManagerBase<T>.SpecimenFactory
+  nameWithType.vb: LearningManagerBase(Of T).SpecimenFactory
+- uid: EA.Core.Loggers.CSV
+  name: EA.Core.Loggers.CSV
+  href: api/EA.Core.Loggers.CSV.html
+  commentId: N:EA.Core.Loggers.CSV
+  fullName: EA.Core.Loggers.CSV
+  nameWithType: EA.Core.Loggers.CSV
+- uid: EA.Core.Loggers.CSV.CSVLogger`2
+  name: CSVLogger<T, Record>
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html
+  commentId: T:EA.Core.Loggers.CSV.CSVLogger`2
+  name.vb: CSVLogger(Of T, Record)
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record)
+  nameWithType: CSVLogger<T, Record>
+  nameWithType.vb: CSVLogger(Of T, Record)
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.#ctor(System.String)
+  name: CSVLogger(String)
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2__ctor_System_String_
+  commentId: M:EA.Core.Loggers.CSV.CSVLogger`2.#ctor(System.String)
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.CSVLogger(System.String)
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).CSVLogger(System.String)
+  nameWithType: CSVLogger<T, Record>.CSVLogger(String)
+  nameWithType.vb: CSVLogger(Of T, Record).CSVLogger(String)
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.#ctor*
+  name: CSVLogger
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2__ctor_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.#ctor
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.CSVLogger
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).CSVLogger
+  nameWithType: CSVLogger<T, Record>.CSVLogger
+  nameWithType.vb: CSVLogger(Of T, Record).CSVLogger
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.CancellationTokenSource
+  name: CancellationTokenSource
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_CancellationTokenSource
+  commentId: P:EA.Core.Loggers.CSV.CSVLogger`2.CancellationTokenSource
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.CancellationTokenSource
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).CancellationTokenSource
+  nameWithType: CSVLogger<T, Record>.CancellationTokenSource
+  nameWithType.vb: CSVLogger(Of T, Record).CancellationTokenSource
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.CancellationTokenSource*
+  name: CancellationTokenSource
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_CancellationTokenSource_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.CancellationTokenSource
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.CancellationTokenSource
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).CancellationTokenSource
+  nameWithType: CSVLogger<T, Record>.CancellationTokenSource
+  nameWithType.vb: CSVLogger(Of T, Record).CancellationTokenSource
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.Dispose
+  name: Dispose()
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_Dispose
+  commentId: M:EA.Core.Loggers.CSV.CSVLogger`2.Dispose
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.Dispose()
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).Dispose()
+  nameWithType: CSVLogger<T, Record>.Dispose()
+  nameWithType.vb: CSVLogger(Of T, Record).Dispose()
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.Dispose*
+  name: Dispose
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_Dispose_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.Dispose
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.Dispose
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).Dispose
+  nameWithType: CSVLogger<T, Record>.Dispose
+  nameWithType.vb: CSVLogger(Of T, Record).Dispose
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.FilePath
+  name: FilePath
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_FilePath
+  commentId: P:EA.Core.Loggers.CSV.CSVLogger`2.FilePath
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.FilePath
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).FilePath
+  nameWithType: CSVLogger<T, Record>.FilePath
+  nameWithType.vb: CSVLogger(Of T, Record).FilePath
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.FilePath*
+  name: FilePath
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_FilePath_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.FilePath
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.FilePath
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).FilePath
+  nameWithType: CSVLogger<T, Record>.FilePath
+  nameWithType.vb: CSVLogger(Of T, Record).FilePath
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.Log(System.Int32,System.Collections.Generic.IList{`0})
+  name: Log(Int32, IList<T>)
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_Log_System_Int32_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.Loggers.CSV.CSVLogger`2.Log(System.Int32,System.Collections.Generic.IList{`0})
+  name.vb: Log(Int32, IList(Of T))
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.Log(System.Int32, System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).Log(System.Int32, System.Collections.Generic.IList(Of T))
+  nameWithType: CSVLogger<T, Record>.Log(Int32, IList<T>)
+  nameWithType.vb: CSVLogger(Of T, Record).Log(Int32, IList(Of T))
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.Log*
+  name: Log
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_Log_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.Log
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.Log
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).Log
+  nameWithType: CSVLogger<T, Record>.Log
+  nameWithType.vb: CSVLogger(Of T, Record).Log
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.LoggerTasks
+  name: LoggerTasks
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_LoggerTasks
+  commentId: P:EA.Core.Loggers.CSV.CSVLogger`2.LoggerTasks
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.LoggerTasks
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).LoggerTasks
+  nameWithType: CSVLogger<T, Record>.LoggerTasks
+  nameWithType.vb: CSVLogger(Of T, Record).LoggerTasks
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.LoggerTasks*
+  name: LoggerTasks
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_LoggerTasks_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.LoggerTasks
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.LoggerTasks
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).LoggerTasks
+  nameWithType: CSVLogger<T, Record>.LoggerTasks
+  nameWithType.vb: CSVLogger(Of T, Record).LoggerTasks
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.LoggerThread
+  name: LoggerThread
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_LoggerThread
+  commentId: P:EA.Core.Loggers.CSV.CSVLogger`2.LoggerThread
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.LoggerThread
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).LoggerThread
+  nameWithType: CSVLogger<T, Record>.LoggerThread
+  nameWithType.vb: CSVLogger(Of T, Record).LoggerThread
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.LoggerThread*
+  name: LoggerThread
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_LoggerThread_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.LoggerThread
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.LoggerThread
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).LoggerThread
+  nameWithType: CSVLogger<T, Record>.LoggerThread
+  nameWithType.vb: CSVLogger(Of T, Record).LoggerThread
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.RunLogger
+  name: RunLogger()
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_RunLogger
+  commentId: M:EA.Core.Loggers.CSV.CSVLogger`2.RunLogger
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.RunLogger()
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).RunLogger()
+  nameWithType: CSVLogger<T, Record>.RunLogger()
+  nameWithType.vb: CSVLogger(Of T, Record).RunLogger()
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.RunLogger*
+  name: RunLogger
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_RunLogger_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.RunLogger
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.RunLogger
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).RunLogger
+  nameWithType: CSVLogger<T, Record>.RunLogger
+  nameWithType.vb: CSVLogger(Of T, Record).RunLogger
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.Wait
+  name: Wait()
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_Wait
+  commentId: M:EA.Core.Loggers.CSV.CSVLogger`2.Wait
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.Wait()
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).Wait()
+  nameWithType: CSVLogger<T, Record>.Wait()
+  nameWithType.vb: CSVLogger(Of T, Record).Wait()
+- uid: EA.Core.Loggers.CSV.CSVLogger`2.Wait*
+  name: Wait
+  href: api/EA.Core.Loggers.CSV.CSVLogger-2.html#EA_Core_Loggers_CSV_CSVLogger_2_Wait_
+  commentId: Overload:EA.Core.Loggers.CSV.CSVLogger`2.Wait
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.CSVLogger<T, Record>.Wait
+  fullName.vb: EA.Core.Loggers.CSV.CSVLogger(Of T, Record).Wait
+  nameWithType: CSVLogger<T, Record>.Wait
+  nameWithType.vb: CSVLogger(Of T, Record).Wait
+- uid: EA.Core.Loggers.CSV.IRecord`1
+  name: IRecord<T>
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html
+  commentId: T:EA.Core.Loggers.CSV.IRecord`1
+  name.vb: IRecord(Of T)
+  fullName: EA.Core.Loggers.CSV.IRecord<T>
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T)
+  nameWithType: IRecord<T>
+  nameWithType.vb: IRecord(Of T)
+- uid: EA.Core.Loggers.CSV.IRecord`1.ApplyData(System.Int32,System.Int32,`0)
+  name: ApplyData(Int32, Int32, T)
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_ApplyData_System_Int32_System_Int32__0_
+  commentId: M:EA.Core.Loggers.CSV.IRecord`1.ApplyData(System.Int32,System.Int32,`0)
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.ApplyData(System.Int32, System.Int32, T)
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).ApplyData(System.Int32, System.Int32, T)
+  nameWithType: IRecord<T>.ApplyData(Int32, Int32, T)
+  nameWithType.vb: IRecord(Of T).ApplyData(Int32, Int32, T)
+- uid: EA.Core.Loggers.CSV.IRecord`1.ApplyData*
+  name: ApplyData
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_ApplyData_
+  commentId: Overload:EA.Core.Loggers.CSV.IRecord`1.ApplyData
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.ApplyData
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).ApplyData
+  nameWithType: IRecord<T>.ApplyData
+  nameWithType.vb: IRecord(Of T).ApplyData
+- uid: EA.Core.Loggers.CSV.IRecord`1.CurrentEpoch
+  name: CurrentEpoch
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_CurrentEpoch
+  commentId: P:EA.Core.Loggers.CSV.IRecord`1.CurrentEpoch
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.CurrentEpoch
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).CurrentEpoch
+  nameWithType: IRecord<T>.CurrentEpoch
+  nameWithType.vb: IRecord(Of T).CurrentEpoch
+- uid: EA.Core.Loggers.CSV.IRecord`1.CurrentEpoch*
+  name: CurrentEpoch
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_CurrentEpoch_
+  commentId: Overload:EA.Core.Loggers.CSV.IRecord`1.CurrentEpoch
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.CurrentEpoch
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).CurrentEpoch
+  nameWithType: IRecord<T>.CurrentEpoch
+  nameWithType.vb: IRecord(Of T).CurrentEpoch
+- uid: EA.Core.Loggers.CSV.IRecord`1.SpecimenIndex
+  name: SpecimenIndex
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_SpecimenIndex
+  commentId: P:EA.Core.Loggers.CSV.IRecord`1.SpecimenIndex
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.SpecimenIndex
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).SpecimenIndex
+  nameWithType: IRecord<T>.SpecimenIndex
+  nameWithType.vb: IRecord(Of T).SpecimenIndex
+- uid: EA.Core.Loggers.CSV.IRecord`1.SpecimenIndex*
+  name: SpecimenIndex
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_SpecimenIndex_
+  commentId: Overload:EA.Core.Loggers.CSV.IRecord`1.SpecimenIndex
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.SpecimenIndex
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).SpecimenIndex
+  nameWithType: IRecord<T>.SpecimenIndex
+  nameWithType.vb: IRecord(Of T).SpecimenIndex
+- uid: EA.Core.Loggers.CSV.IRecord`1.SpecimenScore
+  name: SpecimenScore
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_SpecimenScore
+  commentId: P:EA.Core.Loggers.CSV.IRecord`1.SpecimenScore
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.SpecimenScore
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).SpecimenScore
+  nameWithType: IRecord<T>.SpecimenScore
+  nameWithType.vb: IRecord(Of T).SpecimenScore
+- uid: EA.Core.Loggers.CSV.IRecord`1.SpecimenScore*
+  name: SpecimenScore
+  href: api/EA.Core.Loggers.CSV.IRecord-1.html#EA_Core_Loggers_CSV_IRecord_1_SpecimenScore_
+  commentId: Overload:EA.Core.Loggers.CSV.IRecord`1.SpecimenScore
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.IRecord<T>.SpecimenScore
+  fullName.vb: EA.Core.Loggers.CSV.IRecord(Of T).SpecimenScore
+  nameWithType: IRecord<T>.SpecimenScore
+  nameWithType.vb: IRecord(Of T).SpecimenScore
+- uid: EA.Core.Loggers.CSV.RecordBase`1
+  name: RecordBase<T>
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html
+  commentId: T:EA.Core.Loggers.CSV.RecordBase`1
+  name.vb: RecordBase(Of T)
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T)
+  nameWithType: RecordBase<T>
+  nameWithType.vb: RecordBase(Of T)
+- uid: EA.Core.Loggers.CSV.RecordBase`1.ApplyData(System.Int32,System.Int32,`0)
+  name: ApplyData(Int32, Int32, T)
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_ApplyData_System_Int32_System_Int32__0_
+  commentId: M:EA.Core.Loggers.CSV.RecordBase`1.ApplyData(System.Int32,System.Int32,`0)
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.ApplyData(System.Int32, System.Int32, T)
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).ApplyData(System.Int32, System.Int32, T)
+  nameWithType: RecordBase<T>.ApplyData(Int32, Int32, T)
+  nameWithType.vb: RecordBase(Of T).ApplyData(Int32, Int32, T)
+- uid: EA.Core.Loggers.CSV.RecordBase`1.ApplyData*
+  name: ApplyData
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_ApplyData_
+  commentId: Overload:EA.Core.Loggers.CSV.RecordBase`1.ApplyData
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.ApplyData
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).ApplyData
+  nameWithType: RecordBase<T>.ApplyData
+  nameWithType.vb: RecordBase(Of T).ApplyData
+- uid: EA.Core.Loggers.CSV.RecordBase`1.CurrentEpoch
+  name: CurrentEpoch
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_CurrentEpoch
+  commentId: P:EA.Core.Loggers.CSV.RecordBase`1.CurrentEpoch
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.CurrentEpoch
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).CurrentEpoch
+  nameWithType: RecordBase<T>.CurrentEpoch
+  nameWithType.vb: RecordBase(Of T).CurrentEpoch
+- uid: EA.Core.Loggers.CSV.RecordBase`1.CurrentEpoch*
+  name: CurrentEpoch
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_CurrentEpoch_
+  commentId: Overload:EA.Core.Loggers.CSV.RecordBase`1.CurrentEpoch
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.CurrentEpoch
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).CurrentEpoch
+  nameWithType: RecordBase<T>.CurrentEpoch
+  nameWithType.vb: RecordBase(Of T).CurrentEpoch
+- uid: EA.Core.Loggers.CSV.RecordBase`1.SpecimenIndex
+  name: SpecimenIndex
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_SpecimenIndex
+  commentId: P:EA.Core.Loggers.CSV.RecordBase`1.SpecimenIndex
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.SpecimenIndex
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).SpecimenIndex
+  nameWithType: RecordBase<T>.SpecimenIndex
+  nameWithType.vb: RecordBase(Of T).SpecimenIndex
+- uid: EA.Core.Loggers.CSV.RecordBase`1.SpecimenIndex*
+  name: SpecimenIndex
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_SpecimenIndex_
+  commentId: Overload:EA.Core.Loggers.CSV.RecordBase`1.SpecimenIndex
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.SpecimenIndex
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).SpecimenIndex
+  nameWithType: RecordBase<T>.SpecimenIndex
+  nameWithType.vb: RecordBase(Of T).SpecimenIndex
+- uid: EA.Core.Loggers.CSV.RecordBase`1.SpecimenScore
+  name: SpecimenScore
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_SpecimenScore
+  commentId: P:EA.Core.Loggers.CSV.RecordBase`1.SpecimenScore
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.SpecimenScore
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).SpecimenScore
+  nameWithType: RecordBase<T>.SpecimenScore
+  nameWithType.vb: RecordBase(Of T).SpecimenScore
+- uid: EA.Core.Loggers.CSV.RecordBase`1.SpecimenScore*
+  name: SpecimenScore
+  href: api/EA.Core.Loggers.CSV.RecordBase-1.html#EA_Core_Loggers_CSV_RecordBase_1_SpecimenScore_
+  commentId: Overload:EA.Core.Loggers.CSV.RecordBase`1.SpecimenScore
+  isSpec: "True"
+  fullName: EA.Core.Loggers.CSV.RecordBase<T>.SpecimenScore
+  fullName.vb: EA.Core.Loggers.CSV.RecordBase(Of T).SpecimenScore
+  nameWithType: RecordBase<T>.SpecimenScore
+  nameWithType.vb: RecordBase(Of T).SpecimenScore
+- uid: EA.Core.Selectors
+  name: EA.Core.Selectors
+  href: api/EA.Core.Selectors.html
+  commentId: N:EA.Core.Selectors
+  fullName: EA.Core.Selectors
+  nameWithType: EA.Core.Selectors
+- uid: EA.Core.Selectors.RouletteSelection`1
+  name: RouletteSelection<T>
+  href: api/EA.Core.Selectors.RouletteSelection-1.html
+  commentId: T:EA.Core.Selectors.RouletteSelection`1
+  name.vb: RouletteSelection(Of T)
+  fullName: EA.Core.Selectors.RouletteSelection<T>
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T)
+  nameWithType: RouletteSelection<T>
+  nameWithType.vb: RouletteSelection(Of T)
+- uid: EA.Core.Selectors.RouletteSelection`1.#ctor(System.Int32)
+  name: RouletteSelection(Int32)
+  href: api/EA.Core.Selectors.RouletteSelection-1.html#EA_Core_Selectors_RouletteSelection_1__ctor_System_Int32_
+  commentId: M:EA.Core.Selectors.RouletteSelection`1.#ctor(System.Int32)
+  fullName: EA.Core.Selectors.RouletteSelection<T>.RouletteSelection(System.Int32)
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T).RouletteSelection(System.Int32)
+  nameWithType: RouletteSelection<T>.RouletteSelection(Int32)
+  nameWithType.vb: RouletteSelection(Of T).RouletteSelection(Int32)
+- uid: EA.Core.Selectors.RouletteSelection`1.#ctor*
+  name: RouletteSelection
+  href: api/EA.Core.Selectors.RouletteSelection-1.html#EA_Core_Selectors_RouletteSelection_1__ctor_
+  commentId: Overload:EA.Core.Selectors.RouletteSelection`1.#ctor
+  isSpec: "True"
+  fullName: EA.Core.Selectors.RouletteSelection<T>.RouletteSelection
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T).RouletteSelection
+  nameWithType: RouletteSelection<T>.RouletteSelection
+  nameWithType.vb: RouletteSelection(Of T).RouletteSelection
+- uid: EA.Core.Selectors.RouletteSelection`1.Select(System.Collections.Generic.IList{`0})
+  name: Select(IList<T>)
+  href: api/EA.Core.Selectors.RouletteSelection-1.html#EA_Core_Selectors_RouletteSelection_1_Select_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.Selectors.RouletteSelection`1.Select(System.Collections.Generic.IList{`0})
+  name.vb: Select(IList(Of T))
+  fullName: EA.Core.Selectors.RouletteSelection<T>.Select(System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T).Select(System.Collections.Generic.IList(Of T))
+  nameWithType: RouletteSelection<T>.Select(IList<T>)
+  nameWithType.vb: RouletteSelection(Of T).Select(IList(Of T))
+- uid: EA.Core.Selectors.RouletteSelection`1.Select*
+  name: Select
+  href: api/EA.Core.Selectors.RouletteSelection-1.html#EA_Core_Selectors_RouletteSelection_1_Select_
+  commentId: Overload:EA.Core.Selectors.RouletteSelection`1.Select
+  isSpec: "True"
+  fullName: EA.Core.Selectors.RouletteSelection<T>.Select
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T).Select
+  nameWithType: RouletteSelection<T>.Select
+  nameWithType.vb: RouletteSelection(Of T).Select
+- uid: EA.Core.Selectors.RouletteSelection`1.SpecimenCount
+  name: SpecimenCount
+  href: api/EA.Core.Selectors.RouletteSelection-1.html#EA_Core_Selectors_RouletteSelection_1_SpecimenCount
+  commentId: P:EA.Core.Selectors.RouletteSelection`1.SpecimenCount
+  fullName: EA.Core.Selectors.RouletteSelection<T>.SpecimenCount
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T).SpecimenCount
+  nameWithType: RouletteSelection<T>.SpecimenCount
+  nameWithType.vb: RouletteSelection(Of T).SpecimenCount
+- uid: EA.Core.Selectors.RouletteSelection`1.SpecimenCount*
+  name: SpecimenCount
+  href: api/EA.Core.Selectors.RouletteSelection-1.html#EA_Core_Selectors_RouletteSelection_1_SpecimenCount_
+  commentId: Overload:EA.Core.Selectors.RouletteSelection`1.SpecimenCount
+  isSpec: "True"
+  fullName: EA.Core.Selectors.RouletteSelection<T>.SpecimenCount
+  fullName.vb: EA.Core.Selectors.RouletteSelection(Of T).SpecimenCount
+  nameWithType: RouletteSelection<T>.SpecimenCount
+  nameWithType.vb: RouletteSelection(Of T).SpecimenCount
+- uid: EA.Core.Selectors.TournamentSelection`1
+  name: TournamentSelection<T>
+  href: api/EA.Core.Selectors.TournamentSelection-1.html
+  commentId: T:EA.Core.Selectors.TournamentSelection`1
+  name.vb: TournamentSelection(Of T)
+  fullName: EA.Core.Selectors.TournamentSelection<T>
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T)
+  nameWithType: TournamentSelection<T>
+  nameWithType.vb: TournamentSelection(Of T)
+- uid: EA.Core.Selectors.TournamentSelection`1.#ctor(System.Int32,System.Int32)
+  name: TournamentSelection(Int32, Int32)
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1__ctor_System_Int32_System_Int32_
+  commentId: M:EA.Core.Selectors.TournamentSelection`1.#ctor(System.Int32,System.Int32)
+  fullName: EA.Core.Selectors.TournamentSelection<T>.TournamentSelection(System.Int32, System.Int32)
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).TournamentSelection(System.Int32, System.Int32)
+  nameWithType: TournamentSelection<T>.TournamentSelection(Int32, Int32)
+  nameWithType.vb: TournamentSelection(Of T).TournamentSelection(Int32, Int32)
+- uid: EA.Core.Selectors.TournamentSelection`1.#ctor*
+  name: TournamentSelection
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1__ctor_
+  commentId: Overload:EA.Core.Selectors.TournamentSelection`1.#ctor
+  isSpec: "True"
+  fullName: EA.Core.Selectors.TournamentSelection<T>.TournamentSelection
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).TournamentSelection
+  nameWithType: TournamentSelection<T>.TournamentSelection
+  nameWithType.vb: TournamentSelection(Of T).TournamentSelection
+- uid: EA.Core.Selectors.TournamentSelection`1.Select(System.Collections.Generic.IList{`0})
+  name: Select(IList<T>)
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1_Select_System_Collections_Generic_IList__0__
+  commentId: M:EA.Core.Selectors.TournamentSelection`1.Select(System.Collections.Generic.IList{`0})
+  name.vb: Select(IList(Of T))
+  fullName: EA.Core.Selectors.TournamentSelection<T>.Select(System.Collections.Generic.IList<T>)
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).Select(System.Collections.Generic.IList(Of T))
+  nameWithType: TournamentSelection<T>.Select(IList<T>)
+  nameWithType.vb: TournamentSelection(Of T).Select(IList(Of T))
+- uid: EA.Core.Selectors.TournamentSelection`1.Select*
+  name: Select
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1_Select_
+  commentId: Overload:EA.Core.Selectors.TournamentSelection`1.Select
+  isSpec: "True"
+  fullName: EA.Core.Selectors.TournamentSelection<T>.Select
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).Select
+  nameWithType: TournamentSelection<T>.Select
+  nameWithType.vb: TournamentSelection(Of T).Select
+- uid: EA.Core.Selectors.TournamentSelection`1.SpecimenCount
+  name: SpecimenCount
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1_SpecimenCount
+  commentId: P:EA.Core.Selectors.TournamentSelection`1.SpecimenCount
+  fullName: EA.Core.Selectors.TournamentSelection<T>.SpecimenCount
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).SpecimenCount
+  nameWithType: TournamentSelection<T>.SpecimenCount
+  nameWithType.vb: TournamentSelection(Of T).SpecimenCount
+- uid: EA.Core.Selectors.TournamentSelection`1.SpecimenCount*
+  name: SpecimenCount
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1_SpecimenCount_
+  commentId: Overload:EA.Core.Selectors.TournamentSelection`1.SpecimenCount
+  isSpec: "True"
+  fullName: EA.Core.Selectors.TournamentSelection<T>.SpecimenCount
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).SpecimenCount
+  nameWithType: TournamentSelection<T>.SpecimenCount
+  nameWithType.vb: TournamentSelection(Of T).SpecimenCount
+- uid: EA.Core.Selectors.TournamentSelection`1.TournamentCount
+  name: TournamentCount
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1_TournamentCount
+  commentId: P:EA.Core.Selectors.TournamentSelection`1.TournamentCount
+  fullName: EA.Core.Selectors.TournamentSelection<T>.TournamentCount
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).TournamentCount
+  nameWithType: TournamentSelection<T>.TournamentCount
+  nameWithType.vb: TournamentSelection(Of T).TournamentCount
+- uid: EA.Core.Selectors.TournamentSelection`1.TournamentCount*
+  name: TournamentCount
+  href: api/EA.Core.Selectors.TournamentSelection-1.html#EA_Core_Selectors_TournamentSelection_1_TournamentCount_
+  commentId: Overload:EA.Core.Selectors.TournamentSelection`1.TournamentCount
+  isSpec: "True"
+  fullName: EA.Core.Selectors.TournamentSelection<T>.TournamentCount
+  fullName.vb: EA.Core.Selectors.TournamentSelection(Of T).TournamentCount
+  nameWithType: TournamentSelection<T>.TournamentCount
+  nameWithType.vb: TournamentSelection(Of T).TournamentCount
+- uid: EA.DataTTP
+  name: EA.DataTTP
+  href: api/EA.DataTTP.html
+  commentId: N:EA.DataTTP
+  fullName: EA.DataTTP
+  nameWithType: EA.DataTTP
+- uid: EA.DataTTP.Crossovers
+  name: EA.DataTTP.Crossovers
+  href: api/EA.DataTTP.Crossovers.html
+  commentId: N:EA.DataTTP.Crossovers
+  fullName: EA.DataTTP.Crossovers
+  nameWithType: EA.DataTTP.Crossovers
+- uid: EA.DataTTP.Crossovers.OrderCrossover
+  name: OrderCrossover
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html
+  commentId: T:EA.DataTTP.Crossovers.OrderCrossover
+  fullName: EA.DataTTP.Crossovers.OrderCrossover
+  nameWithType: OrderCrossover
+- uid: EA.DataTTP.Crossovers.OrderCrossover.#ctor(System.Double,System.Int32)
+  name: OrderCrossover(Double, Int32)
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover__ctor_System_Double_System_Int32_
+  commentId: M:EA.DataTTP.Crossovers.OrderCrossover.#ctor(System.Double,System.Int32)
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.OrderCrossover(System.Double, System.Int32)
+  nameWithType: OrderCrossover.OrderCrossover(Double, Int32)
+- uid: EA.DataTTP.Crossovers.OrderCrossover.#ctor*
+  name: OrderCrossover
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover__ctor_
+  commentId: Overload:EA.DataTTP.Crossovers.OrderCrossover.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.OrderCrossover
+  nameWithType: OrderCrossover.OrderCrossover
+- uid: EA.DataTTP.Crossovers.OrderCrossover.CrossLength
+  name: CrossLength
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover_CrossLength
+  commentId: P:EA.DataTTP.Crossovers.OrderCrossover.CrossLength
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.CrossLength
+  nameWithType: OrderCrossover.CrossLength
+- uid: EA.DataTTP.Crossovers.OrderCrossover.CrossLength*
+  name: CrossLength
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover_CrossLength_
+  commentId: Overload:EA.DataTTP.Crossovers.OrderCrossover.CrossLength
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.CrossLength
+  nameWithType: OrderCrossover.CrossLength
+- uid: EA.DataTTP.Crossovers.OrderCrossover.Crossover(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name: Crossover(IList<Specimen>)
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover_Crossover_System_Collections_Generic_IList_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.Crossovers.OrderCrossover.Crossover(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name.vb: Crossover(IList(Of Specimen))
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.Crossover(System.Collections.Generic.IList<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.Crossovers.OrderCrossover.Crossover(System.Collections.Generic.IList(Of EA.DataTTP.Specimen))
+  nameWithType: OrderCrossover.Crossover(IList<Specimen>)
+  nameWithType.vb: OrderCrossover.Crossover(IList(Of Specimen))
+- uid: EA.DataTTP.Crossovers.OrderCrossover.Crossover*
+  name: Crossover
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover_Crossover_
+  commentId: Overload:EA.DataTTP.Crossovers.OrderCrossover.Crossover
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.Crossover
+  nameWithType: OrderCrossover.Crossover
+- uid: EA.DataTTP.Crossovers.OrderCrossover.Probability
+  name: Probability
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover_Probability
+  commentId: P:EA.DataTTP.Crossovers.OrderCrossover.Probability
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.Probability
+  nameWithType: OrderCrossover.Probability
+- uid: EA.DataTTP.Crossovers.OrderCrossover.Probability*
+  name: Probability
+  href: api/EA.DataTTP.Crossovers.OrderCrossover.html#EA_DataTTP_Crossovers_OrderCrossover_Probability_
+  commentId: Overload:EA.DataTTP.Crossovers.OrderCrossover.Probability
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.OrderCrossover.Probability
+  nameWithType: OrderCrossover.Probability
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover
+  name: PartiallyMatchedCrossover
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html
+  commentId: T:EA.DataTTP.Crossovers.PartiallyMatchedCrossover
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover
+  nameWithType: PartiallyMatchedCrossover
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.#ctor(System.Double,System.Int32)
+  name: PartiallyMatchedCrossover(Double, Int32)
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover__ctor_System_Double_System_Int32_
+  commentId: M:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.#ctor(System.Double,System.Int32)
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.PartiallyMatchedCrossover(System.Double, System.Int32)
+  nameWithType: PartiallyMatchedCrossover.PartiallyMatchedCrossover(Double, Int32)
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.#ctor*
+  name: PartiallyMatchedCrossover
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover__ctor_
+  commentId: Overload:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.PartiallyMatchedCrossover
+  nameWithType: PartiallyMatchedCrossover.PartiallyMatchedCrossover
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.CrossLength
+  name: CrossLength
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover_CrossLength
+  commentId: P:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.CrossLength
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.CrossLength
+  nameWithType: PartiallyMatchedCrossover.CrossLength
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.CrossLength*
+  name: CrossLength
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover_CrossLength_
+  commentId: Overload:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.CrossLength
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.CrossLength
+  nameWithType: PartiallyMatchedCrossover.CrossLength
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name: Crossover(IList<Specimen>)
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover_Crossover_System_Collections_Generic_IList_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name.vb: Crossover(IList(Of Specimen))
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover(System.Collections.Generic.IList<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover(System.Collections.Generic.IList(Of EA.DataTTP.Specimen))
+  nameWithType: PartiallyMatchedCrossover.Crossover(IList<Specimen>)
+  nameWithType.vb: PartiallyMatchedCrossover.Crossover(IList(Of Specimen))
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover*
+  name: Crossover
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover_Crossover_
+  commentId: Overload:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Crossover
+  nameWithType: PartiallyMatchedCrossover.Crossover
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Probability
+  name: Probability
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover_Probability
+  commentId: P:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Probability
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Probability
+  nameWithType: PartiallyMatchedCrossover.Probability
+- uid: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Probability*
+  name: Probability
+  href: api/EA.DataTTP.Crossovers.PartiallyMatchedCrossover.html#EA_DataTTP_Crossovers_PartiallyMatchedCrossover_Probability_
+  commentId: Overload:EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Probability
+  isSpec: "True"
+  fullName: EA.DataTTP.Crossovers.PartiallyMatchedCrossover.Probability
+  nameWithType: PartiallyMatchedCrossover.Probability
+- uid: EA.DataTTP.Data
+  name: Data
+  href: api/EA.DataTTP.Data.html
+  commentId: T:EA.DataTTP.Data
+  fullName: EA.DataTTP.Data
+  nameWithType: Data
+- uid: EA.DataTTP.Data.#ctor
+  name: Data()
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data__ctor
+  commentId: M:EA.DataTTP.Data.#ctor
+  fullName: EA.DataTTP.Data.Data()
+  nameWithType: Data.Data()
+- uid: EA.DataTTP.Data.#ctor*
+  name: Data
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data__ctor_
+  commentId: Overload:EA.DataTTP.Data.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.Data
+  nameWithType: Data.Data
+- uid: EA.DataTTP.Data.CityCount
+  name: CityCount
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_CityCount
+  commentId: P:EA.DataTTP.Data.CityCount
+  fullName: EA.DataTTP.Data.CityCount
+  nameWithType: Data.CityCount
+- uid: EA.DataTTP.Data.CityCount*
+  name: CityCount
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_CityCount_
+  commentId: Overload:EA.DataTTP.Data.CityCount
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.CityCount
+  nameWithType: Data.CityCount
+- uid: EA.DataTTP.Data.Distances
+  name: Distances
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Distances
+  commentId: P:EA.DataTTP.Data.Distances
+  fullName: EA.DataTTP.Data.Distances
+  nameWithType: Data.Distances
+- uid: EA.DataTTP.Data.Distances*
+  name: Distances
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Distances_
+  commentId: Overload:EA.DataTTP.Data.Distances
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.Distances
+  nameWithType: Data.Distances
+- uid: EA.DataTTP.Data.EdgeWeightType
+  name: EdgeWeightType
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_EdgeWeightType
+  commentId: P:EA.DataTTP.Data.EdgeWeightType
+  fullName: EA.DataTTP.Data.EdgeWeightType
+  nameWithType: Data.EdgeWeightType
+- uid: EA.DataTTP.Data.EdgeWeightType*
+  name: EdgeWeightType
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_EdgeWeightType_
+  commentId: Overload:EA.DataTTP.Data.EdgeWeightType
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.EdgeWeightType
+  nameWithType: Data.EdgeWeightType
+- uid: EA.DataTTP.Data.GetNodeMatrix
+  name: GetNodeMatrix()
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_GetNodeMatrix
+  commentId: M:EA.DataTTP.Data.GetNodeMatrix
+  fullName: EA.DataTTP.Data.GetNodeMatrix()
+  nameWithType: Data.GetNodeMatrix()
+- uid: EA.DataTTP.Data.GetNodeMatrix*
+  name: GetNodeMatrix
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_GetNodeMatrix_
+  commentId: Overload:EA.DataTTP.Data.GetNodeMatrix
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.GetNodeMatrix
+  nameWithType: Data.GetNodeMatrix
+- uid: EA.DataTTP.Data.Items
+  name: Items
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Items
+  commentId: P:EA.DataTTP.Data.Items
+  fullName: EA.DataTTP.Data.Items
+  nameWithType: Data.Items
+- uid: EA.DataTTP.Data.Items*
+  name: Items
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Items_
+  commentId: Overload:EA.DataTTP.Data.Items
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.Items
+  nameWithType: Data.Items
+- uid: EA.DataTTP.Data.KnapsackCapacity
+  name: KnapsackCapacity
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_KnapsackCapacity
+  commentId: P:EA.DataTTP.Data.KnapsackCapacity
+  fullName: EA.DataTTP.Data.KnapsackCapacity
+  nameWithType: Data.KnapsackCapacity
+- uid: EA.DataTTP.Data.KnapsackCapacity*
+  name: KnapsackCapacity
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_KnapsackCapacity_
+  commentId: Overload:EA.DataTTP.Data.KnapsackCapacity
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.KnapsackCapacity
+  nameWithType: Data.KnapsackCapacity
+- uid: EA.DataTTP.Data.MaxSpeed
+  name: MaxSpeed
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_MaxSpeed
+  commentId: P:EA.DataTTP.Data.MaxSpeed
+  fullName: EA.DataTTP.Data.MaxSpeed
+  nameWithType: Data.MaxSpeed
+- uid: EA.DataTTP.Data.MaxSpeed*
+  name: MaxSpeed
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_MaxSpeed_
+  commentId: Overload:EA.DataTTP.Data.MaxSpeed
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.MaxSpeed
+  nameWithType: Data.MaxSpeed
+- uid: EA.DataTTP.Data.MinSpeed
+  name: MinSpeed
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_MinSpeed
+  commentId: P:EA.DataTTP.Data.MinSpeed
+  fullName: EA.DataTTP.Data.MinSpeed
+  nameWithType: Data.MinSpeed
+- uid: EA.DataTTP.Data.MinSpeed*
+  name: MinSpeed
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_MinSpeed_
+  commentId: Overload:EA.DataTTP.Data.MinSpeed
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.MinSpeed
+  nameWithType: Data.MinSpeed
+- uid: EA.DataTTP.Data.Name
+  name: Name
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Name
+  commentId: P:EA.DataTTP.Data.Name
+  fullName: EA.DataTTP.Data.Name
+  nameWithType: Data.Name
+- uid: EA.DataTTP.Data.Name*
+  name: Name
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Name_
+  commentId: Overload:EA.DataTTP.Data.Name
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.Name
+  nameWithType: Data.Name
+- uid: EA.DataTTP.Data.Nodes
+  name: Nodes
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Nodes
+  commentId: P:EA.DataTTP.Data.Nodes
+  fullName: EA.DataTTP.Data.Nodes
+  nameWithType: Data.Nodes
+- uid: EA.DataTTP.Data.Nodes*
+  name: Nodes
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Nodes_
+  commentId: Overload:EA.DataTTP.Data.Nodes
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.Nodes
+  nameWithType: Data.Nodes
+- uid: EA.DataTTP.Data.NumberOfItems
+  name: NumberOfItems
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_NumberOfItems
+  commentId: P:EA.DataTTP.Data.NumberOfItems
+  fullName: EA.DataTTP.Data.NumberOfItems
+  nameWithType: Data.NumberOfItems
+- uid: EA.DataTTP.Data.NumberOfItems*
+  name: NumberOfItems
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_NumberOfItems_
+  commentId: Overload:EA.DataTTP.Data.NumberOfItems
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.NumberOfItems
+  nameWithType: Data.NumberOfItems
+- uid: EA.DataTTP.Data.RentingRatio
+  name: RentingRatio
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_RentingRatio
+  commentId: P:EA.DataTTP.Data.RentingRatio
+  fullName: EA.DataTTP.Data.RentingRatio
+  nameWithType: Data.RentingRatio
+- uid: EA.DataTTP.Data.RentingRatio*
+  name: RentingRatio
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_RentingRatio_
+  commentId: Overload:EA.DataTTP.Data.RentingRatio
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.RentingRatio
+  nameWithType: Data.RentingRatio
+- uid: EA.DataTTP.Data.Type
+  name: Type
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Type
+  commentId: P:EA.DataTTP.Data.Type
+  fullName: EA.DataTTP.Data.Type
+  nameWithType: Data.Type
+- uid: EA.DataTTP.Data.Type*
+  name: Type
+  href: api/EA.DataTTP.Data.html#EA_DataTTP_Data_Type_
+  commentId: Overload:EA.DataTTP.Data.Type
+  isSpec: "True"
+  fullName: EA.DataTTP.Data.Type
+  nameWithType: Data.Type
+- uid: EA.DataTTP.DataLoader
+  name: DataLoader
+  href: api/EA.DataTTP.DataLoader.html
+  commentId: T:EA.DataTTP.DataLoader
+  fullName: EA.DataTTP.DataLoader
+  nameWithType: DataLoader
+- uid: EA.DataTTP.DataLoader.Load(System.String)
+  name: Load(String)
+  href: api/EA.DataTTP.DataLoader.html#EA_DataTTP_DataLoader_Load_System_String_
+  commentId: M:EA.DataTTP.DataLoader.Load(System.String)
+  fullName: EA.DataTTP.DataLoader.Load(System.String)
+  nameWithType: DataLoader.Load(String)
+- uid: EA.DataTTP.DataLoader.Load*
+  name: Load
+  href: api/EA.DataTTP.DataLoader.html#EA_DataTTP_DataLoader_Load_
+  commentId: Overload:EA.DataTTP.DataLoader.Load
+  isSpec: "True"
+  fullName: EA.DataTTP.DataLoader.Load
+  nameWithType: DataLoader.Load
+- uid: EA.DataTTP.Inititializators
+  name: EA.DataTTP.Inititializators
+  href: api/EA.DataTTP.Inititializators.html
+  commentId: N:EA.DataTTP.Inititializators
+  fullName: EA.DataTTP.Inititializators
+  nameWithType: EA.DataTTP.Inititializators
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator
+  name: GreedySpecimenInitializator
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html
+  commentId: T:EA.DataTTP.Inititializators.GreedySpecimenInitializator
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator
+  nameWithType: GreedySpecimenInitializator
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.#ctor(EA.DataTTP.Data,System.Double)
+  name: GreedySpecimenInitializator(Data, Double)
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator__ctor_EA_DataTTP_Data_System_Double_
+  commentId: M:EA.DataTTP.Inititializators.GreedySpecimenInitializator.#ctor(EA.DataTTP.Data,System.Double)
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.GreedySpecimenInitializator(EA.DataTTP.Data, System.Double)
+  nameWithType: GreedySpecimenInitializator.GreedySpecimenInitializator(Data, Double)
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.#ctor*
+  name: GreedySpecimenInitializator
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator__ctor_
+  commentId: Overload:EA.DataTTP.Inititializators.GreedySpecimenInitializator.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.GreedySpecimenInitializator
+  nameWithType: GreedySpecimenInitializator.GreedySpecimenInitializator
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Config
+  name: Config
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator_Config
+  commentId: P:EA.DataTTP.Inititializators.GreedySpecimenInitializator.Config
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Config
+  nameWithType: GreedySpecimenInitializator.Config
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Config*
+  name: Config
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator_Config_
+  commentId: Overload:EA.DataTTP.Inititializators.GreedySpecimenInitializator.Config
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Config
+  nameWithType: GreedySpecimenInitializator.Config
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Initialize(EA.DataTTP.Specimen)
+  name: Initialize(Specimen)
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator_Initialize_EA_DataTTP_Specimen_
+  commentId: M:EA.DataTTP.Inititializators.GreedySpecimenInitializator.Initialize(EA.DataTTP.Specimen)
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Initialize(EA.DataTTP.Specimen)
+  nameWithType: GreedySpecimenInitializator.Initialize(Specimen)
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Initialize*
+  name: Initialize
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator_Initialize_
+  commentId: Overload:EA.DataTTP.Inititializators.GreedySpecimenInitializator.Initialize
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.Initialize
+  nameWithType: GreedySpecimenInitializator.Initialize
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.ItemAddProbability
+  name: ItemAddProbability
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator_ItemAddProbability
+  commentId: P:EA.DataTTP.Inititializators.GreedySpecimenInitializator.ItemAddProbability
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.ItemAddProbability
+  nameWithType: GreedySpecimenInitializator.ItemAddProbability
+- uid: EA.DataTTP.Inititializators.GreedySpecimenInitializator.ItemAddProbability*
+  name: ItemAddProbability
+  href: api/EA.DataTTP.Inititializators.GreedySpecimenInitializator.html#EA_DataTTP_Inititializators_GreedySpecimenInitializator_ItemAddProbability_
+  commentId: Overload:EA.DataTTP.Inititializators.GreedySpecimenInitializator.ItemAddProbability
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.GreedySpecimenInitializator.ItemAddProbability
+  nameWithType: GreedySpecimenInitializator.ItemAddProbability
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator
+  name: RandomSpecimenInitializator
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html
+  commentId: T:EA.DataTTP.Inititializators.RandomSpecimenInitializator
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator
+  nameWithType: RandomSpecimenInitializator
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.#ctor(EA.DataTTP.Data,System.Double)
+  name: RandomSpecimenInitializator(Data, Double)
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator__ctor_EA_DataTTP_Data_System_Double_
+  commentId: M:EA.DataTTP.Inititializators.RandomSpecimenInitializator.#ctor(EA.DataTTP.Data,System.Double)
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.RandomSpecimenInitializator(EA.DataTTP.Data, System.Double)
+  nameWithType: RandomSpecimenInitializator.RandomSpecimenInitializator(Data, Double)
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.#ctor*
+  name: RandomSpecimenInitializator
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator__ctor_
+  commentId: Overload:EA.DataTTP.Inititializators.RandomSpecimenInitializator.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.RandomSpecimenInitializator
+  nameWithType: RandomSpecimenInitializator.RandomSpecimenInitializator
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Config
+  name: Config
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator_Config
+  commentId: P:EA.DataTTP.Inititializators.RandomSpecimenInitializator.Config
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Config
+  nameWithType: RandomSpecimenInitializator.Config
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Config*
+  name: Config
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator_Config_
+  commentId: Overload:EA.DataTTP.Inititializators.RandomSpecimenInitializator.Config
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Config
+  nameWithType: RandomSpecimenInitializator.Config
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Initialize(EA.DataTTP.Specimen)
+  name: Initialize(Specimen)
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator_Initialize_EA_DataTTP_Specimen_
+  commentId: M:EA.DataTTP.Inititializators.RandomSpecimenInitializator.Initialize(EA.DataTTP.Specimen)
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Initialize(EA.DataTTP.Specimen)
+  nameWithType: RandomSpecimenInitializator.Initialize(Specimen)
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Initialize*
+  name: Initialize
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator_Initialize_
+  commentId: Overload:EA.DataTTP.Inititializators.RandomSpecimenInitializator.Initialize
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.Initialize
+  nameWithType: RandomSpecimenInitializator.Initialize
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.ItemAddProbability
+  name: ItemAddProbability
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator_ItemAddProbability
+  commentId: P:EA.DataTTP.Inititializators.RandomSpecimenInitializator.ItemAddProbability
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.ItemAddProbability
+  nameWithType: RandomSpecimenInitializator.ItemAddProbability
+- uid: EA.DataTTP.Inititializators.RandomSpecimenInitializator.ItemAddProbability*
+  name: ItemAddProbability
+  href: api/EA.DataTTP.Inititializators.RandomSpecimenInitializator.html#EA_DataTTP_Inititializators_RandomSpecimenInitializator_ItemAddProbability_
+  commentId: Overload:EA.DataTTP.Inititializators.RandomSpecimenInitializator.ItemAddProbability
+  isSpec: "True"
+  fullName: EA.DataTTP.Inititializators.RandomSpecimenInitializator.ItemAddProbability
+  nameWithType: RandomSpecimenInitializator.ItemAddProbability
+- uid: EA.DataTTP.Item
+  name: Item
+  href: api/EA.DataTTP.Item.html
+  commentId: T:EA.DataTTP.Item
+  fullName: EA.DataTTP.Item
+  nameWithType: Item
+- uid: EA.DataTTP.Item.#ctor
+  name: Item()
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item__ctor
+  commentId: M:EA.DataTTP.Item.#ctor
+  fullName: EA.DataTTP.Item.Item()
+  nameWithType: Item.Item()
+- uid: EA.DataTTP.Item.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,EA.DataTTP.Node)
+  name: Item(Int32, Int32, Int32, Int32, Node)
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item__ctor_System_Int32_System_Int32_System_Int32_System_Int32_EA_DataTTP_Node_
+  commentId: M:EA.DataTTP.Item.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,EA.DataTTP.Node)
+  fullName: EA.DataTTP.Item.Item(System.Int32, System.Int32, System.Int32, System.Int32, EA.DataTTP.Node)
+  nameWithType: Item.Item(Int32, Int32, Int32, Int32, Node)
+- uid: EA.DataTTP.Item.#ctor*
+  name: Item
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item__ctor_
+  commentId: Overload:EA.DataTTP.Item.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Item.Item
+  nameWithType: Item.Item
+- uid: EA.DataTTP.Item.Index
+  name: Index
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Index
+  commentId: P:EA.DataTTP.Item.Index
+  fullName: EA.DataTTP.Item.Index
+  nameWithType: Item.Index
+- uid: EA.DataTTP.Item.Index*
+  name: Index
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Index_
+  commentId: Overload:EA.DataTTP.Item.Index
+  isSpec: "True"
+  fullName: EA.DataTTP.Item.Index
+  nameWithType: Item.Index
+- uid: EA.DataTTP.Item.Node
+  name: Node
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Node
+  commentId: P:EA.DataTTP.Item.Node
+  fullName: EA.DataTTP.Item.Node
+  nameWithType: Item.Node
+- uid: EA.DataTTP.Item.Node*
+  name: Node
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Node_
+  commentId: Overload:EA.DataTTP.Item.Node
+  isSpec: "True"
+  fullName: EA.DataTTP.Item.Node
+  nameWithType: Item.Node
+- uid: EA.DataTTP.Item.NodeIndex
+  name: NodeIndex
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_NodeIndex
+  commentId: P:EA.DataTTP.Item.NodeIndex
+  fullName: EA.DataTTP.Item.NodeIndex
+  nameWithType: Item.NodeIndex
+- uid: EA.DataTTP.Item.NodeIndex*
+  name: NodeIndex
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_NodeIndex_
+  commentId: Overload:EA.DataTTP.Item.NodeIndex
+  isSpec: "True"
+  fullName: EA.DataTTP.Item.NodeIndex
+  nameWithType: Item.NodeIndex
+- uid: EA.DataTTP.Item.Profit
+  name: Profit
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Profit
+  commentId: P:EA.DataTTP.Item.Profit
+  fullName: EA.DataTTP.Item.Profit
+  nameWithType: Item.Profit
+- uid: EA.DataTTP.Item.Profit*
+  name: Profit
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Profit_
+  commentId: Overload:EA.DataTTP.Item.Profit
+  isSpec: "True"
+  fullName: EA.DataTTP.Item.Profit
+  nameWithType: Item.Profit
+- uid: EA.DataTTP.Item.Weight
+  name: Weight
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Weight
+  commentId: P:EA.DataTTP.Item.Weight
+  fullName: EA.DataTTP.Item.Weight
+  nameWithType: Item.Weight
+- uid: EA.DataTTP.Item.Weight*
+  name: Weight
+  href: api/EA.DataTTP.Item.html#EA_DataTTP_Item_Weight_
+  commentId: Overload:EA.DataTTP.Item.Weight
+  isSpec: "True"
+  fullName: EA.DataTTP.Item.Weight
+  nameWithType: Item.Weight
+- uid: EA.DataTTP.LearningManager
+  name: LearningManager
+  href: api/EA.DataTTP.LearningManager.html
+  commentId: T:EA.DataTTP.LearningManager
+  fullName: EA.DataTTP.LearningManager
+  nameWithType: LearningManager
+- uid: EA.DataTTP.LearningManager.#ctor(EA.DataTTP.Data,EA.Core.IMutator{EA.DataTTP.Specimen},EA.Core.ICrossover{EA.DataTTP.Specimen},EA.Core.ISelector{EA.DataTTP.Specimen},EA.Core.ISpecimenFactory{EA.DataTTP.Specimen},System.UInt32,EA.Core.ILogger{EA.DataTTP.Specimen})
+  name: LearningManager(Data, IMutator<Specimen>, ICrossover<Specimen>, ISelector<Specimen>, ISpecimenFactory<Specimen>, UInt32, ILogger<Specimen>)
+  href: api/EA.DataTTP.LearningManager.html#EA_DataTTP_LearningManager__ctor_EA_DataTTP_Data_EA_Core_IMutator_EA_DataTTP_Specimen__EA_Core_ICrossover_EA_DataTTP_Specimen__EA_Core_ISelector_EA_DataTTP_Specimen__EA_Core_ISpecimenFactory_EA_DataTTP_Specimen__System_UInt32_EA_Core_ILogger_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.LearningManager.#ctor(EA.DataTTP.Data,EA.Core.IMutator{EA.DataTTP.Specimen},EA.Core.ICrossover{EA.DataTTP.Specimen},EA.Core.ISelector{EA.DataTTP.Specimen},EA.Core.ISpecimenFactory{EA.DataTTP.Specimen},System.UInt32,EA.Core.ILogger{EA.DataTTP.Specimen})
+  name.vb: LearningManager(Data, IMutator(Of Specimen), ICrossover(Of Specimen), ISelector(Of Specimen), ISpecimenFactory(Of Specimen), UInt32, ILogger(Of Specimen))
+  fullName: EA.DataTTP.LearningManager.LearningManager(EA.DataTTP.Data, EA.Core.IMutator<EA.DataTTP.Specimen>, EA.Core.ICrossover<EA.DataTTP.Specimen>, EA.Core.ISelector<EA.DataTTP.Specimen>, EA.Core.ISpecimenFactory<EA.DataTTP.Specimen>, System.UInt32, EA.Core.ILogger<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.LearningManager.LearningManager(EA.DataTTP.Data, EA.Core.IMutator(Of EA.DataTTP.Specimen), EA.Core.ICrossover(Of EA.DataTTP.Specimen), EA.Core.ISelector(Of EA.DataTTP.Specimen), EA.Core.ISpecimenFactory(Of EA.DataTTP.Specimen), System.UInt32, EA.Core.ILogger(Of EA.DataTTP.Specimen))
+  nameWithType: LearningManager.LearningManager(Data, IMutator<Specimen>, ICrossover<Specimen>, ISelector<Specimen>, ISpecimenFactory<Specimen>, UInt32, ILogger<Specimen>)
+  nameWithType.vb: LearningManager.LearningManager(Data, IMutator(Of Specimen), ICrossover(Of Specimen), ISelector(Of Specimen), ISpecimenFactory(Of Specimen), UInt32, ILogger(Of Specimen))
+- uid: EA.DataTTP.LearningManager.#ctor*
+  name: LearningManager
+  href: api/EA.DataTTP.LearningManager.html#EA_DataTTP_LearningManager__ctor_
+  commentId: Overload:EA.DataTTP.LearningManager.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.LearningManager.LearningManager
+  nameWithType: LearningManager.LearningManager
+- uid: EA.DataTTP.LearningManager.Config
+  name: Config
+  href: api/EA.DataTTP.LearningManager.html#EA_DataTTP_LearningManager_Config
+  commentId: P:EA.DataTTP.LearningManager.Config
+  fullName: EA.DataTTP.LearningManager.Config
+  nameWithType: LearningManager.Config
+- uid: EA.DataTTP.LearningManager.Config*
+  name: Config
+  href: api/EA.DataTTP.LearningManager.html#EA_DataTTP_LearningManager_Config_
+  commentId: Overload:EA.DataTTP.LearningManager.Config
+  isSpec: "True"
+  fullName: EA.DataTTP.LearningManager.Config
+  nameWithType: LearningManager.Config
+- uid: EA.DataTTP.Mutators
+  name: EA.DataTTP.Mutators
+  href: api/EA.DataTTP.Mutators.html
+  commentId: N:EA.DataTTP.Mutators
+  fullName: EA.DataTTP.Mutators
+  nameWithType: EA.DataTTP.Mutators
+- uid: EA.DataTTP.Mutators.InverseMutator
+  name: InverseMutator
+  href: api/EA.DataTTP.Mutators.InverseMutator.html
+  commentId: T:EA.DataTTP.Mutators.InverseMutator
+  fullName: EA.DataTTP.Mutators.InverseMutator
+  nameWithType: InverseMutator
+- uid: EA.DataTTP.Mutators.InverseMutator.#ctor(EA.DataTTP.Data,System.Double,System.Int32,System.Int32,System.Int32)
+  name: InverseMutator(Data, Double, Int32, Int32, Int32)
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator__ctor_EA_DataTTP_Data_System_Double_System_Int32_System_Int32_System_Int32_
+  commentId: M:EA.DataTTP.Mutators.InverseMutator.#ctor(EA.DataTTP.Data,System.Double,System.Int32,System.Int32,System.Int32)
+  fullName: EA.DataTTP.Mutators.InverseMutator.InverseMutator(EA.DataTTP.Data, System.Double, System.Int32, System.Int32, System.Int32)
+  nameWithType: InverseMutator.InverseMutator(Data, Double, Int32, Int32, Int32)
+- uid: EA.DataTTP.Mutators.InverseMutator.#ctor*
+  name: InverseMutator
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator__ctor_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.InverseMutator
+  nameWithType: InverseMutator.InverseMutator
+- uid: EA.DataTTP.Mutators.InverseMutator.Config
+  name: Config
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_Config
+  commentId: P:EA.DataTTP.Mutators.InverseMutator.Config
+  fullName: EA.DataTTP.Mutators.InverseMutator.Config
+  nameWithType: InverseMutator.Config
+- uid: EA.DataTTP.Mutators.InverseMutator.Config*
+  name: Config
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_Config_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.Config
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.Config
+  nameWithType: InverseMutator.Config
+- uid: EA.DataTTP.Mutators.InverseMutator.ItemSwappingCount
+  name: ItemSwappingCount
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_ItemSwappingCount
+  commentId: P:EA.DataTTP.Mutators.InverseMutator.ItemSwappingCount
+  fullName: EA.DataTTP.Mutators.InverseMutator.ItemSwappingCount
+  nameWithType: InverseMutator.ItemSwappingCount
+- uid: EA.DataTTP.Mutators.InverseMutator.ItemSwappingCount*
+  name: ItemSwappingCount
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_ItemSwappingCount_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.ItemSwappingCount
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.ItemSwappingCount
+  nameWithType: InverseMutator.ItemSwappingCount
+- uid: EA.DataTTP.Mutators.InverseMutator.Mutate(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name: Mutate(IList<Specimen>)
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_Mutate_System_Collections_Generic_IList_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.Mutators.InverseMutator.Mutate(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name.vb: Mutate(IList(Of Specimen))
+  fullName: EA.DataTTP.Mutators.InverseMutator.Mutate(System.Collections.Generic.IList<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.Mutators.InverseMutator.Mutate(System.Collections.Generic.IList(Of EA.DataTTP.Specimen))
+  nameWithType: InverseMutator.Mutate(IList<Specimen>)
+  nameWithType.vb: InverseMutator.Mutate(IList(Of Specimen))
+- uid: EA.DataTTP.Mutators.InverseMutator.Mutate*
+  name: Mutate
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_Mutate_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.Mutate
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.Mutate
+  nameWithType: InverseMutator.Mutate
+- uid: EA.DataTTP.Mutators.InverseMutator.MutateRatio
+  name: MutateRatio
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_MutateRatio
+  commentId: P:EA.DataTTP.Mutators.InverseMutator.MutateRatio
+  fullName: EA.DataTTP.Mutators.InverseMutator.MutateRatio
+  nameWithType: InverseMutator.MutateRatio
+- uid: EA.DataTTP.Mutators.InverseMutator.MutateRatio*
+  name: MutateRatio
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_MutateRatio_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.MutateRatio
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.MutateRatio
+  nameWithType: InverseMutator.MutateRatio
+- uid: EA.DataTTP.Mutators.InverseMutator.NodeSwappingCount
+  name: NodeSwappingCount
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_NodeSwappingCount
+  commentId: P:EA.DataTTP.Mutators.InverseMutator.NodeSwappingCount
+  fullName: EA.DataTTP.Mutators.InverseMutator.NodeSwappingCount
+  nameWithType: InverseMutator.NodeSwappingCount
+- uid: EA.DataTTP.Mutators.InverseMutator.NodeSwappingCount*
+  name: NodeSwappingCount
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_NodeSwappingCount_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.NodeSwappingCount
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.NodeSwappingCount
+  nameWithType: InverseMutator.NodeSwappingCount
+- uid: EA.DataTTP.Mutators.InverseMutator.NodeSwappingLength
+  name: NodeSwappingLength
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_NodeSwappingLength
+  commentId: P:EA.DataTTP.Mutators.InverseMutator.NodeSwappingLength
+  fullName: EA.DataTTP.Mutators.InverseMutator.NodeSwappingLength
+  nameWithType: InverseMutator.NodeSwappingLength
+- uid: EA.DataTTP.Mutators.InverseMutator.NodeSwappingLength*
+  name: NodeSwappingLength
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_NodeSwappingLength_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.NodeSwappingLength
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.NodeSwappingLength
+  nameWithType: InverseMutator.NodeSwappingLength
+- uid: EA.DataTTP.Mutators.InverseMutator.Probability
+  name: Probability
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_Probability
+  commentId: P:EA.DataTTP.Mutators.InverseMutator.Probability
+  fullName: EA.DataTTP.Mutators.InverseMutator.Probability
+  nameWithType: InverseMutator.Probability
+- uid: EA.DataTTP.Mutators.InverseMutator.Probability*
+  name: Probability
+  href: api/EA.DataTTP.Mutators.InverseMutator.html#EA_DataTTP_Mutators_InverseMutator_Probability_
+  commentId: Overload:EA.DataTTP.Mutators.InverseMutator.Probability
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.InverseMutator.Probability
+  nameWithType: InverseMutator.Probability
+- uid: EA.DataTTP.Mutators.SwapMutator
+  name: SwapMutator
+  href: api/EA.DataTTP.Mutators.SwapMutator.html
+  commentId: T:EA.DataTTP.Mutators.SwapMutator
+  fullName: EA.DataTTP.Mutators.SwapMutator
+  nameWithType: SwapMutator
+- uid: EA.DataTTP.Mutators.SwapMutator.#ctor(EA.DataTTP.Data,System.Double,System.Int32,System.Int32)
+  name: SwapMutator(Data, Double, Int32, Int32)
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator__ctor_EA_DataTTP_Data_System_Double_System_Int32_System_Int32_
+  commentId: M:EA.DataTTP.Mutators.SwapMutator.#ctor(EA.DataTTP.Data,System.Double,System.Int32,System.Int32)
+  fullName: EA.DataTTP.Mutators.SwapMutator.SwapMutator(EA.DataTTP.Data, System.Double, System.Int32, System.Int32)
+  nameWithType: SwapMutator.SwapMutator(Data, Double, Int32, Int32)
+- uid: EA.DataTTP.Mutators.SwapMutator.#ctor*
+  name: SwapMutator
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator__ctor_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.SwapMutator
+  nameWithType: SwapMutator.SwapMutator
+- uid: EA.DataTTP.Mutators.SwapMutator.Config
+  name: Config
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_Config
+  commentId: P:EA.DataTTP.Mutators.SwapMutator.Config
+  fullName: EA.DataTTP.Mutators.SwapMutator.Config
+  nameWithType: SwapMutator.Config
+- uid: EA.DataTTP.Mutators.SwapMutator.Config*
+  name: Config
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_Config_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.Config
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.Config
+  nameWithType: SwapMutator.Config
+- uid: EA.DataTTP.Mutators.SwapMutator.ItemSwappingCount
+  name: ItemSwappingCount
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_ItemSwappingCount
+  commentId: P:EA.DataTTP.Mutators.SwapMutator.ItemSwappingCount
+  fullName: EA.DataTTP.Mutators.SwapMutator.ItemSwappingCount
+  nameWithType: SwapMutator.ItemSwappingCount
+- uid: EA.DataTTP.Mutators.SwapMutator.ItemSwappingCount*
+  name: ItemSwappingCount
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_ItemSwappingCount_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.ItemSwappingCount
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.ItemSwappingCount
+  nameWithType: SwapMutator.ItemSwappingCount
+- uid: EA.DataTTP.Mutators.SwapMutator.Mutate(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name: Mutate(IList<Specimen>)
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_Mutate_System_Collections_Generic_IList_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.Mutators.SwapMutator.Mutate(System.Collections.Generic.IList{EA.DataTTP.Specimen})
+  name.vb: Mutate(IList(Of Specimen))
+  fullName: EA.DataTTP.Mutators.SwapMutator.Mutate(System.Collections.Generic.IList<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.Mutators.SwapMutator.Mutate(System.Collections.Generic.IList(Of EA.DataTTP.Specimen))
+  nameWithType: SwapMutator.Mutate(IList<Specimen>)
+  nameWithType.vb: SwapMutator.Mutate(IList(Of Specimen))
+- uid: EA.DataTTP.Mutators.SwapMutator.Mutate*
+  name: Mutate
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_Mutate_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.Mutate
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.Mutate
+  nameWithType: SwapMutator.Mutate
+- uid: EA.DataTTP.Mutators.SwapMutator.MutateRatio
+  name: MutateRatio
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_MutateRatio
+  commentId: P:EA.DataTTP.Mutators.SwapMutator.MutateRatio
+  fullName: EA.DataTTP.Mutators.SwapMutator.MutateRatio
+  nameWithType: SwapMutator.MutateRatio
+- uid: EA.DataTTP.Mutators.SwapMutator.MutateRatio*
+  name: MutateRatio
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_MutateRatio_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.MutateRatio
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.MutateRatio
+  nameWithType: SwapMutator.MutateRatio
+- uid: EA.DataTTP.Mutators.SwapMutator.NodeSwappingCount
+  name: NodeSwappingCount
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_NodeSwappingCount
+  commentId: P:EA.DataTTP.Mutators.SwapMutator.NodeSwappingCount
+  fullName: EA.DataTTP.Mutators.SwapMutator.NodeSwappingCount
+  nameWithType: SwapMutator.NodeSwappingCount
+- uid: EA.DataTTP.Mutators.SwapMutator.NodeSwappingCount*
+  name: NodeSwappingCount
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_NodeSwappingCount_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.NodeSwappingCount
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.NodeSwappingCount
+  nameWithType: SwapMutator.NodeSwappingCount
+- uid: EA.DataTTP.Mutators.SwapMutator.Probability
+  name: Probability
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_Probability
+  commentId: P:EA.DataTTP.Mutators.SwapMutator.Probability
+  fullName: EA.DataTTP.Mutators.SwapMutator.Probability
+  nameWithType: SwapMutator.Probability
+- uid: EA.DataTTP.Mutators.SwapMutator.Probability*
+  name: Probability
+  href: api/EA.DataTTP.Mutators.SwapMutator.html#EA_DataTTP_Mutators_SwapMutator_Probability_
+  commentId: Overload:EA.DataTTP.Mutators.SwapMutator.Probability
+  isSpec: "True"
+  fullName: EA.DataTTP.Mutators.SwapMutator.Probability
+  nameWithType: SwapMutator.Probability
+- uid: EA.DataTTP.Node
+  name: Node
+  href: api/EA.DataTTP.Node.html
+  commentId: T:EA.DataTTP.Node
+  fullName: EA.DataTTP.Node
+  nameWithType: Node
+- uid: EA.DataTTP.Node.#ctor
+  name: Node()
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node__ctor
+  commentId: M:EA.DataTTP.Node.#ctor
+  fullName: EA.DataTTP.Node.Node()
+  nameWithType: Node.Node()
+- uid: EA.DataTTP.Node.#ctor(System.Int32,System.Double,System.Double)
+  name: Node(Int32, Double, Double)
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node__ctor_System_Int32_System_Double_System_Double_
+  commentId: M:EA.DataTTP.Node.#ctor(System.Int32,System.Double,System.Double)
+  fullName: EA.DataTTP.Node.Node(System.Int32, System.Double, System.Double)
+  nameWithType: Node.Node(Int32, Double, Double)
+- uid: EA.DataTTP.Node.#ctor*
+  name: Node
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node__ctor_
+  commentId: Overload:EA.DataTTP.Node.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Node.Node
+  nameWithType: Node.Node
+- uid: EA.DataTTP.Node.AvailableItems
+  name: AvailableItems
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_AvailableItems
+  commentId: P:EA.DataTTP.Node.AvailableItems
+  fullName: EA.DataTTP.Node.AvailableItems
+  nameWithType: Node.AvailableItems
+- uid: EA.DataTTP.Node.AvailableItems*
+  name: AvailableItems
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_AvailableItems_
+  commentId: Overload:EA.DataTTP.Node.AvailableItems
+  isSpec: "True"
+  fullName: EA.DataTTP.Node.AvailableItems
+  nameWithType: Node.AvailableItems
+- uid: EA.DataTTP.Node.Index
+  name: Index
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_Index
+  commentId: P:EA.DataTTP.Node.Index
+  fullName: EA.DataTTP.Node.Index
+  nameWithType: Node.Index
+- uid: EA.DataTTP.Node.Index*
+  name: Index
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_Index_
+  commentId: Overload:EA.DataTTP.Node.Index
+  isSpec: "True"
+  fullName: EA.DataTTP.Node.Index
+  nameWithType: Node.Index
+- uid: EA.DataTTP.Node.X
+  name: X
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_X
+  commentId: P:EA.DataTTP.Node.X
+  fullName: EA.DataTTP.Node.X
+  nameWithType: Node.X
+- uid: EA.DataTTP.Node.X*
+  name: X
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_X_
+  commentId: Overload:EA.DataTTP.Node.X
+  isSpec: "True"
+  fullName: EA.DataTTP.Node.X
+  nameWithType: Node.X
+- uid: EA.DataTTP.Node.Y
+  name: Y
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_Y
+  commentId: P:EA.DataTTP.Node.Y
+  fullName: EA.DataTTP.Node.Y
+  nameWithType: Node.Y
+- uid: EA.DataTTP.Node.Y*
+  name: Y
+  href: api/EA.DataTTP.Node.html#EA_DataTTP_Node_Y_
+  commentId: Overload:EA.DataTTP.Node.Y
+  isSpec: "True"
+  fullName: EA.DataTTP.Node.Y
+  nameWithType: Node.Y
+- uid: EA.DataTTP.Specimen
+  name: Specimen
+  href: api/EA.DataTTP.Specimen.html
+  commentId: T:EA.DataTTP.Specimen
+  fullName: EA.DataTTP.Specimen
+  nameWithType: Specimen
+- uid: EA.DataTTP.Specimen.#ctor(EA.DataTTP.Data,EA.Core.ISpecimenInitializator{EA.DataTTP.Specimen})
+  name: Specimen(Data, ISpecimenInitializator<Specimen>)
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen__ctor_EA_DataTTP_Data_EA_Core_ISpecimenInitializator_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.Specimen.#ctor(EA.DataTTP.Data,EA.Core.ISpecimenInitializator{EA.DataTTP.Specimen})
+  name.vb: Specimen(Data, ISpecimenInitializator(Of Specimen))
+  fullName: EA.DataTTP.Specimen.Specimen(EA.DataTTP.Data, EA.Core.ISpecimenInitializator<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.Specimen.Specimen(EA.DataTTP.Data, EA.Core.ISpecimenInitializator(Of EA.DataTTP.Specimen))
+  nameWithType: Specimen.Specimen(Data, ISpecimenInitializator<Specimen>)
+  nameWithType.vb: Specimen.Specimen(Data, ISpecimenInitializator(Of Specimen))
+- uid: EA.DataTTP.Specimen.#ctor*
+  name: Specimen
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen__ctor_
+  commentId: Overload:EA.DataTTP.Specimen.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Specimen
+  nameWithType: Specimen.Specimen
+- uid: EA.DataTTP.Specimen.AddItemToKnapsack(EA.DataTTP.Item)
+  name: AddItemToKnapsack(Item)
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_AddItemToKnapsack_EA_DataTTP_Item_
+  commentId: M:EA.DataTTP.Specimen.AddItemToKnapsack(EA.DataTTP.Item)
+  fullName: EA.DataTTP.Specimen.AddItemToKnapsack(EA.DataTTP.Item)
+  nameWithType: Specimen.AddItemToKnapsack(Item)
+- uid: EA.DataTTP.Specimen.AddItemToKnapsack*
+  name: AddItemToKnapsack
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_AddItemToKnapsack_
+  commentId: Overload:EA.DataTTP.Specimen.AddItemToKnapsack
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.AddItemToKnapsack
+  nameWithType: Specimen.AddItemToKnapsack
+- uid: EA.DataTTP.Specimen.CheckIfItemIsInKnapsack(EA.DataTTP.Item)
+  name: CheckIfItemIsInKnapsack(Item)
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_CheckIfItemIsInKnapsack_EA_DataTTP_Item_
+  commentId: M:EA.DataTTP.Specimen.CheckIfItemIsInKnapsack(EA.DataTTP.Item)
+  fullName: EA.DataTTP.Specimen.CheckIfItemIsInKnapsack(EA.DataTTP.Item)
+  nameWithType: Specimen.CheckIfItemIsInKnapsack(Item)
+- uid: EA.DataTTP.Specimen.CheckIfItemIsInKnapsack*
+  name: CheckIfItemIsInKnapsack
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_CheckIfItemIsInKnapsack_
+  commentId: Overload:EA.DataTTP.Specimen.CheckIfItemIsInKnapsack
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.CheckIfItemIsInKnapsack
+  nameWithType: Specimen.CheckIfItemIsInKnapsack
+- uid: EA.DataTTP.Specimen.Clone
+  name: Clone()
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Clone
+  commentId: M:EA.DataTTP.Specimen.Clone
+  fullName: EA.DataTTP.Specimen.Clone()
+  nameWithType: Specimen.Clone()
+- uid: EA.DataTTP.Specimen.Clone*
+  name: Clone
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Clone_
+  commentId: Overload:EA.DataTTP.Specimen.Clone
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Clone
+  nameWithType: Specimen.Clone
+- uid: EA.DataTTP.Specimen.Config
+  name: Config
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Config
+  commentId: P:EA.DataTTP.Specimen.Config
+  fullName: EA.DataTTP.Specimen.Config
+  nameWithType: Specimen.Config
+- uid: EA.DataTTP.Specimen.Config*
+  name: Config
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Config_
+  commentId: Overload:EA.DataTTP.Specimen.Config
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Config
+  nameWithType: Specimen.Config
+- uid: EA.DataTTP.Specimen.CurrentKnapsackUsage
+  name: CurrentKnapsackUsage
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_CurrentKnapsackUsage
+  commentId: P:EA.DataTTP.Specimen.CurrentKnapsackUsage
+  fullName: EA.DataTTP.Specimen.CurrentKnapsackUsage
+  nameWithType: Specimen.CurrentKnapsackUsage
+- uid: EA.DataTTP.Specimen.CurrentKnapsackUsage*
+  name: CurrentKnapsackUsage
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_CurrentKnapsackUsage_
+  commentId: Overload:EA.DataTTP.Specimen.CurrentKnapsackUsage
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.CurrentKnapsackUsage
+  nameWithType: Specimen.CurrentKnapsackUsage
+- uid: EA.DataTTP.Specimen.Evaluate
+  name: Evaluate()
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Evaluate
+  commentId: M:EA.DataTTP.Specimen.Evaluate
+  fullName: EA.DataTTP.Specimen.Evaluate()
+  nameWithType: Specimen.Evaluate()
+- uid: EA.DataTTP.Specimen.Evaluate*
+  name: Evaluate
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Evaluate_
+  commentId: Overload:EA.DataTTP.Specimen.Evaluate
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Evaluate
+  nameWithType: Specimen.Evaluate
+- uid: EA.DataTTP.Specimen.EvaluationValue
+  name: EvaluationValue
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_EvaluationValue
+  commentId: P:EA.DataTTP.Specimen.EvaluationValue
+  fullName: EA.DataTTP.Specimen.EvaluationValue
+  nameWithType: Specimen.EvaluationValue
+- uid: EA.DataTTP.Specimen.EvaluationValue*
+  name: EvaluationValue
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_EvaluationValue_
+  commentId: Overload:EA.DataTTP.Specimen.EvaluationValue
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.EvaluationValue
+  nameWithType: Specimen.EvaluationValue
+- uid: EA.DataTTP.Specimen.Fix
+  name: Fix()
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Fix
+  commentId: M:EA.DataTTP.Specimen.Fix
+  fullName: EA.DataTTP.Specimen.Fix()
+  nameWithType: Specimen.Fix()
+- uid: EA.DataTTP.Specimen.Fix*
+  name: Fix
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Fix_
+  commentId: Overload:EA.DataTTP.Specimen.Fix
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Fix
+  nameWithType: Specimen.Fix
+- uid: EA.DataTTP.Specimen.GetKnapsackItems
+  name: GetKnapsackItems()
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_GetKnapsackItems
+  commentId: M:EA.DataTTP.Specimen.GetKnapsackItems
+  fullName: EA.DataTTP.Specimen.GetKnapsackItems()
+  nameWithType: Specimen.GetKnapsackItems()
+- uid: EA.DataTTP.Specimen.GetKnapsackItems*
+  name: GetKnapsackItems
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_GetKnapsackItems_
+  commentId: Overload:EA.DataTTP.Specimen.GetKnapsackItems
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.GetKnapsackItems
+  nameWithType: Specimen.GetKnapsackItems
+- uid: EA.DataTTP.Specimen.Init
+  name: Init()
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Init
+  commentId: M:EA.DataTTP.Specimen.Init
+  fullName: EA.DataTTP.Specimen.Init()
+  nameWithType: Specimen.Init()
+- uid: EA.DataTTP.Specimen.Init*
+  name: Init
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Init_
+  commentId: Overload:EA.DataTTP.Specimen.Init
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Init
+  nameWithType: Specimen.Init
+- uid: EA.DataTTP.Specimen.Nodes
+  name: Nodes
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Nodes
+  commentId: P:EA.DataTTP.Specimen.Nodes
+  fullName: EA.DataTTP.Specimen.Nodes
+  nameWithType: Specimen.Nodes
+- uid: EA.DataTTP.Specimen.Nodes*
+  name: Nodes
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_Nodes_
+  commentId: Overload:EA.DataTTP.Specimen.Nodes
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.Nodes
+  nameWithType: Specimen.Nodes
+- uid: EA.DataTTP.Specimen.RemoveItemFromKnapsack(EA.DataTTP.Item)
+  name: RemoveItemFromKnapsack(Item)
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_RemoveItemFromKnapsack_EA_DataTTP_Item_
+  commentId: M:EA.DataTTP.Specimen.RemoveItemFromKnapsack(EA.DataTTP.Item)
+  fullName: EA.DataTTP.Specimen.RemoveItemFromKnapsack(EA.DataTTP.Item)
+  nameWithType: Specimen.RemoveItemFromKnapsack(Item)
+- uid: EA.DataTTP.Specimen.RemoveItemFromKnapsack*
+  name: RemoveItemFromKnapsack
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_RemoveItemFromKnapsack_
+  commentId: Overload:EA.DataTTP.Specimen.RemoveItemFromKnapsack
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.RemoveItemFromKnapsack
+  nameWithType: Specimen.RemoveItemFromKnapsack
+- uid: EA.DataTTP.Specimen.SpecimenInitialization
+  name: SpecimenInitialization
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_SpecimenInitialization
+  commentId: P:EA.DataTTP.Specimen.SpecimenInitialization
+  fullName: EA.DataTTP.Specimen.SpecimenInitialization
+  nameWithType: Specimen.SpecimenInitialization
+- uid: EA.DataTTP.Specimen.SpecimenInitialization*
+  name: SpecimenInitialization
+  href: api/EA.DataTTP.Specimen.html#EA_DataTTP_Specimen_SpecimenInitialization_
+  commentId: Overload:EA.DataTTP.Specimen.SpecimenInitialization
+  isSpec: "True"
+  fullName: EA.DataTTP.Specimen.SpecimenInitialization
+  nameWithType: Specimen.SpecimenInitialization
+- uid: EA.DataTTP.SpecimenFactory
+  name: SpecimenFactory
+  href: api/EA.DataTTP.SpecimenFactory.html
+  commentId: T:EA.DataTTP.SpecimenFactory
+  fullName: EA.DataTTP.SpecimenFactory
+  nameWithType: SpecimenFactory
+- uid: EA.DataTTP.SpecimenFactory.#ctor(EA.DataTTP.Data,EA.Core.ISpecimenInitializator{EA.DataTTP.Specimen})
+  name: SpecimenFactory(Data, ISpecimenInitializator<Specimen>)
+  href: api/EA.DataTTP.SpecimenFactory.html#EA_DataTTP_SpecimenFactory__ctor_EA_DataTTP_Data_EA_Core_ISpecimenInitializator_EA_DataTTP_Specimen__
+  commentId: M:EA.DataTTP.SpecimenFactory.#ctor(EA.DataTTP.Data,EA.Core.ISpecimenInitializator{EA.DataTTP.Specimen})
+  name.vb: SpecimenFactory(Data, ISpecimenInitializator(Of Specimen))
+  fullName: EA.DataTTP.SpecimenFactory.SpecimenFactory(EA.DataTTP.Data, EA.Core.ISpecimenInitializator<EA.DataTTP.Specimen>)
+  fullName.vb: EA.DataTTP.SpecimenFactory.SpecimenFactory(EA.DataTTP.Data, EA.Core.ISpecimenInitializator(Of EA.DataTTP.Specimen))
+  nameWithType: SpecimenFactory.SpecimenFactory(Data, ISpecimenInitializator<Specimen>)
+  nameWithType.vb: SpecimenFactory.SpecimenFactory(Data, ISpecimenInitializator(Of Specimen))
+- uid: EA.DataTTP.SpecimenFactory.#ctor*
+  name: SpecimenFactory
+  href: api/EA.DataTTP.SpecimenFactory.html#EA_DataTTP_SpecimenFactory__ctor_
+  commentId: Overload:EA.DataTTP.SpecimenFactory.#ctor
+  isSpec: "True"
+  fullName: EA.DataTTP.SpecimenFactory.SpecimenFactory
+  nameWithType: SpecimenFactory.SpecimenFactory
+- uid: EA.DataTTP.SpecimenFactory.CreateSpecimen
+  name: CreateSpecimen()
+  href: api/EA.DataTTP.SpecimenFactory.html#EA_DataTTP_SpecimenFactory_CreateSpecimen
+  commentId: M:EA.DataTTP.SpecimenFactory.CreateSpecimen
+  fullName: EA.DataTTP.SpecimenFactory.CreateSpecimen()
+  nameWithType: SpecimenFactory.CreateSpecimen()
+- uid: EA.DataTTP.SpecimenFactory.CreateSpecimen*
+  name: CreateSpecimen
+  href: api/EA.DataTTP.SpecimenFactory.html#EA_DataTTP_SpecimenFactory_CreateSpecimen_
+  commentId: Overload:EA.DataTTP.SpecimenFactory.CreateSpecimen
+  isSpec: "True"
+  fullName: EA.DataTTP.SpecimenFactory.CreateSpecimen
+  nameWithType: SpecimenFactory.CreateSpecimen
+- uid: EA.IDataLoader`1
+  name: IDataLoader<T>
+  href: api/EA.IDataLoader-1.html
+  commentId: T:EA.IDataLoader`1
+  name.vb: IDataLoader(Of T)
+  fullName: EA.IDataLoader<T>
+  fullName.vb: EA.IDataLoader(Of T)
+  nameWithType: IDataLoader<T>
+  nameWithType.vb: IDataLoader(Of T)
+- uid: EA.IDataLoader`1.Load(System.String)
+  name: Load(String)
+  href: api/EA.IDataLoader-1.html#EA_IDataLoader_1_Load_System_String_
+  commentId: M:EA.IDataLoader`1.Load(System.String)
+  fullName: EA.IDataLoader<T>.Load(System.String)
+  fullName.vb: EA.IDataLoader(Of T).Load(System.String)
+  nameWithType: IDataLoader<T>.Load(String)
+  nameWithType.vb: IDataLoader(Of T).Load(String)
+- uid: EA.IDataLoader`1.Load*
+  name: Load
+  href: api/EA.IDataLoader-1.html#EA_IDataLoader_1_Load_
+  commentId: Overload:EA.IDataLoader`1.Load
+  isSpec: "True"
+  fullName: EA.IDataLoader<T>.Load
+  fullName.vb: EA.IDataLoader(Of T).Load
+  nameWithType: IDataLoader<T>.Load
+  nameWithType.vb: IDataLoader(Of T).Load
