@@ -1,0 +1,28 @@
+﻿[
+  {
+    "Crossover": {
+      "CrossoverLength": 5,
+      "Probability": 0.2,
+      "Type": 1
+    },
+    "Epochs": 100,
+    "Mutator": {
+      "ItemSwappingCount": 5,
+      "MutateRatio": 0.2,
+      "NodeSwappingCount": 5,
+      "NodeSwappingLength": 5,
+      "Type": 1
+    },
+    "OutputFileName": "LearningManager_test.csv",
+    "PopulationSize": 100,
+    "Selector": {
+      "SpecimenCount": 5,
+      "TournamentCount": 5,
+      "Type": 2
+    },
+    "SpecimenInitializator": {
+      "ItemAddPropability": 0.2,
+      "Type": 1
+    }
+  }
+]
