@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace EA.Config
 {
+    /// <summary>
+    /// Mutator methods
+    /// </summary>
     public enum MutatorType
     {
+        /// <summary>
+        /// Swap method = 1
+        /// </summary>
         Swap = 1,
+        /// <summary>
+        /// Inverse method = 2
+        /// </summary>
         Inverse = 2
     }
 }

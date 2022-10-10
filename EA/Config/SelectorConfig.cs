@@ -8,8 +8,18 @@ namespace EA.Config
 {
     public class SelectorConfig
     {
+        /// <summary>
+        /// Selector method to be used
+        /// </summary>
         public SelectionType Type { get; set; }
+        /// <summary>
+        /// Specimen count which should be selected
+        /// </summary>
         public int SpecimenCount { get; set; }
+
+        /// <summary>
+        /// Tournament count only used by tournament selector
+        /// </summary>
         public int? TournamentCount { get; set; }
     }
 }

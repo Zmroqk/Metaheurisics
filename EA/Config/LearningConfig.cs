@@ -14,6 +14,7 @@ namespace EA.Config
         public SpecimenInitializatorConfig SpecimenInitializator { get; set; }
         public int PopulationSize { get; set; }
         public string OutputFileName { get; set; }
+        public string InputFileName { get; set; }
         public int Epochs { get; set; }
     }
 }

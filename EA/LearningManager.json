@@ -14,6 +14,7 @@
       "Type": 1
     },
     "OutputFileName": "LearningManager_test.csv",
+    "InputFileName": "ai-lab1-ttp_data/easy_0.ttp",
     "PopulationSize": 100,
     "Selector": {
       "SpecimenCount": 5,

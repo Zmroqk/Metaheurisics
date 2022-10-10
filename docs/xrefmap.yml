@@ -108,6 +108,19 @@ references:
   isSpec: "True"
   fullName: EA.Config.LearningConfig.Epochs
   nameWithType: LearningConfig.Epochs
+- uid: EA.Config.LearningConfig.InputFileName
+  name: InputFileName
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_InputFileName
+  commentId: P:EA.Config.LearningConfig.InputFileName
+  fullName: EA.Config.LearningConfig.InputFileName
+  nameWithType: LearningConfig.InputFileName
+- uid: EA.Config.LearningConfig.InputFileName*
+  name: InputFileName
+  href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_InputFileName_
+  commentId: Overload:EA.Config.LearningConfig.InputFileName
+  isSpec: "True"
+  fullName: EA.Config.LearningConfig.InputFileName
+  nameWithType: LearningConfig.InputFileName
 - uid: EA.Config.LearningConfig.Mutator
   name: Mutator
   href: api/EA.Config.LearningConfig.html#EA_Config_LearningConfig_Mutator
