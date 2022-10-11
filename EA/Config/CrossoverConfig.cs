@@ -16,9 +16,5 @@ namespace EA.Config
         /// Crossover probability
         /// </summary>
         public double Probability { get; set; }
-        /// <summary>
-        /// Crossover method length parameter
-        /// </summary>
-        public int CrossoverLength { get; set; }
     }
 }

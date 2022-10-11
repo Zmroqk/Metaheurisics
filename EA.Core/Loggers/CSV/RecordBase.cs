@@ -10,14 +10,8 @@ namespace EA.Core.Loggers.CSV
     public class RecordBase<T> : IRecord<T> where T : ISpecimen<T>
     {
         public int CurrentEpoch { get; set; }
-        public int SpecimenIndex { get; set; }
-        public double SpecimenScore { get; set; }
-
-        public void ApplyData(int currentEpoch, int specimenIndex, T specimen)
-        {
-            this.CurrentEpoch = currentEpoch;
-            this.SpecimenIndex = specimenIndex;
-            this.SpecimenScore = specimen.Evaluate();
-        }
+        public double MaxSpecimenScore { get; set; }
+        public double MinSpecimenScore { get; set; }
+        public double AverageSpecimenScore { get; set; }
     }
 }

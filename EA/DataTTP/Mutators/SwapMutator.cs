@@ -11,9 +11,6 @@ namespace EA.DataTTP.Mutators
     {
         public Data Config { get; set; }
         public double MutateRatio { get; set; }
-
-        public int NodeSwappingCount { get; set; }
-        public int ItemSwappingCount { get; set; }
         public double Probability
         {
             get
@@ -26,39 +23,29 @@ namespace EA.DataTTP.Mutators
             }
         }
 
-        public SwapMutator(Data config, double mutateRatio, int nodeSwappingCount, int itemSwappingCount)
+        public SwapMutator(Data config, double mutateRatio)
         {
             this.Config = config;
             this.MutateRatio = mutateRatio;
-            this.NodeSwappingCount = nodeSwappingCount;
-            this.ItemSwappingCount = itemSwappingCount;
         }
 
         public IList<Specimen> Mutate(IList<Specimen> currentPopulation)
         {
             Random random = new Random();
+            var probability = 1 - this.MutateRatio;
             foreach(Specimen specimen in currentPopulation)
             {
-                if(random.Next() <= this.MutateRatio)
+                for(int i = 0; i < specimen.Nodes.Count; i++)
                 {
-                    for(int i = 0; i < this.NodeSwappingCount; i++)
+                    if (probability <= random.NextDouble())
                     {
-                        var index1 = random.Next(specimen.Nodes.Count);
                         var index2 = random.Next(specimen.Nodes.Count);
-                        var swappedNode = specimen.Nodes[index1];
-                        specimen.Nodes[index1] = specimen.Nodes[index2];
+                        var swappedNode = specimen.Nodes[i];
+                        specimen.Nodes[i] = specimen.Nodes[index2];
                         specimen.Nodes[index2] = swappedNode;
                     }
-                    //TODO Should be moved to own MutateRatio if?
-                    for (int i = 0; i < this.ItemSwappingCount; i++)
-                    {
-                        var items = specimen.GetKnapsackItems();
-                        var index1 = random.Next(items.Length);
-                        var index2 = random.Next(this.Config.Items.Count);
-                        specimen.RemoveItemFromKnapsack(items[index1]);
-                        specimen.AddItemToKnapsack(this.Config.Items[index2]);
-                    }
                 }
+                KnapsackHelper.GreedyKnapsack(specimen);
             }
             return currentPopulation;
         }

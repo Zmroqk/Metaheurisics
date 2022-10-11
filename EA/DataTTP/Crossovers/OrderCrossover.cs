@@ -10,12 +10,10 @@ namespace EA.DataTTP.Crossovers
     public class OrderCrossover : ICrossover<Specimen>
     {
         public double Probability { get; set; }
-        public int CrossLength { get; set; }
 
-        public OrderCrossover(double probability, int crossLength)
+        public OrderCrossover(double probability)
         {
             this.Probability = probability;
-            this.CrossLength = crossLength;
         }
 
         public IList<Specimen> Crossover(IList<Specimen> specimens)
@@ -25,16 +23,20 @@ namespace EA.DataTTP.Crossovers
             var newSpecimens = new List<Specimen>();
             for(int i = 0; i < specimens.Count - 1; i++)
             {
+                Specimen? newSpecimen = null;
                 if (prop <= random.NextDouble())
                 {
-                    newSpecimens.Add(this.CrossSpecimens(specimens[i], specimens[i + 1]));
+                    newSpecimen = this.CrossSpecimens(specimens[i], specimens[i + 1]);
+                    newSpecimens.Add(newSpecimen);
                 }
                 else
                 {
+                    newSpecimen = specimens[i].Clone();
                     newSpecimens.Add(specimens[i].Clone());
                 }
+                KnapsackHelper.GreedyKnapsack(newSpecimen);
             }
-            newSpecimens.Add(specimens[specimens.Count - 1].Clone());
+            newSpecimens.Add(specimens[specimens.Count - 1].Clone());           
             return newSpecimens;
         }
 
@@ -42,8 +44,9 @@ namespace EA.DataTTP.Crossovers
         {
             var newSpecimen = otherSpecimen.Clone();
             var random = new Random();
-            var startIndex = random.Next(specimen.Nodes.Count - this.CrossLength);
-            var nodes = specimen.Nodes.GetRange(startIndex, this.CrossLength);
+            var startIndex = random.Next(specimen.Nodes.Count);
+            var length = specimen.Nodes.Count - startIndex;
+            var nodes = specimen.Nodes.GetRange(startIndex, length);
             foreach(var node in nodes)
             {
                 newSpecimen.Nodes.Remove(node);

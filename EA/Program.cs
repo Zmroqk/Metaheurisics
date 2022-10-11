@@ -30,13 +30,13 @@ if (string.IsNullOrWhiteSpace(learningConfig))
                 Environment.Exit(-1);
             }
 
-            var mutator = new SwapMutator(data, 0.1d, 5, 5);
+            var mutator = new SwapMutator(data, 0.1d);
             var specimenInitailizator = new RandomSpecimenInitializator(data, 0.2d);
             var specimenFactory = new SpecimenFactory(data, specimenInitailizator);
             var selector = new RouletteSelection<Specimen>(10);
             var csvLogger = new CSVLogger<Specimen, RecordBase<Specimen>>("Logs.csv");
             csvLogger.RunLogger();
-            var crossover = new OrderCrossover(0.3d, 5);
+            var crossover = new OrderCrossover(0.3d);
             var learningManager = new LearningManager(data
                 , mutator
                 , crossover
@@ -67,6 +67,8 @@ else
             Environment.Exit(-1);
         }
 
+        Console.WriteLine($"Test for: {config.OutputFileName}");
+
         IMutator<Specimen> mutator;
         ISpecimenInitializator<Specimen> specimenInitializator;
         ISelector<Specimen> selector;
@@ -74,11 +76,11 @@ else
 
         if(config.Mutator.Type == MutatorType.Swap)
         {
-            mutator = new SwapMutator(data, config.Mutator.MutateRatio, config.Mutator.NodeSwappingCount, config.Mutator.ItemSwappingCount);
+            mutator = new SwapMutator(data, config.Mutator.MutateRatio);
         }
         else
         {
-            mutator = new InverseMutator(data, config.Mutator.MutateRatio, config.Mutator.NodeSwappingCount, config.Mutator.ItemSwappingCount, config.Mutator.NodeSwappingLength.Value);
+            mutator = new InverseMutator(data, config.Mutator.MutateRatio);
         }
 
         if(config.SpecimenInitializator.Type == SpecimenInitializatorType.Random)
@@ -87,7 +89,7 @@ else
         }
         else
         {
-            specimenInitializator = new GreedySpecimenInitializator(data, config.SpecimenInitializator.ItemAddPropability);
+            specimenInitializator = new GreedySpecimenInitializator(data);
         }
 
         if(config.Selector.Type == SelectionType.Roulette)
@@ -96,16 +98,16 @@ else
         }
         else
         {
-            selector = new TournamentSelection<Specimen>(config.Selector.SpecimenCount, config.Selector.TournamentCount.Value);
+            selector = new TournamentSelection<Specimen>(config.Selector.SpecimenCount);
         }
 
         if(config.Crossover.Type == CrossoverType.Order)
         {
-            crossover = new OrderCrossover(config.Crossover.Probability, config.Crossover.CrossoverLength);
+            crossover = new OrderCrossover(config.Crossover.Probability);
         }
         else
         {
-            crossover = new PartiallyMatchedCrossover(config.Crossover.Probability, config.Crossover.CrossoverLength);
+            crossover = new PartiallyMatchedCrossover(config.Crossover.Probability);
         }
 
         var specimenFactory = new SpecimenFactory(data, specimenInitializator);

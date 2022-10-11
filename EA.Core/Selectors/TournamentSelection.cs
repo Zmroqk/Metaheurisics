@@ -10,19 +10,17 @@ namespace EA.Core.Selectors
     public class TournamentSelection<T> : ISelector<T> where T : ISpecimen<T>
     {
         public int SpecimenCount { get; set; }
-        public int TournamentCount { get; set; }
 
-        public TournamentSelection(int specimenCount, int tournamentCount)
+        public TournamentSelection(int specimenCount)
         {
             this.SpecimenCount = specimenCount;
-            this.TournamentCount = tournamentCount;
         }
 
         public virtual IList<T> Select(IList<T> currentPopulation)
         {
             Random random = new Random();
             List<T> selectedSpecimens = new List<T>();
-            for (int i = 0; i < this.TournamentCount; i++)
+            while(selectedSpecimens.Count != currentPopulation.Count)
             {
                 List<T> tournamentSelectedSpecimens = new List<T>();
                 for(int j = 0; j < this.SpecimenCount; j++)
@@ -30,16 +28,9 @@ namespace EA.Core.Selectors
                     var index = random.Next(currentPopulation.Count);
                     tournamentSelectedSpecimens.Add(currentPopulation[index]);
                 }
-                selectedSpecimens.Add(tournamentSelectedSpecimens.MaxBy(s => s.Evaluate()));
+                selectedSpecimens.Add(tournamentSelectedSpecimens.MaxBy(s => s.Evaluate()).Clone());
             }
-            List<T> newSpecimens = new List<T>(currentPopulation.Count);
-            int selectedSpecimenIndex = 0;
-            for(int i = 0; i < currentPopulation.Count; i++)
-            {
-                newSpecimens.Add(selectedSpecimens[selectedSpecimenIndex++].Clone());
-                selectedSpecimenIndex %= selectedSpecimens.Count;
-            }
-            return newSpecimens;
+            return selectedSpecimens;
         }
     }
 }

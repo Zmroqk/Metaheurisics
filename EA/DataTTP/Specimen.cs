@@ -50,12 +50,12 @@ namespace EA.DataTTP
             this.UpdateWeight(ref currentWeight, this.Nodes[0]);
             for(int i = 1; i < this.Nodes.Count; i++)
             {
-                var distance = this.Config.GetNodeMatrix()[(this.Nodes[i - 1], this.Nodes[i])];
+                var distance = this.Config.GetNodeMatrix()[new PathStruct() { From = this.Nodes[i - 1], To = this.Nodes[i] }];
                 var currentSpeed = this.Config.MaxSpeed - currentWeight * ((this.Config.MaxSpeed - this.Config.MinSpeed) / this.Config.KnapsackCapacity);
                 time += distance * currentSpeed;
                 this.UpdateWeight(ref currentWeight, this.Nodes[i]);
             }
-            this.EvaluationValue = profit + time;
+            this.EvaluationValue = profit - time;
             return profit - time;
         }
 
@@ -79,6 +79,14 @@ namespace EA.DataTTP
         {
             this.Items[item] = false;
             this.CurrentKnapsackUsage -= item.Weight;
+        }
+
+        public void RemoveAllItemsFromKnapsack()
+        {
+            foreach(var item in this.Items.Keys)
+            {
+                this.Items[item] = false;
+            }
         }
 
         public bool CheckIfItemIsInKnapsack(Item item)

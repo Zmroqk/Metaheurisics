@@ -12,7 +12,7 @@ namespace EA.DataTTP
         {
             this.Nodes = new List<Node>();
             this.Items = new List<Item>();
-            this.Distances = new Dictionary<(Node, Node), double>();
+            this.Distances = new Dictionary<PathStruct, double>();
         }
 
         public string Name { get; set; }
@@ -27,9 +27,9 @@ namespace EA.DataTTP
         public List<Node> Nodes { get; set; }
         public List<Item> Items { get; set; }
 
-        public Dictionary<(Node from, Node to), double> Distances { get; set; }
+        public Dictionary<PathStruct, double> Distances { get; set; }
 
-        public Dictionary<(Node from, Node to), double> GetNodeMatrix()
+        public Dictionary<PathStruct, double> GetNodeMatrix()
         {
             if(this.Distances.Count != 0)
             {
@@ -40,7 +40,7 @@ namespace EA.DataTTP
                 foreach (var otherNode in Nodes)
                 {
                     var distance = Math.Sqrt(Math.Pow(node.X - otherNode.X, 2) + Math.Pow(node.Y - otherNode.Y, 2));
-                    this.Distances.Add((node, otherNode), distance);
+                    this.Distances.Add(new PathStruct() { From = node, To = otherNode }, distance);
                 }
             }
             return this.Distances;

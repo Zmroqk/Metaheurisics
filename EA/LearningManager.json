@@ -1,29 +1,48 @@
 ﻿[
   {
     "Crossover": {
-      "CrossoverLength": 5,
-      "Probability": 0.2,
+      "CrossoverLength": 10,
+      "Probability": 0.6,
       "Type": 1
     },
     "Epochs": 100,
     "Mutator": {
-      "ItemSwappingCount": 5,
-      "MutateRatio": 0.2,
-      "NodeSwappingCount": 5,
-      "NodeSwappingLength": 5,
+      "MutateRatio": 0.02,
       "Type": 1
     },
     "OutputFileName": "LearningManager_test.csv",
     "InputFileName": "ai-lab1-ttp_data/easy_0.ttp",
     "PopulationSize": 100,
     "Selector": {
-      "SpecimenCount": 5,
-      "TournamentCount": 5,
+      "SpecimenCount": 25,
+      "TournamentCount": 25,
       "Type": 2
     },
     "SpecimenInitializator": {
-      "ItemAddPropability": 0.2,
+      "ItemAddPropability": 0.3,
+      "Type": 2
+    }
+  },
+  {
+    "Crossover": {
+      "Probability": 0.1,
       "Type": 1
+    },
+    "Epochs": 100,
+    "Mutator": {
+      "MutateRatio": 0.02,
+      "Type": 1
+    },
+    "OutputFileName": "LearningManager_zajecia.csv",
+    "InputFileName": "ai-lab1-ttp_data/easy_0.ttp",
+    "PopulationSize": 100,
+    "Selector": {
+      "SpecimenCount": 2,
+      "Type": 2
+    },
+    "SpecimenInitializator": {
+      "ItemAddPropability": 0.3,
+      "Type": 2
     }
   }
 ]

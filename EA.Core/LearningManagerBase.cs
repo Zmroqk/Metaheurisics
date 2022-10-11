@@ -33,7 +33,7 @@ namespace EA.Core
             this.Selector = selector;            this.PopulationSize = populationSize;
             this.SpecimenFactory = specimenFactory;
             this.Logger = logger;
-            this.CurrentEpoch = 1;
+            this.CurrentEpoch = 0;
         }
 
         public virtual void Init()

@@ -16,10 +16,5 @@ namespace EA.Config
         /// Specimen count which should be selected
         /// </summary>
         public int SpecimenCount { get; set; }
-
-        /// <summary>
-        /// Tournament count only used by tournament selector
-        /// </summary>
-        public int? TournamentCount { get; set; }
     }
 }

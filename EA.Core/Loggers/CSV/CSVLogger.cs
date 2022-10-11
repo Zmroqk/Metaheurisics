@@ -79,14 +79,13 @@ namespace EA.Core.Loggers.CSV
 
         private void LogSpecimens(int currentEpoch, IList<T> currentEpochSpecimens)
         {
-            int index = 0;
-            foreach (var specimen in currentEpochSpecimens)
-            {
-                var record = new Record();
-                record.ApplyData(currentEpoch, index++, specimen);
-                this.CsvWriter.WriteRecord<Record>(record);
-                this.CsvWriter.NextRecord();
-            }
+            var record = new Record();
+            record.CurrentEpoch = currentEpoch;
+            record.MaxSpecimenScore = currentEpochSpecimens.Max(s => s.Evaluate());
+            record.MinSpecimenScore = currentEpochSpecimens.Min(s => s.Evaluate());
+            record.AverageSpecimenScore = currentEpochSpecimens.Average(s => s.Evaluate());
+            this.CsvWriter.WriteRecord<Record>(record);
+            this.CsvWriter.NextRecord();
             this.CsvWriter.Flush();
         }
 

@@ -17,20 +17,5 @@ namespace EA.Config
         /// Mutate probability
         /// </summary>
         public double MutateRatio { get; set; }
-
-        /// <summary>
-        /// Node swapping count
-        /// </summary>
-        public int NodeSwappingCount { get; set; }
-
-        /// <summary>
-        /// Item swapping count
-        /// </summary>
-        public int ItemSwappingCount { get; set; }
-
-        /// <summary>
-        /// Node swapping length only used by Inverse Mutator
-        /// </summary>
-        public int? NodeSwappingLength { get; set; }
     }
 }

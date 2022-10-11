@@ -10,12 +10,10 @@ namespace EA.DataTTP.Crossovers
     public class PartiallyMatchedCrossover : ICrossover<Specimen>
     {
         public double Probability { get; set; }
-        public int CrossLength { get; set; }
 
-        public PartiallyMatchedCrossover(double probability, int crossLength)
+        public PartiallyMatchedCrossover(double probability)
         {
             this.Probability = probability;
-            this.CrossLength = crossLength;
         }
 
         public IList<Specimen> Crossover(IList<Specimen> specimens)
@@ -30,16 +28,24 @@ namespace EA.DataTTP.Crossovers
                     var (specimen1, specimen2) = this.CrossSpecimens(specimens[i - 1], specimens[i]);
                     newSpecimens.Add(specimen1);
                     newSpecimens.Add(specimen2);
+                    KnapsackHelper.GreedyKnapsack(specimen1);
+                    KnapsackHelper.GreedyKnapsack(specimen2);
                 }
                 else
                 {
-                    newSpecimens.Add(specimens[i-1].Clone());
-                    newSpecimens.Add(specimens[i].Clone());
+                    var specimen1 = specimens[i - 1].Clone();
+                    var specimen2 = specimens[i].Clone();
+                    newSpecimens.Add(specimen1);
+                    newSpecimens.Add(specimen2);
+                    KnapsackHelper.GreedyKnapsack(specimen1);
+                    KnapsackHelper.GreedyKnapsack(specimen2);
                 }
             }
             if(specimens.Count % 2 == 0)
             {
-                newSpecimens.Add(specimens[specimens.Count - 1].Clone());
+                var specimen = specimens[specimens.Count - 1].Clone();
+                newSpecimens.Add(specimen);
+                KnapsackHelper.GreedyKnapsack(specimen);
             }
             return newSpecimens;
         }
@@ -49,11 +55,12 @@ namespace EA.DataTTP.Crossovers
             var newSpecimen = specimen.Clone();
             var newOtherSpecimen = otherSpecimen.Clone();
             var random = new Random();
-            var startIndex = random.Next(specimen.Nodes.Count - this.CrossLength);
-            var specimenRange = newSpecimen.Nodes.GetRange(startIndex, this.CrossLength);
-            var otherSpecimenRange = newOtherSpecimen.Nodes.GetRange(startIndex, this.CrossLength);
-            newSpecimen.Nodes.RemoveRange(startIndex, this.CrossLength);
-            newOtherSpecimen.Nodes.RemoveRange(startIndex, this.CrossLength);
+            var startIndex = random.Next(specimen.Nodes.Count);
+            var length = specimen.Nodes.Count - startIndex;
+            var specimenRange = newSpecimen.Nodes.GetRange(startIndex, length);
+            var otherSpecimenRange = newOtherSpecimen.Nodes.GetRange(startIndex, length);
+            newSpecimen.Nodes.RemoveRange(startIndex, length);
+            newOtherSpecimen.Nodes.RemoveRange(startIndex, length);
             newSpecimen.Nodes.InsertRange(startIndex, otherSpecimenRange);
             newSpecimen.Nodes.InsertRange(startIndex, specimenRange);
 
@@ -61,14 +68,14 @@ namespace EA.DataTTP.Crossovers
 
             for(int i = 0; i < newSpecimen.Nodes.Count; i++)
             {
-                if(i < startIndex || i > startIndex + this.CrossLength)
+                if(i < startIndex || i > startIndex + length)
                 {
                     newSpecimen.Nodes[i] = mapping[newSpecimen.Nodes[i]][random.Next(mapping[newSpecimen.Nodes[i]].Count)];
                 }
             }
             for (int i = 0; i < newOtherSpecimen.Nodes.Count; i++)
             {
-                if (i < startIndex || i > startIndex + this.CrossLength)
+                if (i < startIndex || i > startIndex + length)
                 {
                     newSpecimen.Nodes[i] = mapping[newSpecimen.Nodes[i]][random.Next(mapping[newSpecimen.Nodes[i]].Count)];
                 }
