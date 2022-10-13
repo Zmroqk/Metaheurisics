@@ -14,7 +14,7 @@ namespace EA.Core
         ISelector<T> Selector { get; set; }
         ISpecimenFactory<T> SpecimenFactory { get; set; }
         ILogger<T>? Logger { get; set; }
-
+        IAdditionalOperations<T>? AdditionalOperationsHandler { get; set; }
         void Init();
         void NextEpoch();
 

@@ -34,19 +34,18 @@ namespace EA.DataTTP.Mutators
             var probability = 1 - this.MutateRatio;
             foreach(Specimen specimen in currentPopulation)
             {
-                for(int i = 0; i < specimen.Nodes.Count; i++)
+                if (probability <= random.NextDouble())
                 {
-                    if (probability <= random.NextDouble())
+                    for (int i = 0; i < specimen.Nodes.Count; i++)
                     {
                         var length = random.Next(specimen.Nodes.Count - i);
                         var swappedNodes = specimen.Nodes.GetRange(i, length);
                         swappedNodes.Reverse();
                         specimen.Nodes.RemoveRange(i, length);
                         specimen.Nodes.InsertRange(i, swappedNodes);
+                        specimen.IsMutated = true;
                     }
                 }
-                KnapsackHelper.GreedyKnapsack(specimen);
-
             }
             return currentPopulation;
         }

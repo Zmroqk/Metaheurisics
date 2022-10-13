@@ -43,9 +43,9 @@ namespace EA.DataTTP.Mutators
                         var swappedNode = specimen.Nodes[i];
                         specimen.Nodes[i] = specimen.Nodes[index2];
                         specimen.Nodes[index2] = swappedNode;
+                        specimen.IsMutated = true;
                     }
                 }
-                KnapsackHelper.GreedyKnapsack(specimen);
             }
             return currentPopulation;
         }

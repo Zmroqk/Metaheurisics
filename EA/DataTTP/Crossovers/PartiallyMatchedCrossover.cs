@@ -26,26 +26,21 @@ namespace EA.DataTTP.Crossovers
                 if (prop <= random.NextDouble())
                 {
                     var (specimen1, specimen2) = this.CrossSpecimens(specimens[i - 1], specimens[i]);
+                    specimen1.IsCrossed = true;
+                    specimen2.IsCrossed = true;
                     newSpecimens.Add(specimen1);
                     newSpecimens.Add(specimen2);
-                    KnapsackHelper.GreedyKnapsack(specimen1);
-                    KnapsackHelper.GreedyKnapsack(specimen2);
                 }
                 else
                 {
-                    var specimen1 = specimens[i - 1].Clone();
-                    var specimen2 = specimens[i].Clone();
-                    newSpecimens.Add(specimen1);
-                    newSpecimens.Add(specimen2);
-                    KnapsackHelper.GreedyKnapsack(specimen1);
-                    KnapsackHelper.GreedyKnapsack(specimen2);
+                    newSpecimens.Add(specimens[i - 1].Clone());
+                    newSpecimens.Add(specimens[i].Clone());
                 }
             }
             if(specimens.Count % 2 == 0)
             {
                 var specimen = specimens[specimens.Count - 1].Clone();
                 newSpecimens.Add(specimen);
-                KnapsackHelper.GreedyKnapsack(specimen);
             }
             return newSpecimens;
         }

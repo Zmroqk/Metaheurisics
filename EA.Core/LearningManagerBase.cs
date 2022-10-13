@@ -18,6 +18,7 @@ namespace EA.Core
         public ILogger<T>? Logger { get; set; }
 
         public int CurrentEpoch { get; set; }
+        public IAdditionalOperations<T>? AdditionalOperationsHandler { get; set; }
 
         public LearningManagerBase(IMutator<T> mutator
             , ICrossover<T> crossover
@@ -47,11 +48,17 @@ namespace EA.Core
 
         public virtual void NextEpoch()
         {
-            var selectedSpecimens = Selector.Select(CurrentEpochSpecimens);
-            var newSpecimens = Crossover.Crossover(selectedSpecimens);
-            var mutatedSpecimens = Mutator.Mutate(newSpecimens);
-            this.CurrentEpochSpecimens = mutatedSpecimens;
-            this.Logger?.Log(++this.CurrentEpoch, CurrentEpochSpecimens);
+            var beforeSelectSpecimens = this.AdditionalOperationsHandler?.BeforeSelect(this.CurrentEpochSpecimens) ?? this.CurrentEpochSpecimens;
+            var selectedSpecimens = this.Selector.Select(beforeSelectSpecimens);
+            var afterSelectSpecimens = this.AdditionalOperationsHandler?.AfterSelect(selectedSpecimens) ?? selectedSpecimens;
+            var beforeCrossoverSpecimens = this.AdditionalOperationsHandler?.BeforeCrossover(afterSelectSpecimens) ?? afterSelectSpecimens;
+            var newSpecimens = this.Crossover.Crossover(beforeCrossoverSpecimens);
+            var afterCrossoverSpecimens = this.AdditionalOperationsHandler?.AfterCrossover(newSpecimens) ?? newSpecimens;
+            var beforeMutationSpecimens = this.AdditionalOperationsHandler?.BeforeMutation(afterCrossoverSpecimens) ?? afterCrossoverSpecimens;
+            var mutatedSpecimens = this.Mutator.Mutate(beforeMutationSpecimens);
+            var afterMutationSpecimens = this.AdditionalOperationsHandler?.AfterMutation(mutatedSpecimens) ?? mutatedSpecimens;
+            this.CurrentEpochSpecimens = afterMutationSpecimens;
+            this.Logger?.Log(++this.CurrentEpoch, this.CurrentEpochSpecimens);
         }
     }
 }

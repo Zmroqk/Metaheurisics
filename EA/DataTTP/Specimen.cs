@@ -15,12 +15,12 @@ namespace EA.DataTTP
         {
             this.Nodes = new List<Node>();
             this.Config = config;
-            this.Items = new Dictionary<Item, bool>();
+            this.Items = new HashSet<Item>();
             this.SpecimenInitialization = specimenInitialization;
             this.CurrentKnapsackUsage = 0;
         }
 
-        private Dictionary<Item, bool> Items { get; }
+        private HashSet<Item> Items { get; set; }
 
         public List<Node> Nodes { get; }
 
@@ -30,6 +30,12 @@ namespace EA.DataTTP
 
         public double? EvaluationValue { get; set; }
 
+        public bool IsCrossed { get; set; }
+
+        public bool IsMutated { get; set; }
+
+        public bool IsModified => this.IsCrossed || this.IsMutated;
+
         public double Evaluate()
         {
             if (this.EvaluationValue.HasValue)
@@ -38,12 +44,9 @@ namespace EA.DataTTP
             }
 
             var profit = 0d;
-            foreach(var item in Items)
+            foreach(var item in this.Items)
             {
-                if (item.Value)
-                {
-                    profit += item.Key.Profit;
-                }
+                profit += item.Profit;
             }
             var time = 0d;
             var currentWeight = 0d;
@@ -63,7 +66,7 @@ namespace EA.DataTTP
         {
             if(this.Config.KnapsackCapacity >= this.CurrentKnapsackUsage + item.Weight)
             {
-                this.Items[item] = true;
+                this.Items.Add(item);
                 this.CurrentKnapsackUsage += item.Weight;
                 return true;
             }
@@ -72,48 +75,33 @@ namespace EA.DataTTP
 
         public Item[] GetKnapsackItems()
         {
-            return this.Items.Where(i => i.Value).Select(i => i.Key).ToArray();
+            return this.Items.ToArray();
         }
 
         public void RemoveItemFromKnapsack(Item item)
         {
-            this.Items[item] = false;
+            this.Items.Remove(item);
             this.CurrentKnapsackUsage -= item.Weight;
         }
 
         public void RemoveAllItemsFromKnapsack()
         {
-            foreach(var item in this.Items.Keys)
-            {
-                this.Items[item] = false;
-            }
+            this.Items = new HashSet<Item>();
         }
 
         public bool CheckIfItemIsInKnapsack(Item item)
         {
-            return this.Items.ContainsKey(item);
+            return this.Items.Contains(item);
         }
 
         private void UpdateWeight(ref double weight, Node node)
         {
             foreach (var item in node.AvailableItems)
             {
-                if (this.Items[item])
+                if (this.Items.Contains(item))
                 {
                     weight += item.Weight;
                 }
-            }
-        }
-
-        private void SetupItemsDictionary()
-        {
-            if(this.Items.Count != 0)
-            {
-                return;
-            }
-            foreach(var item in this.Config.Items)
-            {
-                this.Items.Add(item, false);
             }
         }
 
@@ -136,21 +124,19 @@ namespace EA.DataTTP
 
         public void Init()
         {
-            this.SetupItemsDictionary();
             this.SpecimenInitialization.Initialize(this);
         }
 
         public Specimen Clone()
         {
             var specimen = new Specimen(this.Config, this.SpecimenInitialization);
-            specimen.SetupItemsDictionary();
             foreach(var node in this.Nodes)
             {
                 specimen.Nodes.Add(node);
             }
             foreach(var item in this.Items)
             {
-                specimen.Items[item.Key] = item.Value;
+                specimen.Items.Add(item);
             }
             return specimen;
         }

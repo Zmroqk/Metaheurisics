@@ -23,18 +23,16 @@ namespace EA.DataTTP.Crossovers
             var newSpecimens = new List<Specimen>();
             for(int i = 0; i < specimens.Count - 1; i++)
             {
-                Specimen? newSpecimen = null;
                 if (prop <= random.NextDouble())
                 {
-                    newSpecimen = this.CrossSpecimens(specimens[i], specimens[i + 1]);
+                    var newSpecimen = this.CrossSpecimens(specimens[i], specimens[i + 1]);
+                    newSpecimen.IsCrossed = true;
                     newSpecimens.Add(newSpecimen);
                 }
                 else
                 {
-                    newSpecimen = specimens[i].Clone();
                     newSpecimens.Add(specimens[i].Clone());
                 }
-                KnapsackHelper.GreedyKnapsack(newSpecimen);
             }
             newSpecimens.Add(specimens[specimens.Count - 1].Clone());           
             return newSpecimens;
