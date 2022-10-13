@@ -16,5 +16,10 @@ namespace EA.Config
         /// Specimen count which should be selected
         /// </summary>
         public int SpecimenCount { get; set; }
+
+        /// <summary>
+        /// Should selection minimalize score of specimens
+        /// </summary>
+        public bool IsMinimalizing { get; set; }
     }
 }

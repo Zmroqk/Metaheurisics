@@ -10,10 +10,12 @@ namespace EA.Core.Selectors
     public class TournamentSelection<T> : ISelector<T> where T : ISpecimen<T>
     {
         public int SpecimenCount { get; set; }
+        public bool IsMinimalizing { get; set; }
 
-        public TournamentSelection(int specimenCount)
+        public TournamentSelection(int specimenCount, bool isMinimalizing)
         {
             this.SpecimenCount = specimenCount;
+            this.IsMinimalizing = isMinimalizing;
         }
 
         public virtual IList<T> Select(IList<T> currentPopulation)
@@ -28,9 +30,21 @@ namespace EA.Core.Selectors
                     var index = random.Next(currentPopulation.Count);
                     tournamentSelectedSpecimens.Add(currentPopulation[index]);
                 }
-                selectedSpecimens.Add(tournamentSelectedSpecimens.MaxBy(s => s.Evaluate()).Clone());
+                if (this.IsMinimalizing)
+                {
+                    selectedSpecimens.Add(tournamentSelectedSpecimens.MinBy(this.Evaluate).Clone());
+                }
+                else
+                {
+                    selectedSpecimens.Add(tournamentSelectedSpecimens.MaxBy(this.Evaluate).Clone());
+                }
             }
             return selectedSpecimens;
+        }
+
+        private double Evaluate(T specimen)
+        {
+            return specimen.Evaluate();
         }
     }
 }

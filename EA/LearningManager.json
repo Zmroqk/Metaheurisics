@@ -14,7 +14,8 @@
     "PopulationSize": 100,
     "Selector": {
       "SpecimenCount": 5,
-      "Type": 2
+      "Type": 2,
+      "IsMinimalizing": false
     },
     "SpecimenInitializator": {
       "ItemAddPropability": 0.3,
@@ -36,7 +37,8 @@
     "PopulationSize": 100,
     "Selector": {
       "SpecimenCount": 5,
-      "Type": 2
+      "Type": 2,
+      "IsMinimalizing": false
     },
     "SpecimenInitializator": {
       "ItemAddPropability": 0.3,

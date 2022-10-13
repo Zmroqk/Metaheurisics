@@ -33,7 +33,7 @@ if (string.IsNullOrWhiteSpace(learningConfig))
             var mutator = new SwapMutator(data, 0.1d);
             var specimenInitailizator = new RandomSpecimenInitializator(data, 0.2d);
             var specimenFactory = new SpecimenFactory(data, specimenInitailizator);
-            var selector = new RouletteSelection<Specimen>(10);
+            var selector = new RouletteSelection<Specimen>(false);
             var csvLogger = new CSVLogger<Specimen, RecordBase<Specimen>>("Logs.csv");
             csvLogger.RunLogger();
             var crossover = new OrderCrossover(0.3d);
@@ -94,11 +94,11 @@ else
 
         if(config.Selector.Type == SelectionType.Roulette)
         {
-            selector = new RouletteSelection<Specimen>(config.Selector.SpecimenCount);
+            selector = new RouletteSelection<Specimen>(config.Selector.IsMinimalizing);
         }
         else
         {
-            selector = new TournamentSelection<Specimen>(config.Selector.SpecimenCount);
+            selector = new TournamentSelection<Specimen>(config.Selector.SpecimenCount, config.Selector.IsMinimalizing);
         }
 
         if(config.Crossover.Type == CrossoverType.Order)

@@ -9,39 +9,56 @@ namespace EA.Core.Selectors
 {
     public class RouletteSelection<T> : ISelector<T> where T : ISpecimen<T>
     {
-        public int SpecimenCount { get; set; }
+        public bool IsMinimalizing { get; set; }
 
-        public RouletteSelection(int specimenCount)
+        public RouletteSelection(bool isMinimalizing)
         {
-            this.SpecimenCount = specimenCount;
+            this.IsMinimalizing = isMinimalizing;
         }
 
         public virtual IList<T> Select(IList<T> currentPopulation)
         {
             Dictionary<T, (double from, double to)> weightedSpecimens = new Dictionary<T, (double from, double to)>();
             var sum = 0d;
+            var min = 0d;
+            var max = 0d;
             foreach(var specimen in currentPopulation)
             {
                 var score = specimen.Evaluate();
-                weightedSpecimens.Add(specimen, (sum, sum + score));
-                sum += score;
+                if(score > max)
+                {
+                    max = score;
+                }
+                else if(score < min)
+                {
+                    min = score;
+                }
+            }
+            foreach (var specimen in currentPopulation)
+            {
+                var score = specimen.Evaluate();
+                var normalizedScore = this.Normalize(specimen.Evaluate(), max, min);
+                weightedSpecimens.Add(specimen, (sum, sum + normalizedScore));
+                sum += normalizedScore;
             }
             Random random = new Random();
             List<T> selectedSpecimens = new List<T>();
-            for (int i = 0; i < this.SpecimenCount; i++)
+            for (int i = 0; i < currentPopulation.Count; i++)
             {
                 var value = random.NextDouble() * sum;
                 var specimen = weightedSpecimens.First(ws => ws.Value.from >= value && ws.Value.to < value);
-                selectedSpecimens.Add(specimen.Key);
+                selectedSpecimens.Add(specimen.Key.Clone());
             }
-            List<T> newSpecimens = new List<T>(currentPopulation.Count);
-            int selectedSpecimenIndex = 0;
-            for(int i = 0; i < currentPopulation.Count; i++)
+            return selectedSpecimens;
+        }
+
+        private double Normalize(double value, double max, double min)
+        {
+            if (this.IsMinimalizing)
             {
-                newSpecimens.Add(selectedSpecimens[selectedSpecimenIndex++].Clone());
-                selectedSpecimenIndex %= selectedSpecimens.Count;
+                return (max - value) / (max - min);
             }
-            return newSpecimens;
+            return (value - min) / (max - min);
         }
     }
 }
