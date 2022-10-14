@@ -54,25 +54,22 @@ namespace EA.DataTTP.Crossovers
             var length = specimen.Nodes.Count - startIndex;
             var specimenRange = newSpecimen.Nodes.GetRange(startIndex, length);
             var otherSpecimenRange = newOtherSpecimen.Nodes.GetRange(startIndex, length);
-            newSpecimen.Nodes.RemoveRange(startIndex, length);
-            newOtherSpecimen.Nodes.RemoveRange(startIndex, length);
-            newSpecimen.Nodes.InsertRange(startIndex, otherSpecimenRange);
-            newSpecimen.Nodes.InsertRange(startIndex, specimenRange);
 
-            var mapping = this.CreateMapping(specimenRange, otherSpecimenRange);
+            var mapping1 = this.CreateMapping(specimenRange, otherSpecimenRange);
+            var mapping2 = this.CreateMapping(specimenRange, otherSpecimenRange);
 
             for(int i = 0; i < newSpecimen.Nodes.Count; i++)
             {
                 if(i < startIndex || i > startIndex + length)
                 {
-                    newSpecimen.Nodes[i] = mapping[newSpecimen.Nodes[i]][random.Next(mapping[newSpecimen.Nodes[i]].Count)];
+                    newSpecimen.Nodes[i] = mapping1[newSpecimen.Nodes[i]][random.Next(mapping1[newSpecimen.Nodes[i]].Count)];
                 }
             }
             for (int i = 0; i < newOtherSpecimen.Nodes.Count; i++)
             {
                 if (i < startIndex || i > startIndex + length)
                 {
-                    newSpecimen.Nodes[i] = mapping[newSpecimen.Nodes[i]][random.Next(mapping[newSpecimen.Nodes[i]].Count)];
+                    newOtherSpecimen.Nodes[i] = mapping2[newOtherSpecimen.Nodes[i]][random.Next(mapping2[newOtherSpecimen.Nodes[i]].Count)];
                 }
             }
 
@@ -92,15 +89,6 @@ namespace EA.DataTTP.Crossovers
                     mapping.Add(node, new List<Node>());                   
                 }
                 mapping[node].Add(map2[i]);
-            }
-            for (int i = 0; i < map2.Count; i++)
-            {
-                var node = map2[i];
-                if (!mapping.ContainsKey(node))
-                {
-                    mapping.Add(node, new List<Node>());
-                }
-                mapping[node].Add(map1[i]);
             }
             return mapping;
         }

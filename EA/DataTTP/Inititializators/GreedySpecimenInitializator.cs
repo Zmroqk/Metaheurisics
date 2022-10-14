@@ -19,20 +19,30 @@ namespace EA.DataTTP.Inititializators
         public void Initialize(Specimen specimen)
         {
             var cities = this.Config.Nodes.ToList();
+            var indexes = Enumerable.Range(0, this.Config.Nodes.Count).ToList();
             var distanceMatrix = this.Config.GetNodeMatrix();
             var random = new Random();
             var currentCity = cities[random.Next(0, cities.Count)];
             cities.Remove(currentCity);
             specimen.Nodes.Add(currentCity);
+            indexes.Remove(currentCity.Index);
             while (cities.Count > 0)
             {
-                var selected = distanceMatrix.Where(x => x.Key.From == currentCity 
-                    && cities.Contains(x.Key.To)
-                    && x.Key.From != x.Key.To
-                    ).MaxBy(x => x.Value);
-                currentCity = selected.Key.To;
+                var infos = distanceMatrix[currentCity.Index-1];
+                var maxDistance = 0d;
+                var selectedInfo = infos[0];
+                foreach(var info in infos)
+                {
+                    if(info.From != info.To && cities.Contains(info.To) && maxDistance < info.Distance)
+                    {
+                        selectedInfo = info;
+                        maxDistance = info.Distance;
+                    }
+                }
+                currentCity = selectedInfo.To;
                 cities.Remove(currentCity);
                 specimen.Nodes.Add(currentCity);
+                indexes.Remove(currentCity.Index);
             }
             KnapsackHelper.GreedyKnapsack(specimen);
         }

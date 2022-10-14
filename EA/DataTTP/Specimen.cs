@@ -53,7 +53,7 @@ namespace EA.DataTTP
             this.UpdateWeight(ref currentWeight, this.Nodes[0]);
             for(int i = 1; i < this.Nodes.Count; i++)
             {
-                var distance = this.Config.GetNodeMatrix()[new PathStruct() { From = this.Nodes[i - 1], To = this.Nodes[i] }];
+                var distance = this.Config.GetDistance(this.Nodes[i - 1], this.Nodes[i]);
                 var currentSpeed = this.Config.MaxSpeed - currentWeight * ((this.Config.MaxSpeed - this.Config.MinSpeed) / this.Config.KnapsackCapacity);
                 time += distance * currentSpeed;
                 this.UpdateWeight(ref currentWeight, this.Nodes[i]);
