@@ -9,8 +9,9 @@
       "MutateRatio": 0.02,
       "Type": 1
     },
-    "OutputFileName": "LearningManager_easy_0.csv",
+    "OutputFileName": "LearningManager_easy_0_{0}.csv",
     "InputFileName": "ai-lab1-ttp_data/easy_0.ttp",
+    "TestName": "Test easy 0",
     "PopulationSize": 100,
     "Selector": {
       "SpecimenCount": 5,
@@ -20,7 +21,9 @@
     "SpecimenInitializator": {
       "ItemAddPropability": 0.3,
       "Type": 2
-    }
+    },
+    "RunCount": 10,
+    "RunAsTask": true
   },
   {
     "Crossover": {
@@ -32,8 +35,9 @@
       "MutateRatio": 0.02,
       "Type": 1
     },
-    "OutputFileName": "LearningManager_hard_0.csv",
+    "OutputFileName": "LearningManager_hard_0_{0}.csv",
     "InputFileName": "ai-lab1-ttp_data/hard_0.ttp",
+    "TestName": "Test hard 0",
     "PopulationSize": 100,
     "Selector": {
       "SpecimenCount": 5,
@@ -43,6 +47,34 @@
     "SpecimenInitializator": {
       "ItemAddPropability": 0.3,
       "Type": 2
-    }
+    },
+    "RunCount": 10,
+    "RunAsTask": true
+  },
+  {
+    "Crossover": {
+      "Probability": 0.1,
+      "Type": 1
+    },
+    "Epochs": 100,
+    "Mutator": {
+      "MutateRatio": 0.02,
+      "Type": 1
+    },
+    "OutputFileName": "LearningManager_hard_1_{0}.csv",
+    "InputFileName": "ai-lab1-ttp_data/hard_1.ttp",
+    "TestName": "Test hard 1",
+    "PopulationSize": 100,
+    "Selector": {
+      "SpecimenCount": 5,
+      "Type": 2,
+      "IsMinimalizing": false
+    },
+    "SpecimenInitializator": {
+      "ItemAddPropability": 0.3,
+      "Type": 2
+    },
+    "RunCount": 10,
+    "RunAsTask": true
   }
 ]

@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 
 namespace EA.Core.Loggers.CSV
 {
-    public class CSVLogger<T, Record> : ILogger<T>, IDisposable where T : ISpecimen<T> where Record : IRecord<T>, new()
+    public class CSVLogger<T, Record> : ILogger<T>, IDisposable where T : ISpecimen<T> where Record : IRecord<Record>
     {
         public string FilePath { get; set; }
+
+        public IRecordFactory<Record> RecordFactory { get; set; }
 
         public Task LoggerThread => this.loggerThread;
         public Queue<Task> LoggerTasks { get; }
@@ -22,11 +24,12 @@ namespace EA.Core.Loggers.CSV
         private Task loggerThread;
         public CancellationTokenSource CancellationTokenSource { get; }
 
-        public CSVLogger(string filePath)
+        public CSVLogger(string filePath, IRecordFactory<Record> recordFactory)
         {
             this.FilePath = filePath;
             this.CancellationTokenSource = new CancellationTokenSource();
             this.LoggerTasks = new Queue<Task>();
+            this.RecordFactory = recordFactory;
         }
 
         public void RunLogger()
@@ -79,12 +82,13 @@ namespace EA.Core.Loggers.CSV
 
         private void LogSpecimens(int currentEpoch, IList<T> currentEpochSpecimens)
         {
-            var record = new Record();
+            var record = this.RecordFactory.CreateRecord();
             record.CurrentEpoch = currentEpoch;
             record.MaxSpecimenScore = currentEpochSpecimens.Max(s => s.Evaluate());
             record.MinSpecimenScore = currentEpochSpecimens.Min(s => s.Evaluate());
             record.AverageSpecimenScore = currentEpochSpecimens.Average(s => s.Evaluate());
-            this.CsvWriter.WriteRecord<Record>(record);
+            record.ApplyAdditionalData?.Invoke(record);
+            this.CsvWriter.WriteRecord(record);
             this.CsvWriter.NextRecord();
             this.CsvWriter.Flush();
         }
