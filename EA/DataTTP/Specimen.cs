@@ -113,12 +113,15 @@ namespace EA.DataTTP
             }
             var citiesToRemove = this.Nodes.GroupBy(n => n).Where(g => g.Count() > 1).Select(g => g.Key).ToList();
             var index = 0;
-            foreach(var city in cities)
+            while(citiesToRemove.Count > 0)
             {
-                var nodeIndex = this.Nodes.IndexOf(city);
+                var cityToRemove = citiesToRemove.First();
+                var cityToAdd = cities.First();
+                var nodeIndex = this.Nodes.IndexOf(cityToRemove);
                 this.Nodes.RemoveAt(nodeIndex);
-                this.Nodes.Insert(nodeIndex, citiesToRemove[index]);
-                citiesToRemove.RemoveAt(index++);
+                this.Nodes.Insert(nodeIndex, cityToAdd);
+                citiesToRemove.Remove(cityToRemove);
+                cities.Remove(cityToAdd);
             }
         }
 

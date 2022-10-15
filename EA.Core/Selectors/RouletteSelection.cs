@@ -20,8 +20,8 @@ namespace EA.Core.Selectors
         {
             Dictionary<T, (double from, double to)> weightedSpecimens = new Dictionary<T, (double from, double to)>();
             var sum = 0d;
-            var min = 0d;
-            var max = 0d;
+            var min = double.MaxValue;
+            var max = double.MinValue;
             foreach(var specimen in currentPopulation)
             {
                 var score = specimen.Evaluate();
@@ -46,7 +46,7 @@ namespace EA.Core.Selectors
             for (int i = 0; i < currentPopulation.Count; i++)
             {
                 var value = random.NextDouble() * sum;
-                var specimen = weightedSpecimens.First(ws => ws.Value.from >= value && ws.Value.to < value);
+                var specimen = weightedSpecimens.First(ws => ws.Value.from <= value && ws.Value.to > value);
                 selectedSpecimens.Add(specimen.Key.Clone());
             }
             return selectedSpecimens;

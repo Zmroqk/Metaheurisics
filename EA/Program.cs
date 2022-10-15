@@ -12,13 +12,18 @@ Console.WriteLine("Path to Learning config: ");
 string learningConfig = Console.ReadLine();
 if (string.IsNullOrWhiteSpace(learningConfig))
 {
-    Environment.Exit(-1);
+    learningConfig = "LearningManager.json";
 }
 
 var configLoader = new LearningConfigLoader();
 var tasks = new List<Task>();
 var configs = configLoader.Load(learningConfig);
 var groups = configs.GroupBy(x => x.RunAsTask).ToList();
+var itemIndex = 0;
+var itemsCount = groups.Sum(g => g.Count());
+
+Task.Run(PrintProgress);
+
 foreach (var group in groups)
 {
     foreach(var config in group.ToList())
@@ -26,18 +31,29 @@ foreach (var group in groups)
         if (group.Key)
         {
             var configCopy = config;
-            var task = new Task(() => LearningTask(configCopy));
+            var task = new Task(() => { LearningTask(configCopy); itemIndex++; });
             tasks.Add(task);
             task.Start();
         }
         else
         {
             LearningTask(config);
+            itemIndex++;
         }
     }  
 }
 
 Task.WaitAll(tasks.ToArray());
+
+void PrintProgress()
+{
+    while (true)
+    {
+        Thread.Sleep(5000);
+        var progress = (itemIndex / (double)itemsCount) * 100;
+        Console.WriteLine($"Progress: {progress}%");
+    }
+}
 
 void LearningTask(LearningConfig config)
 {

@@ -36,15 +36,13 @@ namespace EA.DataTTP.Mutators
             {
                 if (probability <= random.NextDouble())
                 {
-                    for (int i = 0; i < specimen.Nodes.Count; i++)
-                    {
-                        var length = random.Next(specimen.Nodes.Count - i);
-                        var swappedNodes = specimen.Nodes.GetRange(i, length);
-                        swappedNodes.Reverse();
-                        specimen.Nodes.RemoveRange(i, length);
-                        specimen.Nodes.InsertRange(i, swappedNodes);
-                        specimen.IsMutated = true;
-                    }
+                    var startIndex = random.Next(specimen.Nodes.Count);
+                    var length = random.Next(specimen.Nodes.Count - startIndex);
+                    var swappedNodes = specimen.Nodes.GetRange(startIndex, length);
+                    swappedNodes.Reverse();
+                    specimen.Nodes.RemoveRange(startIndex, length);
+                    specimen.Nodes.InsertRange(startIndex, swappedNodes);
+                    specimen.IsMutated = true;
                 }
             }
             return currentPopulation;

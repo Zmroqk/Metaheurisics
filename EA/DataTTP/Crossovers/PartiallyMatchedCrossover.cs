@@ -56,20 +56,22 @@ namespace EA.DataTTP.Crossovers
             var otherSpecimenRange = newOtherSpecimen.Nodes.GetRange(startIndex, length);
 
             var mapping1 = this.CreateMapping(specimenRange, otherSpecimenRange);
-            var mapping2 = this.CreateMapping(specimenRange, otherSpecimenRange);
+            var mapping2 = this.CreateMapping(otherSpecimenRange, specimenRange);
 
             for(int i = 0; i < newSpecimen.Nodes.Count; i++)
             {
-                if(i < startIndex || i > startIndex + length)
+                if (mapping1.ContainsKey(newSpecimen.Nodes[i]))
                 {
-                    newSpecimen.Nodes[i] = mapping1[newSpecimen.Nodes[i]][random.Next(mapping1[newSpecimen.Nodes[i]].Count)];
+                    var options = mapping2[newOtherSpecimen.Nodes[i]];
+                    newSpecimen.Nodes[i] = options[random.Next(options.Count)];
                 }
             }
             for (int i = 0; i < newOtherSpecimen.Nodes.Count; i++)
             {
-                if (i < startIndex || i > startIndex + length)
+                if (mapping2.ContainsKey(newOtherSpecimen.Nodes[i]))
                 {
-                    newOtherSpecimen.Nodes[i] = mapping2[newOtherSpecimen.Nodes[i]][random.Next(mapping2[newOtherSpecimen.Nodes[i]].Count)];
+                    var options = mapping2[newOtherSpecimen.Nodes[i]];
+                    newOtherSpecimen.Nodes[i] = options[random.Next(options.Count)];
                 }
             }
 
