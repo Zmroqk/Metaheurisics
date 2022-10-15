@@ -51,27 +51,56 @@ namespace EA.DataTTP.Crossovers
             var newOtherSpecimen = otherSpecimen.Clone();
             var random = new Random();
             var startIndex = random.Next(specimen.Nodes.Count);
-            var length = specimen.Nodes.Count - startIndex;
+            var length = random.Next(specimen.Nodes.Count - startIndex);
             var specimenRange = newSpecimen.Nodes.GetRange(startIndex, length);
             var otherSpecimenRange = newOtherSpecimen.Nodes.GetRange(startIndex, length);
 
             var mapping1 = this.CreateMapping(specimenRange, otherSpecimenRange);
             var mapping2 = this.CreateMapping(otherSpecimenRange, specimenRange);
 
-            for(int i = 0; i < newSpecimen.Nodes.Count; i++)
+            newSpecimen.Nodes.RemoveRange(startIndex, length);
+            newSpecimen.Nodes.InsertRange(startIndex, otherSpecimenRange);
+            newOtherSpecimen.Nodes.RemoveRange(startIndex, length);
+            newOtherSpecimen.Nodes.InsertRange(startIndex, specimenRange);
+
+            for (int i = 0; i < newSpecimen.Nodes.Count; i++)
             {
-                if (mapping1.ContainsKey(newSpecimen.Nodes[i]))
+                if (i < startIndex || startIndex + length < i)
                 {
-                    var options = mapping2[newOtherSpecimen.Nodes[i]];
-                    newSpecimen.Nodes[i] = options[random.Next(options.Count)];
+                    var city = newSpecimen.Nodes[i];
+                    while (mapping2.ContainsKey(city))
+                    {
+                        var newCity = mapping2[city];
+                        if(newCity == newSpecimen.Nodes[i])
+                        {
+                            break;
+                        }
+                        city = newCity;
+                    }
+                    if (newSpecimen.Nodes[i] != city)
+                    {
+                        newSpecimen.Nodes[i] = city;
+                    }
                 }
             }
             for (int i = 0; i < newOtherSpecimen.Nodes.Count; i++)
             {
-                if (mapping2.ContainsKey(newOtherSpecimen.Nodes[i]))
+                if (i < startIndex || startIndex + length < i)
                 {
-                    var options = mapping2[newOtherSpecimen.Nodes[i]];
-                    newOtherSpecimen.Nodes[i] = options[random.Next(options.Count)];
+                    var city = newOtherSpecimen.Nodes[i];
+                    while (mapping1.ContainsKey(city))
+                    {
+                        var newCity = mapping1[city];
+                        if (newCity == newOtherSpecimen.Nodes[i])
+                        {
+                            break;
+                        }
+                        city = newCity;
+                    }
+                    if (newOtherSpecimen.Nodes[i] != city)
+                    {
+                        newOtherSpecimen.Nodes[i] = city;
+                    }
                 }
             }
 
@@ -80,17 +109,13 @@ namespace EA.DataTTP.Crossovers
             return (newSpecimen, newOtherSpecimen);
         }
 
-        private Dictionary<Node, List<Node>> CreateMapping(List<Node> map1, List<Node> map2)
+        private Dictionary<Node, Node> CreateMapping(List<Node> map1, List<Node> map2)
         {
-            var mapping = new Dictionary<Node, List<Node>>();
+            var mapping = new Dictionary<Node, Node>();
             for(int i = 0; i < map1.Count; i++)
             {
                 var node = map1[i];
-                if (!mapping.ContainsKey(node))
-                {
-                    mapping.Add(node, new List<Node>());                   
-                }
-                mapping[node].Add(map2[i]);
+                mapping.Add(node, map2[i]);
             }
             return mapping;
         }

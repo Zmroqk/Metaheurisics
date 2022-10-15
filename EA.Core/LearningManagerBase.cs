@@ -26,6 +26,7 @@ namespace EA.Core
             , ISpecimenFactory<T> specimenFactory
             , uint populationSize
             , ILogger<T>? logger = null
+            , IAdditionalOperations<T> additionalOperations = null
             )
         {
             this.CurrentEpochSpecimens = new List<T>();
@@ -35,6 +36,7 @@ namespace EA.Core
             this.SpecimenFactory = specimenFactory;
             this.Logger = logger;
             this.CurrentEpoch = 0;
+            this.AdditionalOperationsHandler = additionalOperations;
         }
 
         public virtual void Init()

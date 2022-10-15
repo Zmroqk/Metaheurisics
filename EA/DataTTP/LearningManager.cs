@@ -18,8 +18,9 @@ namespace EA.DataTTP
             , ISpecimenFactory<Specimen> specimenFactory
             , uint populationSize
             , ILogger<Specimen>? logger = null
+            , IAdditionalOperations<Specimen> additionalOperations = null
             )
-            : base(mutator, crossover, selector, specimenFactory, populationSize, logger)
+            : base(mutator, crossover, selector, specimenFactory, populationSize, logger, additionalOperations)
         {
             this.Config = config;
         }

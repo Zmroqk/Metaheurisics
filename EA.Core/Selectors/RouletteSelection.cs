@@ -54,6 +54,10 @@ namespace EA.Core.Selectors
 
         private double Normalize(double value, double max, double min)
         {
+            if(min == max)
+            {
+                return 1;
+            }
             if (this.IsMinimalizing)
             {
                 return (max - value) / (max - min);

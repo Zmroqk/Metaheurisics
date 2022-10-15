@@ -7,6 +7,7 @@ using EA.Core.Loggers.CSV;
 using EA.DataTTP.Crossovers;
 using EA.Config;
 using EA.DataTTP.Loggers;
+using EA.DataTTP.AdditionalOperations;
 
 Console.WriteLine("Path to Learning config: ");
 string learningConfig = Console.ReadLine();
@@ -111,6 +112,7 @@ void LearningTask(LearningConfig config)
             crossover = new PartiallyMatchedCrossover(config.Crossover.Probability);
         }
 
+        var additionalOperations = new AdditionalOperationsHandler();
         var specimenFactory = new SpecimenFactory(data, specimenInitializator);
         var recordFactory = new RecordFactory((r) => { r.CurrentRun = runCount; });
         var csvLogger = new CSVLogger<Specimen, Record>(string.Format(config.OutputFileName, runCount), recordFactory);
@@ -123,6 +125,7 @@ void LearningTask(LearningConfig config)
             , specimenFactory
             , (uint)config.PopulationSize
             , csvLogger
+            , additionalOperations
             );
         learningManager.Init();
         for (int i = 0; i < config.Epochs; i++)

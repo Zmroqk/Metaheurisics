@@ -87,6 +87,7 @@ namespace EA.DataTTP
         public void RemoveAllItemsFromKnapsack()
         {
             this.Items = new HashSet<Item>();
+            this.CurrentKnapsackUsage = 0;
         }
 
         public bool CheckIfItemIsInKnapsack(Item item)

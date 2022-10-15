@@ -28,7 +28,7 @@ namespace EA.DataTTP
                     return -1;
                 });
                 specimen.RemoveAllItemsFromKnapsack();
-                while (currentItems.Count > 0 && !specimen.AddItemToKnapsack(currentItems.First()))
+                while (currentItems.Count > 0 && specimen.AddItemToKnapsack(currentItems.First()))
                 {
                     currentItems.RemoveAt(0);
                 }
