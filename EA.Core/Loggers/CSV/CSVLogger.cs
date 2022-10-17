@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace EA.Core.Loggers.CSV
 {
-    public class CSVLogger<T, Record> : ILogger<T>, IDisposable where T : ISpecimen<T> where Record : IRecord<Record>
+    public class CSVLogger<T, TRecord> : ILogger<T>, IDisposable where T : ISpecimen<T> where TRecord : IRecord<TRecord>
     {
         public string FilePath { get; set; }
 
-        public IRecordFactory<Record> RecordFactory { get; set; }
+        public IRecordFactory<TRecord> RecordFactory { get; set; }
 
         public Task LoggerThread => this.loggerThread;
         public Queue<Task> LoggerTasks { get; }
@@ -24,7 +24,7 @@ namespace EA.Core.Loggers.CSV
         private Task loggerThread;
         public CancellationTokenSource CancellationTokenSource { get; }
 
-        public CSVLogger(string filePath, IRecordFactory<Record> recordFactory)
+        public CSVLogger(string filePath, IRecordFactory<TRecord> recordFactory)
         {
             this.FilePath = filePath;
             this.CancellationTokenSource = new CancellationTokenSource();
@@ -45,7 +45,7 @@ namespace EA.Core.Loggers.CSV
             {
                 throw new IOException($"CSVLogger: Cannot create file for logging at {this.FilePath}");
             }
-            this.CsvWriter.WriteHeader(typeof(Record));
+            this.CsvWriter.WriteHeader(typeof(TRecord));
             this.CsvWriter.NextRecord();
             this.loggerThread = new Task(LoggerLoop);
             this.loggerThread.Start();

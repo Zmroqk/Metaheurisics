@@ -25,5 +25,7 @@ namespace EA.Config
         /// Should this learning config be run on another thread
         /// </summary>
         public bool RunAsTask { get; set; }
+
+        public string[] Include { get; set; }
     }
 }

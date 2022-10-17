@@ -13,7 +13,18 @@ namespace EA.Config
         {
             if (File.Exists(path))
             {
-                return JsonConvert.DeserializeObject<List<LearningConfig>>(File.ReadAllText(path));
+                var configs = JsonConvert.DeserializeObject<List<LearningConfig>>(File.ReadAllText(path));
+                var configsWithImport = configs.Where(c => c.Include != null).ToList();
+                foreach(var config in configsWithImport)
+                {
+                    configs.Remove(config);
+                    foreach(var innerPath in config.Include)
+                    {
+                        var additionalConfigs = this.Load(innerPath);
+                        configs.AddRange(additionalConfigs);
+                    }
+                }
+                return configs;
             }
             else
             {
