@@ -58,7 +58,11 @@ void PrintProgress()
 
 void LearningTask(LearningConfig config)
 {
-    for (int runCount = 1; runCount <= config.RunCount; runCount++)
+    int runCount = 1;
+    var recordFactory = new RecordFactory((r) => { r.CurrentRun = runCount; });
+    var csvLogger = new CSVLogger<Specimen, Record>(config.OutputFileName, recordFactory);
+    csvLogger.RunLogger();
+    for (ref int runCountRef = ref runCount; runCountRef <= config.RunCount; runCountRef++)
     {
         var dataLoader = new DataLoader();
         var data = dataLoader.Load(config.InputFileName);
@@ -67,9 +71,9 @@ void LearningTask(LearningConfig config)
             Environment.Exit(-1);
         }
 
-        var name = config.TestName == null ? string.Format(config.OutputFileName, runCount) : config.TestName;
+        var name = config.TestName == null ? config.OutputFileName : config.TestName;
 
-        Console.WriteLine($"Test number {runCount} for: {name}");
+        Console.WriteLine($"Test number {runCountRef} for: {name}");
 
         IMutator<Specimen> mutator;
         ISpecimenInitializator<Specimen> specimenInitializator;
@@ -114,9 +118,6 @@ void LearningTask(LearningConfig config)
 
         var additionalOperations = new AdditionalOperationsHandler();
         var specimenFactory = new SpecimenFactory(data, specimenInitializator);
-        var recordFactory = new RecordFactory((r) => { r.CurrentRun = runCount; });
-        var csvLogger = new CSVLogger<Specimen, Record>(string.Format(config.OutputFileName, runCount), recordFactory);
-        csvLogger.RunLogger();
 
         var learningManager = new LearningManager(data
             , mutator
@@ -132,11 +133,11 @@ void LearningTask(LearningConfig config)
         {
             learningManager.NextEpoch();
         }
-        csvLogger.Wait();
-        csvLogger.Dispose();
 
-        Console.WriteLine($"End for test number {runCount} for: {name}");
+        Console.WriteLine($"End for test number {runCountRef} for: {name}");
     }
+    csvLogger.Wait();
+    csvLogger.Dispose();
 }
 
 
