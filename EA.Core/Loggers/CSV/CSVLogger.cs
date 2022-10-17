@@ -97,10 +97,8 @@ namespace EA.Core.Loggers.CSV
         {
             while(this.LoggerTasks.Count > 0)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(50);
             }
-            this.CancellationTokenSource.Cancel();
-            this.LoggerThread.Wait();
         }
 
         public void Dispose()

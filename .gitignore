@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 docfx_project
+LearningManager*.json

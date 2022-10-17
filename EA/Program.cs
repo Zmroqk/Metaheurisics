@@ -135,6 +135,7 @@ void LearningTask(LearningConfig config)
         }
 
         Console.WriteLine($"End for test number {runCountRef} for: {name}");
+        csvLogger.Wait();
     }
     csvLogger.Wait();
     csvLogger.Dispose();
