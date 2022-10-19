@@ -60,9 +60,9 @@ namespace EA.Core.Selectors
             }
             if (this.IsMinimalizing)
             {
-                return (max - value) / (max - min);
+                return (max - value) / (max - min) + 0.01d;
             }
-            return (value - min) / (max - min);
+            return ((value - min) / (max - min)) + 0.01d;
         }
     }
 }

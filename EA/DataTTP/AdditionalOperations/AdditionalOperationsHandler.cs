@@ -16,13 +16,6 @@ namespace EA.DataTTP.AdditionalOperations
 
         public IList<Specimen> AfterMutation(IList<Specimen> currentPopulation)
         {
-            foreach(var specimen in currentPopulation)
-            {
-                if (specimen.IsModified)
-                {
-                    KnapsackHelper.GreedyKnapsack(specimen);
-                }
-            }
             return currentPopulation;
         }
 
@@ -43,6 +36,13 @@ namespace EA.DataTTP.AdditionalOperations
 
         public IList<Specimen> BeforeSelect(IList<Specimen> currentPopulation)
         {
+            foreach (var specimen in currentPopulation)
+            {
+                if (specimen.IsModified)
+                {
+                    KnapsackHelper.GreedyKnapsack(specimen);
+                }
+            }
             return currentPopulation;
         }
     }

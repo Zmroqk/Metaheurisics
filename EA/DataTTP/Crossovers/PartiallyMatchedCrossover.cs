@@ -51,7 +51,7 @@ namespace EA.DataTTP.Crossovers
             var newOtherSpecimen = otherSpecimen.Clone();
             var random = new Random();
             var startIndex = random.Next(specimen.Nodes.Count);
-            var length = random.Next(specimen.Nodes.Count - startIndex);
+            var length = random.Next(specimen.Nodes.Count - startIndex + 1);
             var specimenRange = newSpecimen.Nodes.GetRange(startIndex, length);
             var otherSpecimenRange = newOtherSpecimen.Nodes.GetRange(startIndex, length);
 

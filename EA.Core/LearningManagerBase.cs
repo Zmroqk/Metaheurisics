@@ -60,7 +60,7 @@ namespace EA.Core
             var mutatedSpecimens = this.Mutator.Mutate(beforeMutationSpecimens);
             var afterMutationSpecimens = this.AdditionalOperationsHandler?.AfterMutation(mutatedSpecimens) ?? mutatedSpecimens;
             this.CurrentEpochSpecimens = afterMutationSpecimens;
-            this.Logger?.Log(++this.CurrentEpoch, this.CurrentEpochSpecimens);
+            this.Logger?.Log(++this.CurrentEpoch, this.CurrentEpochSpecimens.Select(s => s.Clone()).ToList());
         }
     }
 }

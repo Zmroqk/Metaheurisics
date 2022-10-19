@@ -26,7 +26,7 @@ namespace EA.DataTTP.Crossovers
                 if (prop <= random.NextDouble())
                 {
                     var newSpecimen = this.CrossSpecimens(specimens[i], specimens[i + 1]);
-                    newSpecimen.IsCrossed = true;
+                    //newSpecimen.IsCrossed = true;
                     newSpecimens.Add(newSpecimen);
                 }
                 else
@@ -43,13 +43,14 @@ namespace EA.DataTTP.Crossovers
             var newSpecimen = otherSpecimen.Clone();
             var random = new Random();
             var startIndex = random.Next(specimen.Nodes.Count);
-            var length = specimen.Nodes.Count - startIndex;
+            var length = random.Next(specimen.Nodes.Count - startIndex + 1);
             var nodes = specimen.Nodes.GetRange(startIndex, length);
             foreach(var node in nodes)
             {
                 newSpecimen.Nodes.Remove(node);
             }
             newSpecimen.Nodes.InsertRange(startIndex, nodes);
+
             newSpecimen.Fix();
             return newSpecimen;
         }
