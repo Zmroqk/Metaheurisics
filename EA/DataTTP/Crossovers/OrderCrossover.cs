@@ -26,7 +26,7 @@ namespace EA.DataTTP.Crossovers
                 if (prop <= random.NextDouble())
                 {
                     var newSpecimen = this.CrossSpecimens(specimens[i], specimens[i + 1]);
-                    //newSpecimen.IsCrossed = true;
+                    newSpecimen.IsCrossed = true;
                     newSpecimens.Add(newSpecimen);
                 }
                 else

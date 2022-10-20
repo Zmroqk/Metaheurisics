@@ -142,6 +142,8 @@ namespace EA.DataTTP
             {
                 specimen.Items.Add(item);
             }
+            specimen.IsMutated = this.IsMutated;
+            specimen.IsCrossed = this.IsCrossed;
             return specimen;
         }
     }

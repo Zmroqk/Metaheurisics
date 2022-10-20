@@ -37,10 +37,9 @@ namespace EA.DataTTP.Crossovers
                     newSpecimens.Add(specimens[i].Clone());
                 }
             }
-            if(specimens.Count % 2 == 0)
+            if(specimens.Count % 2 != 0)
             {
-                var specimen = specimens[specimens.Count - 1].Clone();
-                newSpecimens.Add(specimen);
+                specimens.RemoveAt(specimens.Count - 1);
             }
             return newSpecimens;
         }
