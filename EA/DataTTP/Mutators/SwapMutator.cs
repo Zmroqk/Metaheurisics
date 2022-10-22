@@ -1,11 +1,11 @@
-﻿using EA.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EA.Core;
 
-namespace EA.DataTTP.Mutators
+namespace TTP.DataTTP.Mutators
 {
     public class SwapMutator : IMutator<Specimen>
     {
@@ -29,28 +29,34 @@ namespace EA.DataTTP.Mutators
             this.MutateRatio = mutateRatio;
         }
 
-        public IList<Specimen> Mutate(IList<Specimen> currentPopulation)
-        {
-            Random random = new Random();
-            var probability = 1 - this.MutateRatio;
+        public IList<Specimen> MutateAll(IList<Specimen> currentPopulation)
+        {      
             var newPopulation = new List<Specimen>();
             foreach (Specimen specimen in currentPopulation)
             {
                 var newSpecimen = specimen.Clone();
-                for(int i = 0; i < newSpecimen.Nodes.Count; i++)
-                {
-                    if (probability <= random.NextDouble())
-                    {
-                        var index2 = random.Next(newSpecimen.Nodes.Count);
-                        var swappedNode = newSpecimen.Nodes[i];
-                        newSpecimen.Nodes[i] = newSpecimen.Nodes[index2];
-                        newSpecimen.Nodes[index2] = swappedNode;
-                        newSpecimen.IsMutated = true;
-                    }
-                }
-                newPopulation.Add(newSpecimen);
-            }
+                this.Mutate(specimen);
+                newPopulation.Add(specimen);
+            }        
             return newPopulation;
+        }
+
+        public virtual Specimen Mutate(Specimen specimen)
+        {
+            Random random = new Random();
+            var probability = 1 - this.MutateRatio;
+            for (int i = 0; i < specimen.Nodes.Count; i++)
+            {
+                if (probability <= random.NextDouble())
+                {
+                    var index2 = random.Next(specimen.Nodes.Count);
+                    var swappedNode = specimen.Nodes[i];
+                    specimen.Nodes[i] = specimen.Nodes[index2];
+                    specimen.Nodes[index2] = swappedNode;
+                    specimen.IsMutated = true;
+                }
+            }
+            return specimen;
         }
     }
 }

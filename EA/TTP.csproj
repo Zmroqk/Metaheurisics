@@ -22,6 +22,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EA.Core\EA.Core.csproj" />
+    <ProjectReference Include="..\Loggers\Loggers.csproj" />
+    <ProjectReference Include="..\Meta.Core\Meta.Core.csproj" />
+    <ProjectReference Include="..\TabuSearch.Core\TabuSearch.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

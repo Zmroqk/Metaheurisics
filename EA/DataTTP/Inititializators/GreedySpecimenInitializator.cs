@@ -1,11 +1,11 @@
-﻿using EA.Core;
+﻿using Meta.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.DataTTP.Inititializators
+namespace TTP.DataTTP.Inititializators
 {
     public class GreedySpecimenInitializator : ISpecimenInitializator<Specimen>
     {

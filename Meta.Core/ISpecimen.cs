@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EA.Core
+﻿namespace Meta.Core
 {
     public interface ISpecimen<T> where T : ISpecimen<T>
     {

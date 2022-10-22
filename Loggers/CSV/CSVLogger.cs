@@ -1,6 +1,6 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
-using EA.Core;
+using Meta.Core;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -8,14 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.Core.Loggers.CSV
+namespace Loggers.CSV
 {
-    public class CSVLogger<T, TRecord> : ILogger<T>, IDisposable where T : ISpecimen<T> where TRecord : IRecord<TRecord>
+    public class CSVLogger<T, TRecord> : ILogger<TRecord>, IDisposable where T : ISpecimen<T> where TRecord : IRecord
     {
         public string FilePath { get; set; }
-
-        public IRecordFactory<TRecord> RecordFactory { get; set; }
-
         public Task LoggerThread => this.loggerThread;
         public Queue<Task> LoggerTasks { get; }
 
@@ -24,12 +21,11 @@ namespace EA.Core.Loggers.CSV
         private Task loggerThread;
         public CancellationTokenSource CancellationTokenSource { get; }
 
-        public CSVLogger(string filePath, IRecordFactory<TRecord> recordFactory)
+        public CSVLogger(string filePath)
         {
             this.FilePath = filePath;
             this.CancellationTokenSource = new CancellationTokenSource();
             this.LoggerTasks = new Queue<Task>();
-            this.RecordFactory = recordFactory;
         }
 
         public void RunLogger()
@@ -68,26 +64,24 @@ namespace EA.Core.Loggers.CSV
             }
         }
 
-        public Task Log(int currentEpoch, IList<T> currentEpochSpecimens)
+        public Task Log(TRecord record)
         {
-            int currentEpochCopy = currentEpoch;
-            var specimensCopy = currentEpochSpecimens;
+            TRecord? recordCopy = record;
             Task newTask = new Task(() =>
             {
-                LogSpecimens(currentEpochCopy, specimensCopy);
+                LogSpecimens(recordCopy);
             });
             this.LoggerTasks.Enqueue(newTask);
             return newTask;
         }
 
-        private void LogSpecimens(int currentEpoch, IList<T> currentEpochSpecimens)
+        private void LogSpecimens(TRecord record)
         {
-            var record = this.RecordFactory.CreateRecord();
-            record.CurrentEpoch = currentEpoch;
-            record.MaxSpecimenScore = currentEpochSpecimens.Max(s => s.Evaluate());
-            record.MinSpecimenScore = currentEpochSpecimens.Min(s => s.Evaluate());
-            record.AverageSpecimenScore = currentEpochSpecimens.Average(s => s.Evaluate());
-            record.ApplyAdditionalData?.Invoke(record);
+            //record.CurrentEpoch = currentEpoch;
+            //record.MaxSpecimenScore = currentEpochSpecimens.Max(s => s.Evaluate());
+            //record.MinSpecimenScore = currentEpochSpecimens.Min(s => s.Evaluate());
+            //record.AverageSpecimenScore = currentEpochSpecimens.Average(s => s.Evaluate());
+            //record.ApplyAdditionalData?.Invoke(record);
             this.CsvWriter.WriteRecord(record);
             this.CsvWriter.NextRecord();
             this.CsvWriter.Flush();
@@ -107,6 +101,7 @@ namespace EA.Core.Loggers.CSV
             {
                 this.CancellationTokenSource.Cancel();
             }
+            this.LoggerThread.Wait();
             this.CsvWriter.Dispose();
         }
     }

@@ -1,13 +1,16 @@
 ﻿using EA.Core;
+using Loggers;
+using Meta.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TTP.DataTTP.Loggers;
 
-namespace EA.DataTTP
+namespace TTP.DataTTP
 {
-    public class LearningManager : LearningManagerBase<Specimen>
+    public class LearningManager : LearningManagerBase<Specimen, Record>
     {
         public Data Config { get; set; }
 
@@ -17,7 +20,7 @@ namespace EA.DataTTP
             , ISelector<Specimen> selector
             , ISpecimenFactory<Specimen> specimenFactory
             , uint populationSize
-            , ILogger<Specimen>? logger = null
+            , ILogger<Record>? logger = null
             , IAdditionalOperations<Specimen> additionalOperations = null
             )
             : base(mutator, crossover, selector, specimenFactory, populationSize, logger, additionalOperations)

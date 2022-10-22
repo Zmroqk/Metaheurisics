@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.DataTTP.Crossovers
+namespace TTP.DataTTP.Crossovers
 {
     public class PartiallyMatchedCrossover : ICrossover<Specimen>
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.DataTTP
+namespace TTP.DataTTP
 {
     public class DataLoader : IDataLoader<Data>
     {

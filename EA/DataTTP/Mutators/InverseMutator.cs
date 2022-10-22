@@ -1,11 +1,11 @@
-﻿using EA.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EA.Core;
 
-namespace EA.DataTTP.Mutators
+namespace TTP.DataTTP.Mutators
 {
     public class InverseMutator : IMutator<Specimen>
     {
@@ -28,27 +28,33 @@ namespace EA.DataTTP.Mutators
             this.MutateRatio = mutateRatio;
         }
 
-        public IList<Specimen> Mutate(IList<Specimen> currentPopulation)
-        {
-            Random random = new Random();
-            var probability = 1 - this.MutateRatio;
+        public IList<Specimen> MutateAll(IList<Specimen> currentPopulation)
+        {         
             var newPopulation = new List<Specimen>();
             foreach(Specimen specimen in currentPopulation)
             {
                 var newSpecimen = specimen.Clone();
-                if (probability <= random.NextDouble())
-                {
-                    var startIndex = random.Next(newSpecimen.Nodes.Count);
-                    var length = random.Next(newSpecimen.Nodes.Count - startIndex);
-                    var swappedNodes = newSpecimen.Nodes.GetRange(startIndex, length);
-                    swappedNodes.Reverse();
-                    newSpecimen.Nodes.RemoveRange(startIndex, length);
-                    newSpecimen.Nodes.InsertRange(startIndex, swappedNodes);
-                    newSpecimen.IsMutated = true;
-                }
+                this.Mutate(newSpecimen);
                 newPopulation.Add(newSpecimen);
             }
             return newPopulation;
+        }
+
+        public Specimen Mutate(Specimen specimen)
+        {
+            Random random = new Random();
+            var probability = 1 - this.MutateRatio;
+            if (probability <= random.NextDouble())
+            {
+                var startIndex = random.Next(specimen.Nodes.Count);
+                var length = random.Next(specimen.Nodes.Count - startIndex);
+                var swappedNodes = specimen.Nodes.GetRange(startIndex, length);
+                swappedNodes.Reverse();
+                specimen.Nodes.RemoveRange(startIndex, length);
+                specimen.Nodes.InsertRange(startIndex, swappedNodes);
+                specimen.IsMutated = true;
+            }
+            return specimen;
         }
     }
 }

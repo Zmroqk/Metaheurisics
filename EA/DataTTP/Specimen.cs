@@ -1,13 +1,13 @@
-﻿using EA.Core;
+﻿using Meta.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EA.DataTTP
+namespace TTP.DataTTP
 {
-    public class Specimen : ISpecimen<Specimen>
+    public class Specimen : ISpecimen<Specimen>, IEquatable<Specimen>
     {
         public Data Config { get; set; }
 
@@ -18,6 +18,7 @@ namespace EA.DataTTP
             this.Items = new HashSet<Item>();
             this.SpecimenInitialization = specimenInitialization;
             this.CurrentKnapsackUsage = 0;
+            this.EvaluationValue = null;
         }
 
         private HashSet<Item> Items { get; set; }
@@ -145,6 +146,34 @@ namespace EA.DataTTP
             specimen.IsMutated = this.IsMutated;
             specimen.IsCrossed = this.IsCrossed;
             return specimen;
+        }
+
+        public bool Equals(Specimen? other)
+        {
+            if(other == null)
+            {
+                return false;
+            }
+            if(this.Nodes.Count != other.Nodes.Count || this.Items.Count != other.Items.Count)
+            {
+                return false;
+            }
+            var nodeCount = this.Nodes.Count;
+            for(int i = 0; i < nodeCount; i++)
+            {
+                if (this.Nodes[i] != other.Nodes[i])
+                {
+                    return false;
+                }
+            }
+            foreach(var item in this.Items)
+            {
+                if (!other.Items.Contains(item))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
