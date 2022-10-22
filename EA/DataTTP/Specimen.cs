@@ -55,7 +55,7 @@ namespace EA.DataTTP
             {
                 var distance = this.Config.GetDistance(this.Nodes[i - 1], this.Nodes[i]);
                 var currentSpeed = this.Config.MaxSpeed - currentWeight * ((this.Config.MaxSpeed - this.Config.MinSpeed) / this.Config.KnapsackCapacity);
-                time += distance * currentSpeed;
+                time += distance / currentSpeed;
                 this.UpdateWeight(ref currentWeight, this.Nodes[i]);
             }
             this.EvaluationValue = profit - time;
@@ -112,7 +112,7 @@ namespace EA.DataTTP
             foreach(var node in this.Nodes) {
                 cities.Remove(node);
             }
-            var citiesToRemove = this.Nodes.GroupBy(n => n).Where(g => g.Count() > 1).Select(g => g.Key).ToList();
+            var citiesToRemove = this.Nodes.GroupBy(n => n).Where(g => g.Count() > 1).SelectMany(g => g.Where((n, i) => i >= 1).ToList()).ToList();
             var index = 0;
             while(citiesToRemove.Count > 0)
             {
@@ -142,6 +142,8 @@ namespace EA.DataTTP
             {
                 specimen.Items.Add(item);
             }
+            specimen.IsMutated = this.IsMutated;
+            specimen.IsCrossed = this.IsCrossed;
             return specimen;
         }
     }

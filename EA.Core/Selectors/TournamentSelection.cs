@@ -22,13 +22,17 @@ namespace EA.Core.Selectors
         {
             Random random = new Random();
             List<T> selectedSpecimens = new List<T>();
+            var tournamentCount = Math.Round((this.SpecimenCount / 100d) * currentPopulation.Count);
+            tournamentCount = tournamentCount == 0 ? 1 : tournamentCount;
             while(selectedSpecimens.Count != currentPopulation.Count)
             {
+                List<T> currentTempPopulation = currentPopulation.ToList();
                 List<T> tournamentSelectedSpecimens = new List<T>();
-                for(int j = 0; j < this.SpecimenCount; j++)
+                for(int j = 0; j < tournamentCount; j++)
                 {
-                    var index = random.Next(currentPopulation.Count);
-                    tournamentSelectedSpecimens.Add(currentPopulation[index]);
+                    var index = random.Next(currentTempPopulation.Count);
+                    tournamentSelectedSpecimens.Add(currentTempPopulation[index]);
+                    currentTempPopulation.RemoveAt(index);
                 }
                 if (this.IsMinimalizing)
                 {

@@ -33,21 +33,24 @@ namespace EA.DataTTP.Mutators
         {
             Random random = new Random();
             var probability = 1 - this.MutateRatio;
-            foreach(Specimen specimen in currentPopulation)
+            var newPopulation = new List<Specimen>();
+            foreach (Specimen specimen in currentPopulation)
             {
-                for(int i = 0; i < specimen.Nodes.Count; i++)
+                var newSpecimen = specimen.Clone();
+                for(int i = 0; i < newSpecimen.Nodes.Count; i++)
                 {
                     if (probability <= random.NextDouble())
                     {
-                        var index2 = random.Next(specimen.Nodes.Count);
-                        var swappedNode = specimen.Nodes[i];
-                        specimen.Nodes[i] = specimen.Nodes[index2];
-                        specimen.Nodes[index2] = swappedNode;
-                        specimen.IsMutated = true;
+                        var index2 = random.Next(newSpecimen.Nodes.Count);
+                        var swappedNode = newSpecimen.Nodes[i];
+                        newSpecimen.Nodes[i] = newSpecimen.Nodes[index2];
+                        newSpecimen.Nodes[index2] = swappedNode;
+                        newSpecimen.IsMutated = true;
                     }
                 }
+                newPopulation.Add(newSpecimen);
             }
-            return currentPopulation;
+            return newPopulation;
         }
     }
 }
