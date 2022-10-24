@@ -56,7 +56,7 @@ namespace TabuSearch.Core
             while(iteration < this.Iterations)
             {
                 var neighborhoods = this.Neighborhood.FindNeighborhood(specimen, this.NeighborhoodSize);
-                var filteredNeighborhoods = neighborhoods.Where(n => !this.TabuList().Contains(n));
+                var filteredNeighborhoods = neighborhoods.Where(n => !this.TabuList().Contains(n)).ToList();
                 var bestNeighborhood = filteredNeighborhoods.MaxBy(n => n.Evaluate());
                 var worstNeighborhood = filteredNeighborhoods.MinBy(n => n.Evaluate());
                 if(bestNeighborhood != null)

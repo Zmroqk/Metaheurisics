@@ -148,6 +148,20 @@ namespace TTP.DataTTP
             return specimen;
         }
 
+        public override int GetHashCode()
+        {
+            return 0;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if(obj is Specimen)
+            {
+                return this.Equals((Specimen)obj);
+            }
+            return false;
+        }
+
         public bool Equals(Specimen? other)
         {
             if(other == null)
