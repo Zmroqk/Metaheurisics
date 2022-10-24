@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace TTP.Config
 {
-    public class LearningConfigLoader
+    public class LearningConfigLoader<TConfig> where TConfig : IConfig
     {
-        public List<LearningConfig> Load(string path)
+        public List<TConfig> Load(string path)
         {
             if (File.Exists(path))
             {
-                var configs = JsonConvert.DeserializeObject<List<LearningConfig>>(File.ReadAllText(path));
+                var configs = JsonConvert.DeserializeObject<List<TConfig>>(File.ReadAllText(path));
                 var configsWithImport = configs.Where(c => c.Include != null).ToList();
                 foreach(var config in configsWithImport)
                 {

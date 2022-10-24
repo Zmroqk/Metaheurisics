@@ -1,0 +1,5 @@
+﻿[
+  {
+    "Include": [ "TabuConfig1.json", "TabuConfig2.json", "TabuConfig3.json", "TabuConfig4.json" ]
+  }
+]

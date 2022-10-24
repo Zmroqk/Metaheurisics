@@ -30,6 +30,15 @@ namespace Loggers.CSV
 
         public void RunLogger()
         {
+            var directoryPath = Path.GetDirectoryName(this.FilePath);
+            if (!string.IsNullOrWhiteSpace(directoryPath))
+            {
+                var directoryInfo = new DirectoryInfo(directoryPath);
+                if (!directoryInfo.Exists)
+                {
+                    directoryInfo.Create();
+                }
+            }
             this.CsvStream = new FileStream(this.FilePath, FileMode.Create, FileAccess.Write, FileShare.Read);
             this.CsvWriter = new CsvWriter(new StreamWriter(this.CsvStream)
                 , new CsvConfiguration(CultureInfo.CurrentCulture)
@@ -58,8 +67,11 @@ namespace Loggers.CSV
                 else
                 {
                     var task = this.LoggerTasks.Dequeue();
-                    task.Start();
-                    task.Wait();
+                    if(task != null)
+                    {
+                        task.Start();
+                        task.Wait();
+                    }
                 }
             }
         }
@@ -77,11 +89,6 @@ namespace Loggers.CSV
 
         private void LogSpecimens(TRecord record)
         {
-            //record.CurrentEpoch = currentEpoch;
-            //record.MaxSpecimenScore = currentEpochSpecimens.Max(s => s.Evaluate());
-            //record.MinSpecimenScore = currentEpochSpecimens.Min(s => s.Evaluate());
-            //record.AverageSpecimenScore = currentEpochSpecimens.Average(s => s.Evaluate());
-            //record.ApplyAdditionalData?.Invoke(record);
             this.CsvWriter.WriteRecord(record);
             this.CsvWriter.NextRecord();
             this.CsvWriter.Flush();

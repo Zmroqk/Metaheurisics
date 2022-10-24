@@ -29,6 +29,8 @@ namespace TTP.DataTTP
 
         public DistanceInfo[][] Distances { get; set; }
 
+        public List<Item> SortedItems { get; set; }
+
         public DistanceInfo[][] GetNodeMatrix()
         {
             if(this.Distances.Length != 0)
@@ -56,6 +58,32 @@ namespace TTP.DataTTP
         public double GetDistance(Node first, Node second)
         {
             return this.GetNodeMatrix()[first.Index - 1][second.Index - 1].Distance;
+        }
+
+        public double SortedItemMedian()
+        {
+            if (this.SortedItems == null)
+            {
+                this.SortedItems = this.Items.ToList();
+                this.SortedItems.Sort((i1, i2) =>
+                {
+                    var rate1 = (double)i1.Profit / i1.Weight;
+                    var rate2 = (double)i2.Profit / i2.Weight;
+                    if (rate1 < rate2)
+                    {
+                        return 1;
+                    }
+                    else if (rate1 == rate2)
+                    {
+                        return 0;
+                    }
+                    return -1;
+                });
+            }          
+            var rates = this.SortedItems.Select(i => (double)i.Profit / i.Weight).ToList();
+            return rates.Count % 2 == 0 ?
+                rates[(rates.Count / 2) - 1] :
+                (rates[(rates.Count / 2)] + rates[(rates.Count / 2) - 1])/2;
         }
     }
 }

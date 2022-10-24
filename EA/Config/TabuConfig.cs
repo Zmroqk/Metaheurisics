@@ -6,25 +6,21 @@ using System.Threading.Tasks;
 
 namespace TTP.Config
 {
-    public class LearningConfig : IConfig
+    public class TabuConfig : IConfig
     {
-        public MutatorConfig Mutator { get; set; }
-        public SelectorConfig Selector { get; set; }
-        public CrossoverConfig Crossover { get; set; }
+        public MutatorType Mutator { get; set; }
+        public bool GreedyKnapsackMutator { get; set; }
         public SpecimenInitializatorConfig SpecimenInitializator { get; set; }
-        public int PopulationSize { get; set; }
+        public int NeighborhoodSize { get; set; }
+        public int TabuSize { get; set; }
         public string? TestName { get; set; }
         public string OutputFileName { get; set; }
         public string InputFileName { get; set; }
-        public int Epochs { get; set; }
+        public int Iterations { get; set; }
         /// <summary>
         /// Number of times current config will be run
         /// </summary>
         public int RunCount { get; set; }
-        /// <summary>
-        /// Should this learning config be run on another thread
-        /// </summary>
-        public bool RunAsTask { get; set; }
 
         public string[] Include { get; set; }
     }

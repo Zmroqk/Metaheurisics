@@ -11,10 +11,11 @@ namespace TTP.DataTTP.Neighborhoods
     public class Neighbourhood : INeighborhood<Specimen>
     {
         public IMutator<Specimen> Mutator { get; set; }
-
-        public Neighbourhood(IMutator<Specimen> mutator)
+        public IMutator<Specimen> KnapsackMutator { get; set; }
+        public Neighbourhood(IMutator<Specimen> mutator, IMutator<Specimen> knapsackMutator)
         {
             this.Mutator = mutator;
+            this.KnapsackMutator = knapsackMutator;
         }
 
         public IEnumerable<Specimen> FindNeighborhood(Specimen specimen, int size)
@@ -23,7 +24,7 @@ namespace TTP.DataTTP.Neighborhoods
             for(int i = 0; i < size; i++)
             {
                 var newSpecimen = this.Mutator.Mutate(specimen.Clone());
-                KnapsackHelper.GreedyKnapsack(newSpecimen);
+                this.KnapsackMutator.Mutate(newSpecimen);
                 neighborhoods.Add(newSpecimen);
             }
             return neighborhoods;
