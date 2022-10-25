@@ -27,9 +27,12 @@ namespace TTP.DataTTP.Inititializators
                 var city = cities[random.Next(0, cities.Count)];
                 specimen.Nodes.Add(city);
                 var probability = 1 - this.ItemAddProbability;
+                var items = city.AvailableItems.ToList();
                 if (probability <= random.NextDouble() && city.AvailableItems.Count > 0)
                 {
-                    specimen.AddItemToKnapsack(city.AvailableItems[random.Next(city.AvailableItems.Count)]);
+                    var index = random.Next(items.Count);
+                    specimen.AddItemToKnapsack(items[index]);
+                    items.RemoveAt(index);
                 }
                 cities.Remove(city);
             }
