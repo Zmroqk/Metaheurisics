@@ -29,7 +29,7 @@ namespace TTP.DataTTP
 
         public DistanceInfo[][] Distances { get; set; }
 
-        public List<Item> SortedItems { get; set; }
+        public double? Median { get; set; }
 
         public DistanceInfo[][] GetNodeMatrix()
         {
@@ -62,10 +62,10 @@ namespace TTP.DataTTP
 
         public double SortedItemMedian()
         {
-            if (this.SortedItems == null)
+            if (!this.Median.HasValue)
             {
-                this.SortedItems = this.Items.ToList();
-                this.SortedItems.Sort((i1, i2) =>
+                var SortedItems = this.Items.ToList();
+                SortedItems.Sort((i1, i2) =>
                 {
                     var rate1 = (double)i1.Profit / i1.Weight;
                     var rate2 = (double)i2.Profit / i2.Weight;
@@ -79,11 +79,12 @@ namespace TTP.DataTTP
                     }
                     return -1;
                 });
-            }          
-            var rates = this.SortedItems.Select(i => (double)i.Profit / i.Weight).ToList();
-            return rates.Count % 2 == 0 ?
-                rates[(rates.Count / 2) - 1] :
-                (rates[(rates.Count / 2)] + rates[(rates.Count / 2) - 1])/2;
+                var rates = SortedItems.Select(i => (double)i.Profit / i.Weight).ToList();
+                this.Median = rates.Count % 2 == 0 ?
+                    rates[(rates.Count / 2) - 1] :
+                    (rates[(rates.Count / 2)] + rates[(rates.Count / 2) - 1]) / 2;
+            }
+            return this.Median.Value;
         }
     }
 }
