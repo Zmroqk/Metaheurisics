@@ -54,9 +54,10 @@ namespace TTP.Managers
             var random = new Random();
             while(iteration < this.Iterations && this.TargetTemperature < currentTemperature)
             {
+                Console.WriteLine(iteration);
                 var specimens = this.Neighborhood.FindNeighborhood(current, this.NeighbourhoodSize);
                 var bestNeigbourhood = specimens.MaxBy(x => x.Evaluate());
-                if (currentScore > bestNeigbourhood.Evaluate() || random.NextDouble() > Math.Exp((current.Evaluate() - bestNeigbourhood.Evaluate()) * currentTemperature))
+                if (currentScore < bestNeigbourhood.Evaluate() || random.NextDouble() < Math.Exp((bestNeigbourhood.Evaluate() - current.Evaluate()) / currentTemperature))
                 {
                     current = bestNeigbourhood;
                     currentScore = bestNeigbourhood.Evaluate();

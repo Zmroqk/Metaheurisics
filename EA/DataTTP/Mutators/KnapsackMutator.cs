@@ -55,11 +55,9 @@ namespace TTP.DataTTP.Mutators
                     }
                     return -1;
                 });
-                int maxCountInCity = 3;
-                while (currentItems.Count > 0 && specimen.AddItemToKnapsack(currentItems.First()) && maxCountInCity > 0 && GetRate(currentItems.First()) >= this.Config.SortedItemMedian())
+                while (currentItems.Count > 0 && specimen.AddItemToKnapsack(currentItems.First()) && GetRate(currentItems.First()) >= this.Config.SortedItemMedian())
                 {
                     currentItems.RemoveAt(0);
-                    maxCountInCity--;
                 }
             }
         }

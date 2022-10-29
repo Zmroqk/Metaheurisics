@@ -1,14 +1,14 @@
 ﻿[
   {
     "Mutator": "Swap",
-    "GreedyKnapsackMutator": true,
+    "GreedyKnapsackMutator": false,
     "SpecimenInitializator": {
       "Type": "Greedy",
       "ItemAddPropability": 0.3
     },
     "NeighborhoodSize": 10,
-    "AnnealingRate": 0.995,
-    "StartingTemperature": 1000,
+    "AnnealingRate": 0.994,
+    "StartingTemperature": 1000000000,
     "TargetTemperature": 0.5,
     "TestName": "Hard0",
     "OutputFileName": "Output/Hard0.csv",

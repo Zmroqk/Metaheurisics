@@ -109,6 +109,7 @@ namespace TTP.DataTTP
 
         public void Fix()
         {
+            this.EvaluationValue = null;
             var cities = new HashSet<Node>(this.Config.Nodes);
             foreach(var node in this.Nodes) {
                 cities.Remove(node);
