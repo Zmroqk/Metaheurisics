@@ -24,6 +24,7 @@
     <ProjectReference Include="..\EA.Core\EA.Core.csproj" />
     <ProjectReference Include="..\Loggers\Loggers.csproj" />
     <ProjectReference Include="..\Meta.Core\Meta.Core.csproj" />
+    <ProjectReference Include="..\SA.Core\SA.Core.csproj" />
     <ProjectReference Include="..\TabuSearch.Core\TabuSearch.Core.csproj" />
   </ItemGroup>
 
@@ -37,6 +38,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="SimulatedAnnealingConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="TabuConfig4.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

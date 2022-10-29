@@ -1,0 +1,88 @@
+﻿using Loggers;
+using Meta.Core;
+using SA.Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TabuSearch.Core;
+using TTP.DataTTP;
+using TTP.DataTTP.Loggers;
+
+namespace TTP.Managers
+{
+    public class SimulatedAnnealingManager : ISimulatedAnnealing<Specimen>
+    {
+        public INeighborhood<Specimen> Neighborhood { get; set; }
+        public ISpecimenFactory<Specimen> SpecimenFactory { get; set; }
+        public ILogger<SimulatedAnnealingRecord> Logger { get; set; }
+        public double AnnealingRatio { get; set; }
+        public int Iterations { get; set; }
+        public int NeighbourhoodSize { get; set; }
+        public double StartingTemperature { get; set; }
+        public double TargetTemperature { get; set; }
+
+        public SimulatedAnnealingManager(INeighborhood<Specimen> neighborhood
+            , ISpecimenFactory<Specimen> specimenFactory
+            , ILogger<SimulatedAnnealingRecord> logger
+            , double annealingRatio
+            , int iterations
+            , int neighbourhoodSize
+            , double startingTemperature
+            , double targetTemperature
+            ) {
+            this.Neighborhood = neighborhood;
+            this.SpecimenFactory = specimenFactory;
+            this.Logger = logger;
+            this.AnnealingRatio = annealingRatio;
+            this.Iterations = iterations;
+            this.NeighbourhoodSize = neighbourhoodSize;
+            this.StartingTemperature = startingTemperature;
+            this.TargetTemperature = targetTemperature;
+        }
+
+        public Specimen RunSimulatedAnnealing()
+        {
+            var current = this.SpecimenFactory.CreateSpecimen();
+            var currentScore = current.Evaluate();
+            var currentTemperature = this.StartingTemperature;
+            var bestScore = currentScore;
+            var worstScore = currentScore;
+            var best = current;
+            var iteration = 0;
+            var random = new Random();
+            while(iteration < this.Iterations && this.TargetTemperature > currentTemperature)
+            {
+                var specimens = this.Neighborhood.FindNeighborhood(current, this.NeighbourhoodSize);
+                var bestNeigbourhood = specimens.MaxBy(x => x.Evaluate());
+                if (currentScore > bestNeigbourhood.Evaluate() || random.NextDouble() > Math.Exp((current.Evaluate() - bestNeigbourhood.Evaluate()) / currentTemperature))
+                {
+                    current = bestNeigbourhood;
+                    currentScore = bestNeigbourhood.Evaluate();
+                    if(bestScore < currentScore)
+                    {
+                        best = bestNeigbourhood;
+                        bestScore = currentScore;
+                    }
+                    if(worstScore > currentScore)
+                    {
+                        worstScore = currentScore;
+                    }
+                }
+                currentTemperature = currentTemperature * this.AnnealingRatio;
+                iteration++;
+                var record = new SimulatedAnnealingRecord()
+                {
+                    Iteration = iteration,
+                    CurrentScore = currentScore,
+                    BestScore = bestScore,
+                    AverageScore = specimens.Average(s => s.Evaluate()),
+                    WorstScore = worstScore
+                };
+                this.Logger.Log(record);
+            }
+            return best;
+        }
+    }
+}

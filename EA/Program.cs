@@ -9,10 +9,12 @@ using TTP.DataTTP.Inititializators;
 using TTP.DataTTP.Loggers;
 using TTP.DataTTP.Mutators;
 using TTP.DataTTP.Neighborhoods;
+using TTP.Managers;
 
 Console.WriteLine("Select mode: ");
 Console.WriteLine("1. Tabu search ");
 Console.WriteLine("2. Random ");
+Console.WriteLine("3. Simulated Annealing ");
 string mode = Console.ReadLine();
 int modeNumber;
 if(!int.TryParse(mode, out modeNumber))
@@ -81,5 +83,55 @@ else if(modeNumber == 2)
     logger.Wait();
     logger.Dispose();
 }
+else if (modeNumber == 3)
+{
+    var loader = new LearningConfigLoader<SimulatedAnnealingConfig>();
+    Console.WriteLine("Path to config: ");
+    var path = Console.ReadLine();
+    var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "SimulatedAnnealingConfig.json" : path);
 
+    foreach (var config in configs)
+    {
+        var dataLoader = new DataLoader();
+        var data = dataLoader.Load(config.InputFileName);
+        ISpecimenInitializator<Specimen> initializator;
+        if (config.SpecimenInitializator.Type == SpecimenInitializatorType.Greedy)
+        {
+            initializator = new GreedySpecimenInitializator(data);
+        }
+        else
+        {
+            initializator = new RandomSpecimenInitializator(data, config.SpecimenInitializator.ItemAddPropability);
+        }
+        var factory = new SpecimenFactory(data, initializator);
+        IMutator<Specimen> mutator;
+        if (config.Mutator == MutatorType.Swap)
+        {
+            mutator = new TabuSwapMutator(data);
+        }
+        else
+        {
+            mutator = new InverseMutator(data, 1);
+        }
+        var knapsackMutator = new KnapsackMutator(data, config.GreedyKnapsackMutator);
+        var neighbourhood = new Neighbourhood(mutator, knapsackMutator);
+        var logger = new CSVLogger<Specimen, SimulatedAnnealingRecord>(config.OutputFileName);
+        logger.RunLogger();
+
+        var simulatedAnnealing = new SimulatedAnnealingManager(neighbourhood
+            , factory
+            , logger
+            , config.AnnealingRate
+            , config.Iterations
+            , config.NeighborhoodSize
+            , config.StartingTemperature
+            , config.TargetTemperature
+            );
+        Console.WriteLine(config.TestName);
+        simulatedAnnealing.RunSimulatedAnnealing();
+
+        logger.Wait();
+        logger.Dispose();
+    }
+}
 

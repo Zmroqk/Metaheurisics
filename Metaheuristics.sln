@@ -14,9 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabuSearch.Core", "TabuSearch.Core\TabuSearch.Core.csproj", "{3D8991A5-3C78-430E-AB01-10D2C234E465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loggers", "Loggers\Loggers.csproj", "{9BBA93E8-5BD7-4277-951D-78CD98DE1A8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loggers", "Loggers\Loggers.csproj", "{9BBA93E8-5BD7-4277-951D-78CD98DE1A8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meta.Core", "Meta.Core\Meta.Core.csproj", "{73EAC5CC-EB68-4438-A168-769C440B0F34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meta.Core", "Meta.Core\Meta.Core.csproj", "{73EAC5CC-EB68-4438-A168-769C440B0F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SA.Core", "SA.Core\SA.Core.csproj", "{C90D57C7-1779-427A-BB7D-96A985592036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{73EAC5CC-EB68-4438-A168-769C440B0F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73EAC5CC-EB68-4438-A168-769C440B0F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73EAC5CC-EB68-4438-A168-769C440B0F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90D57C7-1779-427A-BB7D-96A985592036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90D57C7-1779-427A-BB7D-96A985592036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90D57C7-1779-427A-BB7D-96A985592036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90D57C7-1779-427A-BB7D-96A985592036}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
