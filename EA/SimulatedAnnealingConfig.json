@@ -7,13 +7,13 @@
       "ItemAddPropability": 0.3
     },
     "NeighborhoodSize": 10,
-    "AnnealingRate": 1.01,
-    "StartingTemperature": 100,
-    "TargetTemperature": 100000000,
-    "TestName": "Easy0",
-    "OutputFileName": "Output/Easy0.csv",
-    "InputFileName": "ai-lab1-ttp_data/easy_0.ttp",
-    "Iterations": 1000,
+    "AnnealingRate": 0.995,
+    "StartingTemperature": 1000,
+    "TargetTemperature": 0.5,
+    "TestName": "Hard0",
+    "OutputFileName": "Output/Hard0.csv",
+    "InputFileName": "ai-lab1-ttp_data/hard_0.ttp",
+    "Iterations": 10000,
     "RunCount": 10
   }
 ]
