@@ -83,7 +83,10 @@ namespace Loggers.CSV
             {
                 LogSpecimens(recordCopy);
             });
-            this.LoggerTasks.Enqueue(newTask);
+            lock (this.LoggerTasks)
+            {
+                this.LoggerTasks.Enqueue(newTask);
+            }
             return newTask;
         }
 

@@ -1,19 +1,5 @@
 ﻿[
   {
-    "Mutator": "Swap",
-    "GreedyKnapsackMutator": false,
-    "SpecimenInitializator": {
-      "Type": "Greedy",
-      "ItemAddPropability": 0.3
-    },
-    "NeighborhoodSize": 10,
-    "AnnealingRate": 0.994,
-    "StartingTemperature": 1000000000,
-    "TargetTemperature": 0.5,
-    "TestName": "Hard0",
-    "OutputFileName": "Output/Hard0.csv",
-    "InputFileName": "ai-lab1-ttp_data/hard_0.ttp",
-    "Iterations": 10000,
-    "RunCount": 10
+    "Include": [ "SimulatedAnnealingConfig1.json", "SimulatedAnnealingConfig2.json", "SimulatedAnnealingConfig3.json", "SimulatedAnnealingConfig4.json" ]
   }
 ]
