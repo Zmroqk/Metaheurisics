@@ -56,19 +56,21 @@ namespace TTP.Managers
             {
                 Console.WriteLine(iteration);
                 var specimens = this.Neighborhood.FindNeighborhood(current, this.NeighbourhoodSize);
-                var bestNeigbourhood = specimens.MaxBy(x => x.Evaluate());
-                if (currentScore < bestNeigbourhood.Evaluate() || random.NextDouble() < Math.Exp((bestNeigbourhood.Evaluate() - current.Evaluate()) / currentTemperature))
+                foreach(var specimen in specimens)
                 {
-                    current = bestNeigbourhood;
-                    currentScore = bestNeigbourhood.Evaluate();
-                    if(bestScore < currentScore)
+                    if (currentScore < specimen.Evaluate() || random.NextDouble() < Math.Exp((specimen.Evaluate() - current.Evaluate()) / currentTemperature))
                     {
-                        best = bestNeigbourhood;
-                        bestScore = currentScore;
-                    }
-                    if(worstScore > currentScore)
-                    {
-                        worstScore = currentScore;
+                        current = specimen;
+                        currentScore = specimen.Evaluate();
+                        if (bestScore < currentScore)
+                        {
+                            best = specimen;
+                            bestScore = currentScore;
+                        }
+                        if (worstScore > currentScore)
+                        {
+                            worstScore = currentScore;
+                        }
                     }
                 }
                 currentTemperature = currentTemperature * this.AnnealingRatio;

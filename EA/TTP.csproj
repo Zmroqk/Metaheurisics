@@ -38,6 +38,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="SimulatedAnnealingConfig-method2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SimulatedAnnealingConfig1-method2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SimulatedAnnealingConfig2-method2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="SimulatedAnnealingConfig4.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
