@@ -33,32 +33,54 @@ namespace TTP.DataTTP.Mutators
             return specimen;
         }
 
+        private List<Item> GenerateSortedItemList(Specimen specimen)
+        {
+            var nodes = specimen.Nodes.ToList();
+            var itemsDict = new List<(Item item, double distance)>();
+            foreach(var node in specimen.Nodes)
+            {
+                nodes.Remove(node);
+                var distance = GetRemainingDistance(node, nodes);
+                foreach(var item in node.AvailableItems)
+                {
+                    itemsDict.Add((item, distance));
+                }
+            }
+            itemsDict.Sort((i1, i2) =>
+            {
+                var rate1 = ((double)i1.item.Profit / i1.item.Weight) / i1.distance;
+                var rate2 = ((double)i2.item.Profit / i2.item.Weight) / i2.distance;
+                if (rate1 < rate2)
+                {
+                    return 1;
+                }
+                else if (rate1 == rate2)
+                {
+                    return 0;
+                }
+                return -1;
+            });
+            return itemsDict.Select(x => x.item).ToList();
+        }
+
+        private double GetRemainingDistance(Node current, List<Node> remaining)
+        {
+            double distance = 0d;
+            foreach(var node in remaining)
+            {
+                distance += this.Config.GetDistance(current, node);
+                current = node;
+            }
+            return distance;
+        }
+
         private void GreedyMutate(Specimen specimen)
         {
             specimen.RemoveAllItemsFromKnapsack();
-            var revertedNodes = specimen.Nodes;
-            revertedNodes.Reverse();
-            foreach (var currentCity in revertedNodes)
+            var items = GenerateSortedItemList(specimen);
+            while (items.Count > 0 && specimen.AddItemToKnapsack(items.First()))
             {
-                var currentItems = currentCity.AvailableItems.ToList();
-                currentItems.Sort((i1, i2) =>
-                {
-                    var rate1 = (double)i1.Profit / i1.Weight;
-                    var rate2 = (double)i2.Profit / i2.Weight;
-                    if (rate1 < rate2)
-                    {
-                        return 1;
-                    }
-                    else if (rate1 == rate2)
-                    {
-                        return 0;
-                    }
-                    return -1;
-                });
-                while (currentItems.Count > 0 && specimen.AddItemToKnapsack(currentItems.First()) && GetRate(currentItems.First()) >= this.Config.SortedItemMedian())
-                {
-                    currentItems.RemoveAt(0);
-                }
+                items.RemoveAt(0);
             }
         }
 
