@@ -30,21 +30,28 @@ namespace TTP.Managers
         private List<(Task<List<Specimen>> task, IConfig config)> currentTasks;
         private ILogger<FullSearchRecord> logger;
         private IEnumerator<IConfig> Configs;
+        private IConfigLoader<IConfig> ConfigLoader;
+        private ISaveHandler<IConfig> SaveHandler;
         private int rowsLogged;
         private int fileIndex;
 
-        public FullSearchParamsManager(List<FullSearchConfig> configs, int maxThreads)
+        public FullSearchParamsManager(List<FullSearchConfig> configs, int maxThreads, IConfigLoader<IConfig> configLoader = null)
         {
             this.MaxThreads = maxThreads;
             this.FullSearchConfigs = configs;
             this.currentTasks = new List<(Task<List<Specimen>>, IConfig)>();
             this.rowsLogged = 0;
             this.fileIndex = 0;
+            this.ConfigLoader = configLoader;
         }
 
         public void Run()
         {
-            this.Configs = this.GetConfigsEnumerator();
+            if(this.ConfigLoader != null)
+            {
+                this.Configs = this.GetConfigsEnumerator();
+            }
+            
             this.cancellationToken = new CancellationTokenSource();
             this.managerTask = new Task(() =>
             {
@@ -56,7 +63,7 @@ namespace TTP.Managers
         private void ManagerLoop()
         {
             this.Configs.MoveNext();
-            while (!this.cancellationToken.IsCancellationRequested || this.Configs.Current != null || this.currentTasks.Count != 0)
+            while (!this.cancellationToken.IsCancellationRequested || this.currentTasks.Count != 0)
             {
                 for(int i = 0; i < this.currentTasks.Count; i++)
                 {
@@ -85,6 +92,10 @@ namespace TTP.Managers
                                 this.currentTasks.Add((Task.Run(() => this.RunSimulatedAnnealing((SimulatedAnnealingConfig)config)), config));
                                 break;
                         }
+                    }
+                    else
+                    {
+                        this.cancellationToken.Cancel();
                     }
                 }
                 Thread.Sleep(500);
@@ -517,6 +528,14 @@ namespace TTP.Managers
                 results.Add(learningManager.Best);
             }
             return results;
+        }
+
+        public void Interrupt()
+        {
+            this.cancellationToken.Cancel();
+            this.managerTask.Wait();
+            this.managerTask = null;
+            this.SaveHandler.Save()
         }
 
         public void Wait()

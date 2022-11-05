@@ -24,7 +24,7 @@ if(!int.TryParse(mode, out modeNumber))
 }
 if (modeNumber == 1)
 {
-    var loader = new LearningConfigLoader<TabuConfig>();
+    var loader = new ConfigLoader<TabuConfig>();
     Console.WriteLine("Path to config: ");
     var path = Console.ReadLine();
     var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "TabuConfig.json" : path);
@@ -86,7 +86,7 @@ else if(modeNumber == 2)
 }
 else if (modeNumber == 3)
 {
-    var loader = new LearningConfigLoader<SimulatedAnnealingConfig>();
+    var loader = new ConfigLoader<SimulatedAnnealingConfig>();
     Console.WriteLine("Path to config: ");
     var path = Console.ReadLine();
     var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "SimulatedAnnealingConfig.json" : path);
@@ -137,7 +137,7 @@ else if (modeNumber == 3)
 }
 else if(modeNumber == 4)
 {
-    var loader = new LearningConfigLoader<FullSearchConfig>();
+    var loader = new ConfigLoader<FullSearchConfig>();
     Console.WriteLine("Path to config: ");
     var path = Console.ReadLine();
     var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "FullSearchConfig.json" : path);

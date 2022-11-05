@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace TTP.Config
 {
-    public class LearningConfigLoader<TConfig> where TConfig : IConfig
+    public class ConfigLoader<TConfig> : IConfigLoader<List<TConfig>> where TConfig : IConfig
     {
+        public bool ExitWhenFileNotExists { get; set; }
+        public ConfigLoader(bool exitWhenFileNotExists = true)
+        {
+            ExitWhenFileNotExists = exitWhenFileNotExists;
+        }
+
         public List<TConfig> Load(string path)
         {
             if (File.Exists(path))
@@ -28,7 +34,10 @@ namespace TTP.Config
             }
             else
             {
-                Environment.Exit(-3);
+                if (this.ExitWhenFileNotExists)
+                {
+                    Environment.Exit(-3);
+                }               
                 return null;
             }
         }
