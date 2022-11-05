@@ -21,6 +21,7 @@ namespace EA.Core
 
         public int CurrentEpoch { get; set; }
         public IAdditionalOperations<T>? AdditionalOperationsHandler { get; set; }
+        public T Best { get; set; }
 
         public LearningManagerBase(IMutator<T> mutator
             , ICrossover<T> crossover
@@ -62,6 +63,11 @@ namespace EA.Core
             var mutatedSpecimens = this.Mutator.MutateAll(beforeMutationSpecimens);
             var afterMutationSpecimens = this.AdditionalOperationsHandler?.AfterMutation(mutatedSpecimens) ?? mutatedSpecimens;
             this.CurrentEpochSpecimens = afterMutationSpecimens;
+            var best = this.CurrentEpochSpecimens.MaxBy(x => x.Evaluate());
+            if(this.Best.Evaluate() < best.Evaluate())
+            {
+                this.Best = best;
+            }
             this.Logger?.Log(new TRecord());
         }
     }

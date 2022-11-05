@@ -1,19 +1,23 @@
-﻿using Meta.Core;
+﻿using EA.Core;
+using Meta.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TTP.DataTTP.Mutators;
 
 namespace TTP.DataTTP.Inititializators
 {
     public class GreedySpecimenInitializator : ISpecimenInitializator<Specimen>
     {
         public Data Config { get; set; }
+        public IMutator<Specimen> KnapsackMutator { get; set; }
 
-        public GreedySpecimenInitializator(Data config)
+        public GreedySpecimenInitializator(Data config, IMutator<Specimen> knapsackMutator)
         {
             this.Config = config;
+            this.KnapsackMutator = knapsackMutator;
         }
 
         public void Initialize(Specimen specimen)
@@ -44,7 +48,7 @@ namespace TTP.DataTTP.Inititializators
                 specimen.Nodes.Add(currentCity);
                 indexes.Remove(currentCity.Index);
             }
-            KnapsackHelper.GreedyKnapsack(specimen);
+            this.KnapsackMutator.Mutate(specimen);
         }
     }
 }

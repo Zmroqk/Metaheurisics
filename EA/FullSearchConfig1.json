@@ -1,0 +1,92 @@
+﻿[
+  {
+    "RunCount": 10,
+    "FilePaths": [ "ai-lab1-ttp_data/easy_0.ttp", "ai-lab1-ttp_data/easy_1.ttp", "ai-lab1-ttp_data/medium_0.ttp", "ai-lab1-ttp_data/medium_1.ttp", "ai-lab1-ttp_data/hard_0.ttp" ],
+    "OutputPath": "Output/full_search.csv",
+    "TabuConfig": {
+      "Mutators": [ "Swap", "Inverse" ],
+      "UseGreedyKnapsack": [ true, false ],
+      "SpecimenInitializators": [
+        {
+          "Type": "Greedy"
+        },
+        {
+          "Type": "Random",
+          "ItemAddPropability": 0.3
+        }
+      ],
+      "MinNeighborhoodSize": 1,
+      "MaxNeighborhoodSize": 20,
+      "NeighborhoodSizeChange": 1,
+      "MinTabuSize": 10,
+      "MaxTabuSize": 1000,
+      "TabuSizeChange": 10,
+      "MinIterations": 100,
+      "MaxIterations": 10000,
+      "IterationsChange": 100
+    },
+    "SimulatedAnnealing": {
+      "Mutators": [ "Swap", "Inverse" ],
+      "UseGreedyKnapsack": [ true, false ],
+      "SpecimenInitializators": [
+        {
+          "Type": "Greedy"
+        },
+        {
+          "Type": "Random",
+          "ItemAddPropability": 0.3
+        }
+      ],
+      "MinNeighborhoodSize": 1,
+      "MaxNeighborhoodSize": 20,
+      "NeighborhoodSizeChange": 1,
+      "MinIterations": 100,
+      "MaxIterations": 10000,
+      "IterationsChange": 100,
+      "MinAnnealingRate": 0.9,
+      "MaxAnnealingRate": 0.999,
+      "AnnealingRateChange": 0.001,
+      "MinStartingTemperature": 1000,
+      "MaxStartingTemperature": 1000000,
+      "StartingTemperatureChange": 1000,
+      "MinTargetTemperature": 1,
+      "MaxTargetTemperature": 1000,
+      "TargetTemperatureChange": 100
+    },
+    "EvolutionaryAlgorithm": {
+      "Mutator": {
+        "Types": [ "Swap", "Inverse" ],
+        "MinMutateRatio": 0.001,
+        "MaxMutateRatio": 0.999,
+        "MutateRationChange": 0.001
+      },
+      "Selector": {
+        "Types": [ "Roulette", "Tournament" ],
+        "MinSpecimenCount": 1,
+        "MaxSpecimenCount": 100,
+        "SpecimenCountChange": 1
+      },
+      "Crossover": {
+        "Types": [ "Order", "PartiallyMatched" ],
+        "MinMutateRatio": 0.001,
+        "MaxMutateRatio": 0.999,
+        "MutateRationChange": 0.001
+      },
+      "SpecimenInitializators": [
+        {
+          "Type": "Greedy"
+        },
+        {
+          "Type": "Random",
+          "ItemAddPropability": 0.3
+        }
+      ],
+      "MinPopulationSize": 10,
+      "MaxPopulationSize": 5000,
+      "PopulationSizeChange": 10,
+      "MinEpochs": 10,
+      "MaxEpochs": 10000,
+      "EpochsChange": 10
+    }
+  }
+]

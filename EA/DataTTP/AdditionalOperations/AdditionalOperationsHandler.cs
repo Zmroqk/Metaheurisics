@@ -9,6 +9,13 @@ namespace TTP.DataTTP.AdditionalOperations
 {
     public class AdditionalOperationsHandler : IAdditionalOperations<Specimen>
     {
+        public IMutator<Specimen> KnapsackMutator { get; set; }
+
+        public AdditionalOperationsHandler(IMutator<Specimen> knapsackMutator)
+        {
+            this.KnapsackMutator = knapsackMutator;
+        }
+
         public IList<Specimen> AfterCrossover(IList<Specimen> currentPopulation)
         {
             return currentPopulation;
@@ -20,7 +27,7 @@ namespace TTP.DataTTP.AdditionalOperations
             {
                 if (specimen.IsModified)
                 {
-                    KnapsackHelper.GreedyKnapsack(specimen);
+                    this.KnapsackMutator.Mutate(specimen);
                 }
             }
             return currentPopulation;
@@ -45,10 +52,6 @@ namespace TTP.DataTTP.AdditionalOperations
         {
             foreach (var specimen in currentPopulation)
             {
-                if (specimen.IsModified)
-                {
-                    KnapsackHelper.GreedyKnapsack(specimen);
-                }
                 specimen.IsMutated = false;
                 specimen.IsCrossed = false;
             }

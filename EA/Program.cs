@@ -15,6 +15,7 @@ Console.WriteLine("Select mode: ");
 Console.WriteLine("1. Tabu search ");
 Console.WriteLine("2. Random ");
 Console.WriteLine("3. Simulated Annealing ");
+Console.WriteLine("4. Full search ");
 string mode = Console.ReadLine();
 int modeNumber;
 if(!int.TryParse(mode, out modeNumber))
@@ -35,7 +36,7 @@ if (modeNumber == 1)
         ISpecimenInitializator<Specimen> initializator;
         if (config.SpecimenInitializator.Type == SpecimenInitializatorType.Greedy)
         {
-            initializator = new GreedySpecimenInitializator(data);
+            initializator = new GreedySpecimenInitializator(data, new KnapsackMutator(data, true));
         }
         else
         {
@@ -97,7 +98,7 @@ else if (modeNumber == 3)
         ISpecimenInitializator<Specimen> initializator;
         if (config.SpecimenInitializator.Type == SpecimenInitializatorType.Greedy)
         {
-            initializator = new GreedySpecimenInitializator(data);
+            initializator = new GreedySpecimenInitializator(data, new KnapsackMutator(data, true));
         }
         else
         {
@@ -133,5 +134,16 @@ else if (modeNumber == 3)
         logger.Wait();
         logger.Dispose();
     }
+}
+else if(modeNumber == 4)
+{
+    var loader = new LearningConfigLoader<FullSearchConfig>();
+    Console.WriteLine("Path to config: ");
+    var path = Console.ReadLine();
+    var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "FullSearchConfig.json" : path);
+    var manager = new FullSearchParamsManager(configs, 100);
+    manager.Run();
+    manager.Wait();
+    manager.Dispose();
 }
 
