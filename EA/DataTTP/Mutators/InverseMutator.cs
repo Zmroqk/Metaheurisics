@@ -21,11 +21,12 @@ namespace TTP.DataTTP.Mutators
                 this.MutateRatio = value;
             }
         }
-
+        Random random;
         public InverseMutator(Data config, double mutateRatio)
         {
             this.Config = config;
             this.MutateRatio = mutateRatio;
+            this.random = new Random();
         }
 
         public IList<Specimen> MutateAll(IList<Specimen> currentPopulation)
@@ -42,7 +43,6 @@ namespace TTP.DataTTP.Mutators
 
         public Specimen Mutate(Specimen specimen)
         {
-            Random random = new Random();
             var probability = 1 - this.MutateRatio;
             if (probability <= random.NextDouble())
             {

@@ -11,17 +11,17 @@ namespace TTP.DataTTP.Inititializators
     {
         public Data Config { get; set; }
         public double ItemAddProbability { get; set; }
-
+        Random random;
         public RandomSpecimenInitializator(Data config, double itemAddProbability)
         {
             this.Config = config;
             this.ItemAddProbability = itemAddProbability;
+            this.random = new Random();
         }
 
         public void Initialize(Specimen specimen)
         {
             List<Node> cities = this.Config.Nodes.ToList();
-            Random random = new Random();
             while(cities.Count > 0)
             {
                 var city = cities[random.Next(0, cities.Count)];

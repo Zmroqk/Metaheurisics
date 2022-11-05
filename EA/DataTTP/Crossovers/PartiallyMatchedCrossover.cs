@@ -10,15 +10,15 @@ namespace TTP.DataTTP.Crossovers
     public class PartiallyMatchedCrossover : ICrossover<Specimen>
     {
         public double Probability { get; set; }
-
+        Random random;
         public PartiallyMatchedCrossover(double probability)
         {
             this.Probability = probability;
+            this.random = new Random();
         }
 
         public IList<Specimen> Crossover(IList<Specimen> specimens)
         {
-            var random = new Random();
             var prop = 1 - this.Probability;
             var newSpecimens = new List<Specimen>();
             for (int i = 1; i < specimens.Count; i += 2)
@@ -48,7 +48,6 @@ namespace TTP.DataTTP.Crossovers
         {
             var newSpecimen = specimen.Clone();
             var newOtherSpecimen = otherSpecimen.Clone();
-            var random = new Random();
             var startIndex = random.Next(specimen.Nodes.Count);
             var length = random.Next(specimen.Nodes.Count - startIndex + 1);
             var specimenRange = newSpecimen.Nodes.GetRange(startIndex, length);

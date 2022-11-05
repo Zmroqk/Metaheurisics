@@ -54,7 +54,6 @@ namespace TTP.Managers
             var random = new Random();
             while(iteration < this.Iterations && this.TargetTemperature < currentTemperature)
             {
-                Console.WriteLine(iteration);
                 var specimens = this.Neighborhood.FindNeighborhood(current, this.NeighbourhoodSize);
                 foreach(var specimen in specimens)
                 {
@@ -83,7 +82,7 @@ namespace TTP.Managers
                     AverageScore = specimens.Average(s => s.Evaluate()),
                     WorstScore = worstScore
                 };
-                this.Logger.Log(record);
+                this.Logger?.Log(record);
             }
             return best;
         }

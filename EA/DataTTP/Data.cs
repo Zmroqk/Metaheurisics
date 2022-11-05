@@ -12,7 +12,6 @@ namespace TTP.DataTTP
         {
             this.Nodes = new List<Node>();
             this.Items = new List<Item>();
-            this.Distances = new DistanceInfo[0][];
         }
 
         public string Name { get; set; }
@@ -33,10 +32,11 @@ namespace TTP.DataTTP
 
         public DistanceInfo[][] GetNodeMatrix()
         {
-            if(this.Distances.Length != 0)
-            {
-                return this.Distances;
-            }
+            return this.Distances;       
+        }
+
+        public void GenerateDistances()
+        {
             this.Distances = new DistanceInfo[this.CityCount][];
             foreach (var node in Nodes)
             {
@@ -52,12 +52,11 @@ namespace TTP.DataTTP
                     };
                 }
             }
-            return this.Distances;
         }
 
         public double GetDistance(Node first, Node second)
         {
-            return this.GetNodeMatrix()[first.Index - 1][second.Index - 1].Distance;
+            return this.Distances[first.Index - 1][second.Index - 1].Distance;
         }
 
         public double SortedItemMedian()

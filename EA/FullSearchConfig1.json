@@ -1,6 +1,6 @@
 ﻿[
   {
-    "RunCount": 10,
+    "RunCount": 5,
     "FilePaths": [ "ai-lab1-ttp_data/easy_0.ttp", "ai-lab1-ttp_data/easy_1.ttp", "ai-lab1-ttp_data/medium_0.ttp", "ai-lab1-ttp_data/medium_1.ttp", "ai-lab1-ttp_data/hard_0.ttp" ],
     "OutputPath": "Output/full_search.csv",
     "TabuConfig": {
@@ -68,9 +68,9 @@
       },
       "Crossover": {
         "Types": [ "Order", "PartiallyMatched" ],
-        "MinMutateRatio": 0.001,
-        "MaxMutateRatio": 0.999,
-        "MutateRationChange": 0.001
+        "MinProbability": 0.001,
+        "MaxProbability": 0.999,
+        "ProbabilityChange": 0.001
       },
       "SpecimenInitializators": [
         {

@@ -21,7 +21,6 @@ namespace TTP.DataTTP.Mutators
             specimen.Nodes[index] = specimen.Nodes[index2];
             specimen.Nodes[index2] = swappedNode;
             specimen.IsMutated = true;
-            specimen.Fix();
             return specimen;
         }
     }

@@ -23,7 +23,7 @@ namespace TTP.DataTTP
 
         private HashSet<Item> Items { get; set; }
 
-        public List<Node> Nodes { get; }
+        public List<Node> Nodes { get; set; }
 
         public ISpecimenInitializator<Specimen> SpecimenInitialization { get; }
 
@@ -54,7 +54,7 @@ namespace TTP.DataTTP
             this.UpdateWeight(ref currentWeight, this.Nodes[0]);
             for(int i = 1; i < this.Nodes.Count; i++)
             {
-                var distance = this.Config.GetDistance(this.Nodes[i - 1], this.Nodes[i]);
+                var distance = this.Config.Distances[this.Nodes[i - 1].Index - 1][this.Nodes[i].Index - 1].Distance;
                 var currentSpeed = this.Config.MaxSpeed - currentWeight * ((this.Config.MaxSpeed - this.Config.MinSpeed) / this.Config.KnapsackCapacity);
                 time += distance / currentSpeed;
                 this.UpdateWeight(ref currentWeight, this.Nodes[i]);
@@ -98,8 +98,9 @@ namespace TTP.DataTTP
 
         private void UpdateWeight(ref double weight, Node node)
         {
-            foreach (var item in node.AvailableItems)
+            for(int i = 0; i < node.AvailableItems.Count; i++)
             {
+                var item = node.AvailableItems[i];
                 if (this.Items.Contains(item))
                 {
                     weight += item.Weight;
@@ -136,14 +137,8 @@ namespace TTP.DataTTP
         public Specimen Clone()
         {
             var specimen = new Specimen(this.Config, this.SpecimenInitialization);
-            foreach(var node in this.Nodes)
-            {
-                specimen.Nodes.Add(node);
-            }
-            foreach(var item in this.Items)
-            {
-                specimen.Items.Add(item);
-            }
+            specimen.Nodes = new List<Node>(this.Nodes);
+            specimen.Items = new HashSet<Item>(this.Items);
             specimen.IsMutated = this.IsMutated;
             specimen.IsCrossed = this.IsCrossed;
             return specimen;

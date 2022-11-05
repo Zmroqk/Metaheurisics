@@ -49,6 +49,7 @@ namespace EA.Core
             {
                 this.CurrentEpochSpecimens.Add(this.SpecimenFactory.CreateSpecimen());
             }
+            this.Best = this.CurrentEpochSpecimens.MaxBy(x => x.Evaluate());
         }
 
         public virtual void NextEpoch()
@@ -63,11 +64,15 @@ namespace EA.Core
             var mutatedSpecimens = this.Mutator.MutateAll(beforeMutationSpecimens);
             var afterMutationSpecimens = this.AdditionalOperationsHandler?.AfterMutation(mutatedSpecimens) ?? mutatedSpecimens;
             this.CurrentEpochSpecimens = afterMutationSpecimens;
-            var best = this.CurrentEpochSpecimens.MaxBy(x => x.Evaluate());
-            if(this.Best.Evaluate() < best.Evaluate())
+            T best = this.CurrentEpochSpecimens.First();
+            for(int i = 0; i < this.CurrentEpochSpecimens.Count; i++)
             {
-                this.Best = best;
-            }
+                var specimen = this.CurrentEpochSpecimens[i];
+                if (this.Best.Evaluate() < specimen.Evaluate())
+                {
+                    this.Best = specimen;
+                }
+            }     
             this.Logger?.Log(new TRecord());
         }
     }

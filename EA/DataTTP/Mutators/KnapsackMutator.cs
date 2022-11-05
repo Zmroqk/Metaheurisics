@@ -12,11 +12,12 @@ namespace TTP.DataTTP.Mutators
         public double Probability { get => 1; set => _ = value; }
         public bool UseGreedy { get; set; }
         public Data Config { get; set; }
-
+        Random random;
         public KnapsackMutator(Data config, bool useGreedy = true)
         {
             this.Config = config;
             this.UseGreedy = useGreedy;
+            this.random = new Random();
         }
 
 
@@ -68,7 +69,7 @@ namespace TTP.DataTTP.Mutators
             double distance = 0d;
             foreach(var node in remaining)
             {
-                distance += this.Config.GetDistance(current, node);
+                distance += this.Config.Distances[current.Index-1][node.Index-1].Distance;
                 current = node;
             }
             return distance;
@@ -86,7 +87,6 @@ namespace TTP.DataTTP.Mutators
 
         private void RandomMutate(Specimen specimen)
         {
-            var random = new Random();
             specimen.RemoveAllItemsFromKnapsack();
             while (specimen.AddItemToKnapsack(this.Config.Items[random.Next(this.Config.Items.Count)]))
             {

@@ -48,6 +48,7 @@ namespace TTP.DataTTP
                     data.Items.Add(item);
                     node.AvailableItems.Add(item);
                 }
+                data.GenerateDistances();
                 return data;
             }
             catch (Exception)

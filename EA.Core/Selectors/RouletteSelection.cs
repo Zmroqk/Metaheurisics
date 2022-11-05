@@ -10,15 +10,16 @@ namespace EA.Core.Selectors
     public class RouletteSelection<T> : ISelector<T> where T : ISpecimen<T>
     {
         public bool IsMinimalizing { get; set; }
-
+        Random random;
         public RouletteSelection(bool isMinimalizing)
         {
             this.IsMinimalizing = isMinimalizing;
+            this.random = new Random();
         }
 
         public virtual IList<T> Select(IList<T> currentPopulation)
         {
-            Dictionary<T, (double from, double to)> weightedSpecimens = new Dictionary<T, (double from, double to)>();
+            List<(T specimen, double from, double to)> weightedSpecimens = new List<(T specimen, double from, double to)>();
             var sum = 0d;
             var min = double.MaxValue;
             var max = double.MinValue;
@@ -29,7 +30,7 @@ namespace EA.Core.Selectors
                 {
                     max = score;
                 }
-                else if(score < min)
+                if(score < min)
                 {
                     min = score;
                 }
@@ -38,16 +39,15 @@ namespace EA.Core.Selectors
             {
                 var score = specimen.Evaluate();
                 var normalizedScore = this.Normalize(specimen.Evaluate(), max, min);
-                weightedSpecimens.Add(specimen, (sum, sum + normalizedScore));
+                weightedSpecimens.Add((specimen, sum, sum + normalizedScore));
                 sum += normalizedScore;
             }
-            Random random = new Random();
             List<T> selectedSpecimens = new List<T>();
             for (int i = 0; i < currentPopulation.Count; i++)
             {
                 var value = random.NextDouble() * sum;
-                var specimen = weightedSpecimens.First(ws => ws.Value.from <= value && ws.Value.to > value);
-                selectedSpecimens.Add(specimen.Key.Clone());
+                var specimen = weightedSpecimens.First(ws => ws.from <= value && ws.to > value);
+                selectedSpecimens.Add(specimen.specimen.Clone());
             }
             return selectedSpecimens;
         }
@@ -60,9 +60,9 @@ namespace EA.Core.Selectors
             }
             if (this.IsMinimalizing)
             {
-                return (max - value) / (max - min) + 0.01d;
+                return (max - value) / (max - min) * 1.001;
             }
-            return ((value - min) / (max - min)) + 0.01d;
+            return ((value - min) / (max - min)) * 1.001;
         }
     }
 }

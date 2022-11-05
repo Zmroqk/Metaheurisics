@@ -13,11 +13,13 @@ namespace TTP.DataTTP.Inititializators
     {
         public Data Config { get; set; }
         public IMutator<Specimen> KnapsackMutator { get; set; }
+        Random random;
 
         public GreedySpecimenInitializator(Data config, IMutator<Specimen> knapsackMutator)
         {
             this.Config = config;
             this.KnapsackMutator = knapsackMutator;
+            this.random = new Random();
         }
 
         public void Initialize(Specimen specimen)
@@ -25,7 +27,6 @@ namespace TTP.DataTTP.Inititializators
             var cities = this.Config.Nodes.ToList();
             var indexes = Enumerable.Range(0, this.Config.Nodes.Count).ToList();
             var distanceMatrix = this.Config.GetNodeMatrix();
-            var random = new Random();
             var currentCity = cities[random.Next(0, cities.Count)];
             cities.Remove(currentCity);
             specimen.Nodes.Add(currentCity);
