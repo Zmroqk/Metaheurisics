@@ -11,23 +11,23 @@ namespace EA.Core.Selectors
     {
         public int SpecimenCount { get; set; }
         public bool IsMinimalizing { get; set; }
-
+        Random random;
         public TournamentSelection(int specimenCount, bool isMinimalizing)
         {
             this.SpecimenCount = specimenCount;
             this.IsMinimalizing = isMinimalizing;
+            this.random = new Random();
         }
 
         public virtual IList<T> Select(IList<T> currentPopulation)
         {
-            Random random = new Random();
-            List<T> selectedSpecimens = new List<T>();
-            var tournamentCount = Math.Round((this.SpecimenCount / 100d) * currentPopulation.Count);
+            List<T> selectedSpecimens = new List<T>(currentPopulation.Count);
+            var tournamentCount = (int)Math.Round((this.SpecimenCount / 100d) * currentPopulation.Count);
             tournamentCount = tournamentCount == 0 ? 1 : tournamentCount;
-            while(selectedSpecimens.Count != currentPopulation.Count)
+            while (selectedSpecimens.Count != currentPopulation.Count)
             {
                 List<T> currentTempPopulation = currentPopulation.ToList();
-                List<T> tournamentSelectedSpecimens = new List<T>();
+                List<T> tournamentSelectedSpecimens = new List<T>(tournamentCount);
                 for(int j = 0; j < tournamentCount; j++)
                 {
                     var index = random.Next(currentTempPopulation.Count);

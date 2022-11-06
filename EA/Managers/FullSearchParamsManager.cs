@@ -22,7 +22,7 @@ namespace TTP.Managers
 {
     public class FullSearchParamsManager : IDisposable
     {
-        List<FullSearchConfig> FullSearchConfigs { get; set; }
+        FullSearchConfig FullSearchConfig { get; set; }
         public int MaxThreads { get; set; }
 
         private Task managerTask;
@@ -33,10 +33,10 @@ namespace TTP.Managers
         private int rowsLogged;
         private int fileIndex;
 
-        public FullSearchParamsManager(List<FullSearchConfig> configs, int maxThreads)
+        public FullSearchParamsManager(FullSearchConfig config, int maxThreads)
         {
             this.MaxThreads = maxThreads;
-            this.FullSearchConfigs = configs;
+            this.FullSearchConfig = config;
             this.currentTasks = new List<(Task<List<Specimen>>, IConfig)>();
             this.rowsLogged = 0;
             this.fileIndex = 0;
@@ -56,7 +56,7 @@ namespace TTP.Managers
         private void ManagerLoop()
         {
             this.Configs.MoveNext();
-            while (!this.cancellationToken.IsCancellationRequested || this.Configs.Current != null || this.currentTasks.Count != 0)
+            while (!this.cancellationToken.IsCancellationRequested || this.currentTasks.Count != 0)
             {
                 for(int i = 0; i < this.currentTasks.Count; i++)
                 {
@@ -70,9 +70,12 @@ namespace TTP.Managers
                 for(int i = this.MaxThreads - this.currentTasks.Count; i > 0; i--)
                 {                    
                     var config = this.Configs.Current;
-                    this.Configs.MoveNext();
-                    if (config != null)
+                    var canMoveNext = this.Configs.MoveNext();
+                    if (!canMoveNext)
                     {
+                        this.cancellationToken.Cancel();
+                    }
+                    else {
                         switch (config)
                         {
                             case LearningConfig:
@@ -193,26 +196,23 @@ namespace TTP.Managers
 
         private IEnumerator<IConfig> GetConfigsEnumerator()
         {
-            foreach(var config in this.FullSearchConfigs)
+            foreach (var filePath in this.FullSearchConfig.FilePaths)
             {
-                foreach (var filePath in config.FilePaths)
+                IEnumerator<IConfig> enumerator;
+                enumerator = this.GenerateTabuConfigs(filePath, this.FullSearchConfig);
+                while (enumerator.MoveNext())
                 {
-                    IEnumerator<IConfig> enumerator;
-                    enumerator = this.GenerateTabuConfigs(filePath, config);
-                    while (enumerator.MoveNext())
-                    {
-                        yield return enumerator.Current;
-                    }
-                    enumerator = this.GenerateEvolutionaryAlgorithmConfigs(filePath, config);
-                    while (enumerator.MoveNext())
-                    {
-                        yield return enumerator.Current;
-                    }
-                    enumerator = this.GenerateSimulatedAnnealingConfigs(filePath, config);
-                    while (enumerator.MoveNext())
-                    {
-                        yield return enumerator.Current;
-                    }
+                    yield return enumerator.Current;
+                }
+                enumerator = this.GenerateEvolutionaryAlgorithmConfigs(filePath, this.FullSearchConfig);
+                while (enumerator.MoveNext())
+                {
+                    yield return enumerator.Current;
+                }
+                enumerator = this.GenerateSimulatedAnnealingConfigs(filePath, this.FullSearchConfig);
+                while (enumerator.MoveNext())
+                {
+                    yield return enumerator.Current;
                 }
             }
         }

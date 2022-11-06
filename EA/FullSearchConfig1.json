@@ -1,7 +1,8 @@
 ﻿[
   {
     "RunCount": 5,
-    "FilePaths": [ "ai-lab1-ttp_data/easy_0.ttp", "ai-lab1-ttp_data/easy_1.ttp", "ai-lab1-ttp_data/medium_0.ttp", "ai-lab1-ttp_data/medium_1.ttp", "ai-lab1-ttp_data/hard_0.ttp" ],
+    "Threads": 200,
+    "FilePaths": [ "ai-lab1-ttp_data/easy_0.ttp", "ai-lab1-ttp_data/easy_1.ttp" ],
     "OutputPath": "Output/full_search.csv",
     "TabuConfig": {
       "Mutators": [ "Swap", "Inverse" ],
@@ -9,20 +10,16 @@
       "SpecimenInitializators": [
         {
           "Type": "Greedy"
-        },
-        {
-          "Type": "Random",
-          "ItemAddPropability": 0.3
         }
       ],
       "MinNeighborhoodSize": 1,
-      "MaxNeighborhoodSize": 20,
-      "NeighborhoodSizeChange": 1,
+      "MaxNeighborhoodSize": 25,
+      "NeighborhoodSizeChange": 5,
       "MinTabuSize": 10,
-      "MaxTabuSize": 1000,
-      "TabuSizeChange": 10,
+      "MaxTabuSize": 600,
+      "TabuSizeChange": 100,
       "MinIterations": 100,
-      "MaxIterations": 10000,
+      "MaxIterations": 1000,
       "IterationsChange": 100
     },
     "SimulatedAnnealing": {
@@ -31,23 +28,19 @@
       "SpecimenInitializators": [
         {
           "Type": "Greedy"
-        },
-        {
-          "Type": "Random",
-          "ItemAddPropability": 0.3
         }
       ],
       "MinNeighborhoodSize": 1,
-      "MaxNeighborhoodSize": 20,
-      "NeighborhoodSizeChange": 1,
+      "MaxNeighborhoodSize": 25,
+      "NeighborhoodSizeChange": 5,
       "MinIterations": 100,
       "MaxIterations": 10000,
-      "IterationsChange": 100,
+      "IterationsChange": 500,
       "MinAnnealingRate": 0.9,
       "MaxAnnealingRate": 0.999,
-      "AnnealingRateChange": 0.001,
-      "MinStartingTemperature": 1000,
-      "MaxStartingTemperature": 1000000,
+      "AnnealingRateChange": 0.01,
+      "MinStartingTemperature": 100,
+      "MaxStartingTemperature": 10000,
       "StartingTemperatureChange": 1000,
       "MinTargetTemperature": 1,
       "MaxTargetTemperature": 1000,
@@ -58,35 +51,31 @@
         "Types": [ "Swap", "Inverse" ],
         "MinMutateRatio": 0.001,
         "MaxMutateRatio": 0.999,
-        "MutateRationChange": 0.001
+        "MutateRationChange": 0.1
       },
       "Selector": {
         "Types": [ "Roulette", "Tournament" ],
         "MinSpecimenCount": 1,
         "MaxSpecimenCount": 100,
-        "SpecimenCountChange": 1
+        "SpecimenCountChange": 15
       },
       "Crossover": {
         "Types": [ "Order", "PartiallyMatched" ],
         "MinProbability": 0.001,
         "MaxProbability": 0.999,
-        "ProbabilityChange": 0.001
+        "ProbabilityChange": 0.1
       },
       "SpecimenInitializators": [
         {
           "Type": "Greedy"
-        },
-        {
-          "Type": "Random",
-          "ItemAddPropability": 0.3
         }
       ],
       "MinPopulationSize": 10,
-      "MaxPopulationSize": 5000,
-      "PopulationSizeChange": 10,
+      "MaxPopulationSize": 500,
+      "PopulationSizeChange": 50,
       "MinEpochs": 10,
-      "MaxEpochs": 10000,
-      "EpochsChange": 10
+      "MaxEpochs": 1000,
+      "EpochsChange": 150
     }
   }
 ]

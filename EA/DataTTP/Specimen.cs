@@ -115,6 +115,10 @@ namespace TTP.DataTTP
             foreach(var node in this.Nodes) {
                 cities.Remove(node);
             }
+            if(cities.Count == 0)
+            {
+                return;
+            }
             var citiesToRemove = this.Nodes.GroupBy(n => n).Where(g => g.Count() > 1).SelectMany(g => g.Where((n, i) => i >= 1).ToList()).ToList();
             var index = 0;
             while(citiesToRemove.Count > 0)

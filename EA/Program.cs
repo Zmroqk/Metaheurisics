@@ -12,6 +12,7 @@ using TTP.DataTTP.Neighborhoods;
 using TTP.Managers;
 
 Console.WriteLine("Select mode: ");
+Console.WriteLine("0. EA ");
 Console.WriteLine("1. Tabu search ");
 Console.WriteLine("2. Random ");
 Console.WriteLine("3. Simulated Annealing ");
@@ -22,7 +23,26 @@ if(!int.TryParse(mode, out modeNumber))
 {
     modeNumber = 1;
 }
-if (modeNumber == 1)
+if (modeNumber == 0)
+{
+    var factory = new EAManagerFactory();
+    var loader = new LearningConfigLoader<LearningConfig>();
+    Console.WriteLine("Path to config: ");
+    var path = Console.ReadLine();
+    var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "LearningManager.json" : path);
+    foreach(var config in configs)
+    {
+        var manager = factory.Create(config);
+        manager.Init();
+        for(int i = 0; i < config.Epochs; i++)
+        {
+            Console.WriteLine(i);
+            manager.NextEpoch();
+        }
+        Console.WriteLine(manager.Best.Evaluate());
+    }
+}
+else if (modeNumber == 1)
 {
     var loader = new LearningConfigLoader<TabuConfig>();
     Console.WriteLine("Path to config: ");
@@ -141,9 +161,12 @@ else if(modeNumber == 4)
     Console.WriteLine("Path to config: ");
     var path = Console.ReadLine();
     var configs = loader.Load(string.IsNullOrWhiteSpace(path) ? "FullSearchConfig.json" : path);
-    var manager = new FullSearchParamsManager(configs, 100);
-    manager.Run();
-    manager.Wait();
-    manager.Dispose();
+    foreach(var config in configs)
+    {
+        var manager = new FullSearchParamsManager(config, config.Threads);
+        manager.Run();
+        manager.Wait();
+        manager.Dispose();
+    }   
 }
 

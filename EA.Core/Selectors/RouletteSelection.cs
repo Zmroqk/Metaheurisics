@@ -19,7 +19,7 @@ namespace EA.Core.Selectors
 
         public virtual IList<T> Select(IList<T> currentPopulation)
         {
-            List<(T specimen, double from, double to)> weightedSpecimens = new List<(T specimen, double from, double to)>();
+            List<(T specimen, double from, double to)> weightedSpecimens = new List<(T specimen, double from, double to)>(currentPopulation.Count);
             var sum = 0d;
             var min = double.MaxValue;
             var max = double.MinValue;

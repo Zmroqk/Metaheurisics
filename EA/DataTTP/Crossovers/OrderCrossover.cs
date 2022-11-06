@@ -31,10 +31,10 @@ namespace TTP.DataTTP.Crossovers
                 }
                 else
                 {
-                    newSpecimens.Add(specimens[i].Clone());
+                    newSpecimens.Add(specimens[i]);
                 }
             }
-            newSpecimens.Add(specimens[specimens.Count - 1].Clone());           
+            newSpecimens.Add(specimens[specimens.Count - 1]);           
             return newSpecimens;
         }
 
@@ -48,8 +48,7 @@ namespace TTP.DataTTP.Crossovers
             {
                 newSpecimen.Nodes.Remove(node);
             }
-            newSpecimen.Nodes.InsertRange(startIndex, nodes);
-
+            newSpecimen.Nodes.InsertRange(startIndex > newSpecimen.Nodes.Count ? newSpecimen.Nodes.Count - 1 : startIndex, nodes);
             newSpecimen.Fix();
             return newSpecimen;
         }

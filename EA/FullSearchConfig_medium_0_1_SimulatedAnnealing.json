@@ -1,0 +1,26 @@
+﻿[
+  {
+    "RunCount": 5,
+    "Threads": 300,
+    "FilePaths": [ "ai-lab1-ttp_data/medium_0.ttp", "ai-lab1-ttp_data/medium_1.ttp" ],
+    "OutputPath": "Output/full_search_SA_medium_0_1.csv",
+    "TabuConfig": {
+      "Mutators": [ "Swap", "Inverse" ],
+      "UseGreedyKnapsack": [ true, false ],
+      "SpecimenInitializators": [
+        {
+          "Type": "Greedy"
+        }
+      ],
+      "MinNeighborhoodSize": 1,
+      "MaxNeighborhoodSize": 25,
+      "NeighborhoodSizeChange": 5,
+      "MinTabuSize": 10,
+      "MaxTabuSize": 600,
+      "TabuSizeChange": 100,
+      "MinIterations": 100,
+      "MaxIterations": 1000,
+      "IterationsChange": 100
+    }
+  }
+]

@@ -34,7 +34,7 @@ namespace TTP.DataTTP.Mutators
             var newPopulation = new List<Specimen>();
             foreach(Specimen specimen in currentPopulation)
             {
-                var newSpecimen = specimen.Clone();
+                var newSpecimen = specimen;
                 this.Mutate(newSpecimen);
                 newPopulation.Add(newSpecimen);
             }

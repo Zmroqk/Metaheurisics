@@ -8,13 +8,14 @@ namespace TTP.DataTTP.Mutators
 {
     public class TabuSwapMutator : SwapMutator
     {
+        Random random;
         public TabuSwapMutator(Data config) : base(config, 1)
         {
+            this.random = new Random();
         }
 
         public override Specimen Mutate(Specimen specimen)
-        {
-            Random random = new Random();
+        {         
             var index = random.Next(specimen.Nodes.Count);
             var index2 = random.Next(specimen.Nodes.Count);
             var swappedNode = specimen.Nodes[index];

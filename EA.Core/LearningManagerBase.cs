@@ -74,6 +74,7 @@ namespace EA.Core
                 }
             }     
             this.Logger?.Log(new TRecord());
+            this.CurrentEpoch++;
         }
     }
 }
