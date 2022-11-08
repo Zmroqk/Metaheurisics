@@ -32,7 +32,7 @@ namespace TTP.Managers
         private IEnumerator<IConfig> Configs;
         private int rowsLogged;
         private int fileIndex;
-
+        private Dictionary<string, Data> LoadedData { get; set; }
         public FullSearchParamsManager(FullSearchConfig config, int maxThreads)
         {
             this.MaxThreads = maxThreads;
@@ -40,6 +40,7 @@ namespace TTP.Managers
             this.currentTasks = new List<(Task<List<Specimen>>, IConfig)>();
             this.rowsLogged = 0;
             this.fileIndex = 0;
+            this.LoadedData = new Dictionary<string, Data>();
         }
 
         public void Run()
@@ -371,8 +372,20 @@ namespace TTP.Managers
             var results = new List<Specimen>();
             for(int i = 0; i < tabuConfig.RunCount; i++)
             {
-                var dataLoader = new DataLoader();
-                var data = dataLoader.Load(tabuConfig.InputFileName);
+                Data? data;
+                lock (this.LoadedData)
+                {
+                    if (this.LoadedData.ContainsKey(tabuConfig.InputFileName))
+                    {
+                        data = this.LoadedData[tabuConfig.InputFileName];
+                    }
+                    else
+                    {
+                        var dataLoader = new DataLoader();
+                        data = dataLoader.Load(tabuConfig.InputFileName);
+                        this.LoadedData.Add(tabuConfig.InputFileName, data);
+                    }
+                }       
                 ISpecimenInitializator<Specimen> initializator;
                 if (tabuConfig.SpecimenInitializator.Type == SpecimenInitializatorType.Greedy)
                 {
@@ -406,8 +419,20 @@ namespace TTP.Managers
             var results = new List<Specimen>();
             for (int i = 0; i < simulatedAnnealingConfig.RunCount; i++)
             {
-                var dataLoader = new DataLoader();
-                var data = dataLoader.Load(simulatedAnnealingConfig.InputFileName);
+                Data? data;
+                lock (this.LoadedData)
+                {
+                    if (this.LoadedData.ContainsKey(simulatedAnnealingConfig.InputFileName))
+                    {
+                        data = this.LoadedData[simulatedAnnealingConfig.InputFileName];
+                    }
+                    else
+                    {
+                        var dataLoader = new DataLoader();
+                        data = dataLoader.Load(simulatedAnnealingConfig.InputFileName);
+                        this.LoadedData.Add(simulatedAnnealingConfig.InputFileName, data);
+                    }
+                }
                 ISpecimenInitializator<Specimen> initializator;
                 if (simulatedAnnealingConfig.SpecimenInitializator.Type == SpecimenInitializatorType.Greedy)
                 {
@@ -449,8 +474,20 @@ namespace TTP.Managers
             var results = new List<Specimen>();
             for (int i = 0; i < learningConfig.RunCount; i++)
             {
-                var dataLoader = new DataLoader();
-                var data = dataLoader.Load(learningConfig.InputFileName);
+                Data? data;
+                lock (this.LoadedData)
+                {
+                    if (this.LoadedData.ContainsKey(learningConfig.InputFileName))
+                    {
+                        data = this.LoadedData[learningConfig.InputFileName];
+                    }
+                    else
+                    {
+                        var dataLoader = new DataLoader();
+                        data = dataLoader.Load(learningConfig.InputFileName);
+                        this.LoadedData.Add(learningConfig.InputFileName, data);
+                    }
+                }
                 if (data == null)
                 {
                     Environment.Exit(-1);

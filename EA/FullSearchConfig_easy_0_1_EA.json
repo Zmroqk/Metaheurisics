@@ -7,9 +7,9 @@
     "EvolutionaryAlgorithm": {
       "Mutator": {
         "Types": [ "Swap", "Inverse" ],
-        "MinMutateRatio": 0.001,
+        "MinMutateRatio": 0.101,
         "MaxMutateRatio": 0.999,
-        "MutateRationChange": 0.1
+        "MutateRatioChange": 0.1
       },
       "Selector": {
         "Types": [ "Roulette", "Tournament" ],

@@ -41,16 +41,19 @@
     <None Update="FullSearchConfig_easy_0_1_EA.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="FullSearchConfig_medium_0_1_TabuSearch.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="FullSearchConfig_medium_0_1_SimulatedAnnealing.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="FullSearchConfig_easy_0_1_TabuSearch.json">
+    <None Update="FullSearchConfig_hard_0_TabuSearch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FullSearchConfig_medium_0_1_TabuSearch.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="FullSearchConfig_easy_0_1_SimulatedAnnealing.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FullSearchConfig_easy_0_1_TabuSearch.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="FullSearchConfig1.json">
